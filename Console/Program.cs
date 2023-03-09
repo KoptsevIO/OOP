@@ -169,48 +169,34 @@ namespace ConsoleApp
                 }), "age"),
                 (new Action(() =>
                 {
-                     Console.Write("Введите пол: ");
+                     Console.Write("Введите пол (первую букву гендера): ");
 
                     string gender = Console.ReadLine();
 
-                    // switch (pol)
-                    // {
-                    //    case "m":
-                    //    case "M":
-                    //    case "м":
-                    //    case "М":
-                    //    {
-                    //        person.Gender = Gender.Male;
-                    //        break;
-                    //    }
-                    //
-                    //    case "F":
-                    //    case "f":
-                    //    case "Ж":
-                    //    case "ж":
-                    //    {
-                    //        person.Gender = Gender.Female;
-                    //        break;
-                    //    }
-                    //
-                    //    default:
-                    //    {
-                    //        throw new ArgumentException("Неверно введён пол");
-                    //    }
-                    // }
-                    if (gender == "м" || gender == "М" || gender == "m" ||
-                    gender == "M")
+                    switch (gender)
                     {
-                        person.Gender = Gender.Male;
-                    }
-                    else if (gender == "ж" || gender == "Ж" || gender == "f" ||
-                    gender == "F")
-                    {
-                        person.Gender = Gender.Female;
-                    }
-                    else
-                    {
-                       throw new ArgumentException("Неверно введён пол");
+                       case "m":
+                       case "M":
+                       case "м":
+                       case "М":
+                       {
+                           person.Gender = Gender.Male;
+                           break;
+                       }
+
+                       case "F":
+                       case "f":
+                       case "Ж":
+                       case "ж":
+                       {
+                           person.Gender = Gender.Female;
+                           break;
+                       }
+
+                       default:
+                       {
+                           throw new ArgumentException("Неверно введён пол");
+                       }
                     }
                 }), "gender")
             };
