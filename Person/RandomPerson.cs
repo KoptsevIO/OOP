@@ -14,6 +14,7 @@ namespace Model
             Person person = new Person();
             Random random = new Random();
 
+            //TODO: RSDN
             string[] man_name = { "Андрей", "Артём", "Вадим", "Илья", "Леопольд" };
             string[] woman_name = { "Елена", "Екатерина", "Ангелина", "Наталья", "Яна" };
             string[] man_surname = { "Иванов", "Смирнов", "Соболев", "Кравец", "Карцев" };
