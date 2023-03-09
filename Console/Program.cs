@@ -167,7 +167,34 @@ namespace ConsoleApp
                 (new Action(() =>
                 {
                      Console.Write("Введите пол: ");
+                    //TODO: rename
                     string pol = Console.ReadLine();
+                    //switch (pol)
+                    //{
+                    //    case "m":
+                    //    case "M":
+                    //    case "м":
+                    //    case "М":
+                    //    {
+                    //        person.Gender = Gender.Male;
+                    //        break;
+                    //    }
+                    //
+                    //    case "F":
+                    //    case "f":
+                    //    case "Ж":
+                    //    case "ж":
+                    //    {
+                    //        person.Gender = Gender.Female;
+                    //        break;
+                    //    }
+                    //
+                    //    default:
+                    //    {
+                    //        throw new ArgumentException("Неверно введён пол");
+                    //    }
+                    //}
+
                     if (pol == "м" || pol == "М" || pol == "m" ||
                     pol == "M")
                     {
@@ -194,6 +221,7 @@ namespace ConsoleApp
 
         }
 
+        //TODO: XML
         /// <summary>
         /// Получение значений введеных ползователем.
         /// Задание параметров.

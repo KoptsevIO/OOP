@@ -1,5 +1,6 @@
 namespace Model
 {
+    //TODO: XML
     public class RandomPerson
     {
         public static Person GetRandomPerson()
@@ -12,6 +13,7 @@ namespace Model
             string[] man_surname = { "Иванов", "Смирнов", "Соболев", "Кравец", "Карцев" };
             string[] woman_surname = { "Аксёнова", "Зайцева", "Набиулина", "Вербова", "Дзюба" };
 
+            //TODO: duplication
             int min = 1;
             int max = 90;
 

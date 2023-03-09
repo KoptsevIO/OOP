@@ -2,6 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace Model
 {
+    //TODO: XML
     public class Person
     {
         /// <summary>
@@ -24,6 +25,7 @@ namespace Model
         /// </summary>
         private int _age;
 
+        //TODO: duplication
         /// <summary>
         /// Минимальный возраст.
         /// </summary>
@@ -118,6 +120,7 @@ namespace Model
         /// <summary>
         /// Конструктор персон.
         /// </summary>
+        /// //TODO: XML
         public Person(string name, string surname, Gender gender, int age)
         {
             Name = name;
@@ -164,6 +167,7 @@ namespace Model
             return nameOrSurname;
         }
 
+        //TODO: encapsulation
         /// <summary>
         /// Преобразование регистра первой буквы.
         /// </summary>
