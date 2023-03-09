@@ -1,6 +1,8 @@
 namespace Model
 {
-    //TODO: XML
+    /// <summary>
+    /// Гендеры.
+    /// </summary>
     public enum Gender
     {
         Male,

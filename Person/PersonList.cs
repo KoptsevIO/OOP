@@ -13,7 +13,7 @@ namespace Model
         /// <summary>
         /// Добавление персон в список.
         /// </summary>
-        /// <param name="person">.</param>
+        /// <param name="person">Персона.</param>
         public void Add(Person person)
         {
             _people.Add(person);
@@ -22,7 +22,7 @@ namespace Model
         /// <summary>
         /// Удаление элемента по возрасту.
         /// </summary>
-        /// <param name="age">.</param>
+        /// <param name="age">Возраст.</param>
         public void PeopleRemoveAge(int age)
         {
             _people.RemoveAll(i => i.Age == age);
@@ -31,7 +31,7 @@ namespace Model
         /// <summary>
         /// Удаление элемента по индексу.
         /// </summary>
-        /// <param name="index">.</param>
+        /// <param name="index">Индекс.</param>
         public void PeopleRemoveAt(int index)
         {
             _people.RemoveAt(index);
@@ -40,8 +40,8 @@ namespace Model
         /// <summary>
         /// Поиск элемента по индексу.
         /// </summary>
-        /// <param name="index">.</param>
-        /// <returns>.</returns>
+        /// <param name="index">Индекс.</param>
+        /// <returns>Элемемент списка.</returns>
         public Person PeopleFindByIndex(int index)
         {
             return _people.ElementAt(index);
@@ -50,8 +50,8 @@ namespace Model
         /// <summary>
         /// Возврат индекса списка по возрасту.
         /// </summary>
-        /// <param name="age">.</param>
-        /// <returns>.</returns>
+        /// <param name="age">Возраст.</param>
+        /// <returns>Индекс.</returns>
         public int PeopleFindByAge(int age)
         {
             return _people.FindIndex(i => i.Age == age);
@@ -68,7 +68,7 @@ namespace Model
         /// <summary>
         /// Получение кол-ва элементов списка.
         /// </summary>
-        /// <returns>.</returns>
+        /// <returns>Кол-во элементов списка.</returns>
         public int PeopleCount()
         {
             return _people.Count;

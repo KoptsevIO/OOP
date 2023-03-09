@@ -1,8 +1,14 @@
 namespace Model
 {
-    //TODO: XML
+    /// <summary>
+    /// Класс RandomPerson.
+    /// </summary>
     public class RandomPerson
     {
+        /// <summary>
+        /// Создание рандомной персоны.
+        /// </summary>
+        /// <returns>Персона.</returns>
         public static Person GetRandomPerson()
         {
             Person person = new Person();
@@ -13,11 +19,7 @@ namespace Model
             string[] man_surname = { "Иванов", "Смирнов", "Соболев", "Кравец", "Карцев" };
             string[] woman_surname = { "Аксёнова", "Зайцева", "Набиулина", "Вербова", "Дзюба" };
 
-            //TODO: duplication
-            int min = 1;
-            int max = 90;
-
-            person.Age = random.Next(min, max);
+            person.Age = random.Next(Person.Min, Person.Max);
             person.Gender = (Gender)random.Next(2);
 
             if (person.Gender == Gender.Male)

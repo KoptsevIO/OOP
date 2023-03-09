@@ -3,6 +3,9 @@ using System.Text.RegularExpressions;
 
 namespace ConsoleApp
 {
+    /// <summary>
+    /// Класс Program.
+    /// </summary>
     public class Program
     {
         /// <summary>
@@ -95,8 +98,8 @@ namespace ConsoleApp
         /// <summary>
         /// Печать списка.
         /// </summary>
-        /// <param name="personlist">.</param>
-        public static void PrintList(PersonList personlist)
+        /// <param name="personlist">Список.</param>
+        private static void PrintList(PersonList personlist)
         {
             for (int item = 0; item < personlist.PeopleCount(); item++)
             {
@@ -109,10 +112,10 @@ namespace ConsoleApp
         /// Метод проверяет введёные пользовелелем слова.
         /// Можно вводить буквы и тире.
         /// </summary>
-        /// <param name="word">.</param>
+        /// <param name="word">Слово.</param>
         /// <returns>слово.</returns>
-        /// <exception cref="ArgumentException">.</exception>
-        public static string CheckNames(string word)
+        /// <exception cref="ArgumentException">Слово.</exception>
+        private static string CheckNames(string word)
         {
             Regex wordsAndHyphens = new Regex(@"^[A-z,А-я,-]+$");
 
@@ -132,8 +135,8 @@ namespace ConsoleApp
         /// п. 4
         /// Метод чтения персоны с консоли.
         /// </summary>
-        /// <returns>.</returns>
-        public static Person PersonConsole()
+        /// <returns>Персона.</returns>
+        private static Person PersonConsole()
         {
             Person person = new Person();
 
@@ -167,10 +170,11 @@ namespace ConsoleApp
                 (new Action(() =>
                 {
                      Console.Write("Введите пол: ");
-                    //TODO: rename
-                    string pol = Console.ReadLine();
-                    //switch (pol)
-                    //{
+
+                    string gender = Console.ReadLine();
+
+                    // switch (pol)
+                    // {
                     //    case "m":
                     //    case "M":
                     //    case "м":
@@ -193,15 +197,14 @@ namespace ConsoleApp
                     //    {
                     //        throw new ArgumentException("Неверно введён пол");
                     //    }
-                    //}
-
-                    if (pol == "м" || pol == "М" || pol == "m" ||
-                    pol == "M")
+                    // }
+                    if (gender == "м" || gender == "М" || gender == "m" ||
+                    gender == "M")
                     {
                         person.Gender = Gender.Male;
                     }
-                    else if (pol == "ж" || pol == "Ж" || pol == "g" ||
-                    pol == "G")
+                    else if (gender == "ж" || gender == "Ж" || gender == "f" ||
+                    gender == "F")
                     {
                         person.Gender = Gender.Female;
                     }
@@ -221,13 +224,12 @@ namespace ConsoleApp
 
         }
 
-        //TODO: XML
         /// <summary>
         /// Получение значений введеных ползователем.
         /// Задание параметров.
         /// </summary>
-        /// <param name="action">.</param>
-        /// <param name="propertyName">.</param>
+        /// <param name="action">Action.</param>
+        /// <param name="propertyName">propertyName.</param>
         private static void ActionHandler(Action action, string propertyName)
         {
 

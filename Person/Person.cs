@@ -2,7 +2,9 @@ using System.Text.RegularExpressions;
 
 namespace Model
 {
-    //TODO: XML
+    /// <summary>
+    /// Класс персон.
+    /// </summary>
     public class Person
     {
         /// <summary>
@@ -25,16 +27,15 @@ namespace Model
         /// </summary>
         private int _age;
 
-        //TODO: duplication
         /// <summary>
         /// Минимальный возраст.
         /// </summary>
-        private const int _min = 1;
+        public const int Min = 1;
 
         /// <summary>
         /// Максимальный возраст.
         /// </summary>
-        private const int _max = 90;
+        public const int Max = 90;
 
         /// <summary>
         /// Имя персоны.
@@ -104,11 +105,11 @@ namespace Model
 
             set
             {
-                if (value > _max || value < _min)
+                if (value > Max || value < Min)
                 {
                     throw new ArgumentException($"Введён некорректный" +
                         $" возвраст, введите возраст" +
-                        $" от {_min} до {_max} лет!");
+                        $" от {Min} до {Max} лет!");
                 }
                 else
                 {
@@ -120,7 +121,10 @@ namespace Model
         /// <summary>
         /// Конструктор персон.
         /// </summary>
-        /// //TODO: XML
+        /// <param name="name">Имя.</param>
+        /// <param name="surname">Фамилия.</param>
+        /// <param name="gender">Гендер.</param>
+        /// <param name="age">Возраст.</param>
         public Person(string name, string surname, Gender gender, int age)
         {
             Name = name;
@@ -130,7 +134,7 @@ namespace Model
         }
 
         /// <summary>
-        /// Конструктор персон 2.
+        /// Конструктор по умолчанию.
         /// </summary>
         public Person()
         { }
@@ -138,7 +142,7 @@ namespace Model
         /// <summary>
         /// Метод вывода персоны в консоль.
         /// </summary>
-        /// <returns>.</returns>
+        /// <returns>Персона.</returns>
         public string PersonOutputConsole()
         {
             return $"Имя: {_name}, фамилия: {_surname}, пол: {_gender}" +
@@ -149,9 +153,9 @@ namespace Model
         /// Проверка на ввод имени или фамилии на одном языке.
         /// Возможность ввода двойного имени и фамилии.
         /// </summary>
-        /// <param name="nameOrSurname">.</param>
-        /// <returns>.</returns>
-        /// <exception cref="FormatException">.</exception>
+        /// <param name="nameOrSurname">Имя или фамилия.</param>
+        /// <returns>имя/фамилия.</returns>
+        /// <exception cref="FormatException">CheckName.</exception>
         public static string CheckNameSurname(string nameOrSurname)
         {
             string doubleNameSurname = @"(^[А-я]+(-[А-я])?[А-я]*$)" +
@@ -167,12 +171,12 @@ namespace Model
             return nameOrSurname;
         }
 
-        //TODO: encapsulation
         /// <summary>
-        /// Преобразование регистра первой буквы.
+        /// Преобразование верхнего регистра.
         /// </summary>
-        /// <returns>.</returns>
-        public static string ConvertToRightRegister(string surnameOrName)
+        /// <param name="surnameOrName">Имя/фамилия.</param>
+        /// <returns>Имя/фамилия.</returns>
+        private static string ConvertToRightRegister(string surnameOrName)
         {
             surnameOrName = surnameOrName[0].ToString().ToUpper()
                         + surnameOrName.Substring(1);
@@ -194,10 +198,10 @@ namespace Model
         /// <summary>
         /// Сравнения языка имени и фамилии.
         /// </summary>
-        /// <param name="name">.</param>
-        /// <param name="surname">.</param>
-        /// <exception cref="ArgumentException">.</exception>
-        public void CheckLanguage(string name, string surname)
+        /// <param name="name">Имя.</param>
+        /// <param name="surname">Фамилия.</param>
+        /// <exception cref="ArgumentException">ChekLenguage.</exception>
+        private void CheckLanguage(string name, string surname)
         {
             Lenguage nameLang = DefineLanguage(name);
             Lenguage surnameLang = DefineLanguage(surname);
@@ -211,10 +215,10 @@ namespace Model
         /// <summary>
         /// Проверка на язык.
         /// </summary>
-        /// <param name="word">.</param>
+        /// <param name="word">Слово.</param>
         /// <returns>.</returns>
-        /// <exception cref="ArgumentException">.</exception>
-        public static Lenguage DefineLanguage(string word)
+        /// <exception cref="ArgumentException">Слово.</exception>
+        private static Lenguage DefineLanguage(string word)
         {
             Regex latin = new Regex(@"[a-zA-Z]");
             Regex cyrillic = new Regex(@"[а-яА-Я]");
