@@ -14,25 +14,24 @@ namespace Model
             Person person = new Person();
             Random random = new Random();
 
-            //TODO: RSDN
-            string[] man_name = { "Андрей", "Артём", "Вадим", "Илья", "Леопольд" };
-            string[] woman_name = { "Елена", "Екатерина", "Ангелина", "Наталья", "Яна" };
-            string[] man_surname = { "Иванов", "Смирнов", "Соболев", "Кравец", "Карцев" };
-            string[] woman_surname = { "Аксёнова", "Зайцева", "Набиулина", "Вербова", "Дзюба" };
+            string[] manNames = { "Андрей", "Артём", "Вадим", "Илья", "Леопольд" };
+            string[] womanName = { "Елена", "Екатерина", "Ангелина", "Наталья", "Яна" };
+            string[] manSurname = { "Иванов", "Смирнов", "Соболев", "Кравец", "Карцев" };
+            string[] womanSurname = { "Аксёнова", "Зайцева", "Набиулина", "Вербова", "Дзюба" };
 
             person.Age = random.Next(Person.Min, Person.Max);
             person.Gender = (Gender)random.Next(2);
 
             if (person.Gender == Gender.Male)
             {
-                person.Name = man_name[new Random().Next(man_name.Length)];
-                person.Surname = man_surname[new Random().Next(man_surname.Length)];
+                person.Name = manNames[new Random().Next(manNames.Length)];
+                person.Surname = manSurname[new Random().Next(manSurname.Length)];
             }
 
             else
             {
-                person.Name = woman_name[new Random().Next(woman_name.Length)];
-                person.Surname = woman_surname[new Random().Next(woman_surname.Length)];
+                person.Name = womanName[new Random().Next(womanName.Length)];
+                person.Surname = womanSurname[new Random().Next(womanSurname.Length)];
             }
 
             return person;
