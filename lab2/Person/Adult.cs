@@ -45,5 +45,69 @@ namespace Model
                 _partner = value;
             }
         }
+
+        /// <summary>
+        /// Свойство серия паспорта.
+        /// </summary>
+        public int PassportSerie
+        {
+            get
+            {
+                return _passportSerie;
+            }
+
+            set
+            {
+                _passportSerie = value;
+            }
+        }
+
+        /// <summary>
+        /// Свойство номер паспорта.
+        /// </summary>
+        public int PassportNumber
+        {
+            get
+            {
+                return _passportNumber;
+            }
+
+            set
+            {
+                _passportNumber = value;
+            }
+        }
+
+        /// <summary>
+        /// Свойство семейное положение.
+        /// </summary>
+        public MaritalStatus MaritalStatus
+        {
+            get
+            {
+                return _maritalStatus;
+            }
+
+            set
+            {
+                _maritalStatus = value;
+            }
+        }
+
+        /// <summary>
+        /// Свойство место работы.
+        /// </summary>
+        public string Workplace
+        {
+            get
+            {
+                return _workplace;
+            }
+
+            set
+            {
+                _workplace = value;
+            }
+        }
     }
 }
