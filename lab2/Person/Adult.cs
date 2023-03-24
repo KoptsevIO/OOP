@@ -144,5 +144,34 @@ namespace Model
                 }
             }
         }
+
+        /// <summary>
+        /// Метод представления Adult.
+        /// </summary>
+        /// <returns>Информация о Adult.</returns>
+        public override string PersonOutputConsole()
+        {
+            string info = base.PersonOutputConsole();
+            info += $"\nСемейное положение: {MaritalStatus}";
+
+            if (MaritalStatus == MaritalStatus.Married)
+            {
+                info += $"Партнёр: {Partner.Name} " +
+                    $"{Partner.Surname}, ";
+            }
+
+            info += "\nМесто работы: ";
+
+            if (string.IsNullOrEmpty(Workplace))
+            {
+                info += "Безработный. ";
+            }
+            else
+            {
+                info += Workplace;
+            }
+
+            return info;
+        }
     }
 }
