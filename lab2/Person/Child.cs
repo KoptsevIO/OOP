@@ -102,5 +102,49 @@ namespace Model
                 }
             }
         }
+
+        /// <summary>
+        /// Метод проверки наличия родителя.
+        /// </summary>
+        /// <param name="perent">Родитель.</param>
+        /// <param name="name">Имя.</param>
+        /// <returns>Имя.</returns>
+        private static string CheckParents(Adult perent, string name)
+        {
+            if (perent != null)
+            {
+                return $"\n{name}: {perent.Name} " +
+                    $"{perent.Surname}, ";
+            }
+            else
+            {
+                return $"\nИмя {name} не установлено. ";
+            }
+        }
+
+        /// <summary>
+        /// Метод представления Child.
+        /// </summary>
+        /// <returns>Информацию о Child.</returns>
+        public override string PersonOutputConsole()
+        {
+            string info = base.PersonOutputConsole();
+
+            info += CheckParents(Mom, "Мать");
+            info += CheckParents(Dad, "Отец");
+
+            info += "\nМесто учёбы: ";
+            if (string.IsNullOrEmpty(EducationLevel))
+            {
+                info += "Ребёнок не учится ни в детском саду," +
+                    "ни в школе.";
+            }
+            else
+            {
+                info += EducationLevel;
+            }
+
+            return info;
+        }
     }
 }
