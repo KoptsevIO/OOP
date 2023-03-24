@@ -113,7 +113,7 @@ namespace Model
         /// Метод вывода персоны в консоль.
         /// </summary>
         /// <returns>Персона.</returns>
-        public string PersonOutputConsole()
+        public virtual string PersonOutputConsole()
         {
             return $"Имя: {_name}, фамилия: {_surname}, пол: {_gender}" +
                 $" и возраст: {_age}";
