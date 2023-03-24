@@ -19,7 +19,7 @@ namespace Model
             string[] manSurname = { "Иванов", "Смирнов", "Соболев", "Кравец", "Карцев" };
             string[] womanSurname = { "Аксёнова", "Зайцева", "Набиулина", "Вербова", "Дзюба" };
 
-            person.Age = random.Next(PersonBase.Min, PersonBase.Max);
+            person.Age = random.Next(PersonBase.PersonMin, PersonBase.PersonMax);
             person.Gender = (Gender)random.Next(2);
 
             if (person.Gender == Gender.Male)

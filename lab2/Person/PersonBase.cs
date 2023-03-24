@@ -25,17 +25,7 @@ namespace Model
         /// <summary>
         /// Возраст.
         /// </summary>
-        private int _age;
-
-        /// <summary>
-        /// Минимальный возраст.
-        /// </summary>
-        public const int Min = 1;
-
-        /// <summary>
-        /// Максимальный возраст.
-        /// </summary>
-        public const int Max = 90;
+        protected int _age;
 
         /// <summary>
         /// Имя персоны.

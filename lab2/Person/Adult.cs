@@ -31,6 +31,16 @@ namespace Model
         private Adult _partner;
 
         /// <summary>
+        /// Минимальный возраст Adult.
+        /// </summary>
+        public const int AdultMin = 18;
+
+        /// <summary>
+        /// Максимальный возраст Adult.
+        /// </summary>
+        public const int AdultMax = 90;
+
+        /// <summary>
         /// Ссылка на супруга / супругу.
         /// </summary>
         public Adult Partner
@@ -111,9 +121,9 @@ namespace Model
         }
 
         /// <summary>
-        /// Возраст персоны.
+        /// Свойство возраст Adult.
         /// </summary>
-        public int Age
+        public override int Age
         {
             get
             {
@@ -122,11 +132,11 @@ namespace Model
 
             set
             {
-                if (value > Max || value < Min)
+                if (value > AdultMax || value < AdultMin)
                 {
                     throw new ArgumentException($"Введён некорректный" +
-                        $" возвраст, введите возраст" +
-                        $" от {Min} до {Max} лет!");
+                        $" возвраст Adult, введите возраст" +
+                        $" от {AdultMin} до {AdultMax} лет!");
                 }
                 else
                 {

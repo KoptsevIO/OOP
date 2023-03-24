@@ -1318,3 +1318,6 @@ dotnet_diagnostic.CS8618.severity = none
 
 # SA1611: Element parameters should be documented
 dotnet_diagnostic.SA1611.severity = none
+
+# SA1401: Fields should be private
+dotnet_diagnostic.SA1401.severity = none

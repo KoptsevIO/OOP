@@ -21,6 +21,16 @@ namespace Model
         private string _educationLevel;
 
         /// <summary>
+        /// Минимальный возраст Child.
+        /// </summary>
+        public const int ChildMin = 1;
+
+        /// <summary>
+        /// Максимальный возраст Child.
+        /// </summary>
+        public const int ChildMax = 17;
+
+        /// <summary>
         /// Информация об отце.
         /// </summary>
         public Adult Dad
@@ -65,6 +75,31 @@ namespace Model
             set
             {
                 _educationLevel = value;
+            }
+        }
+
+        /// <summary>
+        /// Свойство возраст Child.
+        /// </summary>
+        public override int Age
+        {
+            get
+            {
+                return _age;
+            }
+
+            set
+            {
+                if (value > ChildMax || value < ChildMin)
+                {
+                    throw new ArgumentException($"Введён некорректный" +
+                        $" возвраст Child, введите возраст" +
+                        $" от {ChildMin} до {ChildMax} лет!");
+                }
+                else
+                {
+                    _age = value;
+                }
             }
         }
     }
