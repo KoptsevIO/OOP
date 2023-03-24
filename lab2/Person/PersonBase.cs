@@ -94,29 +94,9 @@ namespace Model
         }
 
         /// <summary>
-        /// Возраст персоны.
+        /// Абстрактный возраст персоны.
         /// </summary>
-        public int Age
-        {
-            get
-            {
-                return _age;
-            }
-
-            set
-            {
-                if (value > Max || value < Min)
-                {
-                    throw new ArgumentException($"Введён некорректный" +
-                        $" возвраст, введите возраст" +
-                        $" от {Min} до {Max} лет!");
-                }
-                else
-                {
-                    _age = value;
-                }
-            }
-        }
+        public abstract int Age { get; set; }
 
         /// <summary>
         /// Конструктор персон.
