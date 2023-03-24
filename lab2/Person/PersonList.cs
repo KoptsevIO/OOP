@@ -8,13 +8,13 @@ namespace Model
         /// <summary>
         /// Список персон.
         /// </summary>
-        private List<Person> _people = new List<Person>();
+        private List<PersonBase> _people = new List<PersonBase>();
 
         /// <summary>
         /// Добавление персон в список.
         /// </summary>
         /// <param name="person">Персона.</param>
-        public void Add(Person person)
+        public void Add(PersonBase person)
         {
             _people.Add(person);
         }
@@ -42,7 +42,7 @@ namespace Model
         /// </summary>
         /// <param name="index">Индекс.</param>
         /// <returns>Элемемент списка.</returns>
-        public Person PeopleFindByIndex(int index)
+        public PersonBase PeopleFindByIndex(int index)
         {
             return _people.ElementAt(index);
         }

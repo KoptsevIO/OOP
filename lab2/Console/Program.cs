@@ -18,13 +18,13 @@ namespace ConsoleApp
 
             // п.3 (а)
             // Объявление персон и создание двух списков
-            var person1 = new Person("Dmitry", "Puchkov", Gender.Male, 61);
-            var person2 = new Person("Klim", "Zhukov", Gender.Male, 45);
-            var person3 = new Person("Mikhail", "Popov", Gender.Male, 78);
-            var person4 = new Person("Artemy", "Lebedev", Gender.Male, 48);
-            var person5 = new Person("Margarita", "Simonyan", Gender.Female,
+            var person1 = new PersonBase("Dmitry", "Puchkov", Gender.Male, 61);
+            var person2 = new PersonBase("Klim", "Zhukov", Gender.Male, 45);
+            var person3 = new PersonBase("Mikhail", "Popov", Gender.Male, 78);
+            var person4 = new PersonBase("Artemy", "Lebedev", Gender.Male, 48);
+            var person5 = new PersonBase("Margarita", "Simonyan", Gender.Female,
                 42);
-            var person6 = new Person("Dmitry", "Nazarov", Gender.Male, 65);
+            var person6 = new PersonBase("Dmitry", "Nazarov", Gender.Male, 65);
 
             // Создание списка 1
             personlist1.Add(person1);
@@ -136,9 +136,9 @@ namespace ConsoleApp
         /// Метод чтения персоны с консоли.
         /// </summary>
         /// <returns>Персона.</returns>
-        private static Person PersonConsole()
+        private static PersonBase PersonConsole()
         {
-            Person person = new Person();
+            PersonBase person = new PersonBase();
 
             var actionList = new List<(Action, string)>
             {
@@ -146,13 +146,13 @@ namespace ConsoleApp
                 {
                     Console.Write("Введите имя: ");
                     string name = CheckNames(Console.ReadLine());
-                    person.Name = Person.CheckNameSurname(name);
+                    person.Name = PersonBase.CheckNameSurname(name);
                 }), "name"),
                 (new Action(() =>
                 {
                     Console.Write("Введите фамилию: ");
                     string surname = CheckNames(Console.ReadLine());
-                    person.Surname = Person.CheckNameSurname(surname);
+                    person.Surname = PersonBase.CheckNameSurname(surname);
                 }), "surname"),
                 (new Action(() =>
                 {

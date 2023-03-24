@@ -9,9 +9,9 @@ namespace Model
         /// Создание рандомной персоны.
         /// </summary>
         /// <returns>Персона.</returns>
-        public static Person GetRandomPerson()
+        public static PersonBase GetRandomPerson()
         {
-            Person person = new Person();
+            PersonBase person = new PersonBase();
             Random random = new Random();
 
             string[] manNames = { "Андрей", "Артём", "Вадим", "Илья", "Леопольд" };
@@ -19,7 +19,7 @@ namespace Model
             string[] manSurname = { "Иванов", "Смирнов", "Соболев", "Кравец", "Карцев" };
             string[] womanSurname = { "Аксёнова", "Зайцева", "Набиулина", "Вербова", "Дзюба" };
 
-            person.Age = random.Next(Person.Min, Person.Max);
+            person.Age = random.Next(PersonBase.Min, PersonBase.Max);
             person.Gender = (Gender)random.Next(2);
 
             if (person.Gender == Gender.Male)

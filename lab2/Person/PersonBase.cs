@@ -5,7 +5,7 @@ namespace Model
     /// <summary>
     /// Класс персон.
     /// </summary>
-    public class Person
+    public abstract class PersonBase
     {
         /// <summary>
         /// Имя.
@@ -125,7 +125,7 @@ namespace Model
         /// <param name="surname">Фамилия.</param>
         /// <param name="gender">Гендер.</param>
         /// <param name="age">Возраст.</param>
-        public Person(string name, string surname, Gender gender, int age)
+        public PersonBase(string name, string surname, Gender gender, int age)
         {
             Name = name;
             Surname = surname;
@@ -136,7 +136,7 @@ namespace Model
         /// <summary>
         /// Конструктор по умолчанию.
         /// </summary>
-        public Person()
+        public PersonBase()
         { }
 
         /// <summary>
