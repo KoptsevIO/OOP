@@ -23,12 +23,12 @@ namespace Model
         /// <summary>
         /// Минимальный возраст Child.
         /// </summary>
-        public const int ChildMin = 1;
+        public const int Min = 1;
 
         /// <summary>
         /// Максимальный возраст Child.
         /// </summary>
-        public const int ChildMax = 17;
+        public const int Max = 17;
 
         /// <summary>
         /// Информация об отце.
@@ -90,11 +90,11 @@ namespace Model
 
             set
             {
-                if (value > ChildMax || value < ChildMin)
+                if (value > Max || value < Min)
                 {
                     throw new ArgumentException($"Введён некорректный" +
                         $" возвраст Child, введите возраст" +
-                        $" от {ChildMin} до {ChildMax} лет!");
+                        $" от {Min} до {Max} лет!");
                 }
                 else
                 {
@@ -130,8 +130,8 @@ namespace Model
         {
             string info = base.PersonOutputConsole();
 
-            info += CheckParents(Mom, "Мать");
-            info += CheckParents(Dad, "Отец");
+            info += CheckParents(Mom, "матери");
+            info += CheckParents(Dad, "отца");
 
             info += "\nМесто учёбы: ";
             if (string.IsNullOrEmpty(EducationLevel))
