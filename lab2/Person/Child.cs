@@ -113,7 +113,7 @@ namespace Model
         {
             if (perent != null)
             {
-                return $"\n{name}: {perent.Name} " +
+                return $"\nДанные {name}: {perent.Name} " +
                     $"{perent.Surname}, ";
             }
             else

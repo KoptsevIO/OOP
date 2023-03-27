@@ -14,9 +14,9 @@ namespace Model
         /// Метод выбора Adult или Child.
         /// </summary>
         /// <returns>PersonBase.</returns>
-        public static PersonBase AdultOrChild()
+        public static PersonBase GetAdultOrChild()
         {
-            int i = _random.Next(0, 1);
+            int i = _random.Next(0, 2);
 
             if (i == 0)
             {
