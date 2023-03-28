@@ -112,20 +112,25 @@ namespace Model
             string[] work = { "Сфетофор.", "Командор.", "Абрикос.",
                 "Пяторочка.", "Полюс.", "РУСАЛ." };
 
-            var getwork = _random.Next(0, 4);
+            var getWork = _random.Next(0, 4);
 
-            if (getwork > 0)
+            if (getWork > 0)
             {
                 randomAdult.Workplace = work[_random.Next(0, work.Length)];
             }
 
-            var passportSerie = _random.Next
-                (Adult.PassportSerieMin, Adult.PassportSerieMax);
-            randomAdult.PassportSerie = passportSerie;
+            int[] passportSerie = { 4452, 4352, 4252, 4152 };
+            int[] passportNumber = { 842156, 832156, 954123, 852156 };
 
-            var passportNumber = _random.Next
-                (Adult.PassportNumberMin, Adult.PassportNumberMax);
-            randomAdult.PassportNumber = passportNumber;
+            var getPassport = _random.Next();
+
+            if (getPassport > 0)
+            {
+                randomAdult.PassportSerie = passportSerie[_random.Next(0,
+                    passportSerie.Length)];
+                randomAdult.PassportNumber = passportNumber[_random.Next(0,
+                    passportNumber.Length)];
+            }
 
             return randomAdult;
         }
