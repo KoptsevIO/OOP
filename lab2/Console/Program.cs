@@ -24,6 +24,28 @@ namespace ConsoleApp
             Console.WriteLine("Список персон: ");
             PrintList(personlist1);
 
+            _ = Console.ReadLine();
+
+            // Определение типа четвёртого элмента списка personlist1
+            switch (personlist1.PeopleFindByIndex(3))
+            {
+                case Adult adult:
+                    {
+                        Console.Write("\nЭто Adult");
+                        Console.Write(adult.PersonOutputConsole());
+                        break;
+                    }
+
+                case Child child:
+                    {
+                        Console.WriteLine("\nЭто Child");
+                        Console.Write(child.PersonOutputConsole());
+                        break;
+                    }
+
+                default:
+                    break;
+            }
         }
 
         /// <summary>
