@@ -31,7 +31,7 @@ namespace ConsoleApp
             {
                 case Adult adult:
                     {
-                        Console.Write("\nЭто Adult");
+                        Console.WriteLine("\nЭто Adult");
                         Console.Write(adult.PersonOutputConsole());
                         break;
                     }
