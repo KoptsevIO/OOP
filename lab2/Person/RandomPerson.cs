@@ -109,14 +109,14 @@ namespace Model
                 randomAdult.MaritalStatus = status;
             }
 
-            string[] job = { "SO \"UES\" ", "RusGidro", "Sberbank",
-                "Bakery \"Plump bun\"", "Norilsk Nickel", "Rosbank" };
+            string[] work = { "Сфетофор.", "Командор.", "Абрикос.",
+                "Пяторочка.", "Полюс.", "РУСАЛ." };
 
-            var getjob = _random.Next(0, 4);
+            var getwork = _random.Next(0, 4);
 
-            if (getjob > 0)
+            if (getwork > 0)
             {
-                randomAdult.Workplace = job[_random.Next(0, job.Length)];
+                randomAdult.Workplace = work[_random.Next(0, work.Length)];
             }
 
             var passportSerie = _random.Next
@@ -159,27 +159,26 @@ namespace Model
                     (MaritalStatus.Married, randomChild.Mom, Gender.Male);
             }
 
-            string[] kindergarten = {
-                "Kindergarten \"Rucheek\"", "Kindergarten \"Dandelion\"",
-                "Kindergarten \"Sunny\"", "Kindergarten \"Cucumbers\"" };
+            string[] kindergartenName = {
+                "Детский ад \"Дельфин\".", "Детский ад \"Русалочка\".",
+                "Детский ад \"Морячок\".", "Детский ад \"Яблочко\"." };
 
-            string[] school = {
-                "Forks High School", "The Cambridge School of Weston",
-                "Mystic Falls High School", "Beacon Hills High School" };
+            string[] schoolName = {
+                "МБОУ СОШ №5.", "Лицей №7.", "МБОУ СОШ №1.", "Гимназия №3." };
 
-            var hasInstitution = _random.Next(0, 4);
+            var hasEducationLevel = _random.Next(0, 4);
 
-            if (hasInstitution > 0)
+            if (hasEducationLevel > 0)
             {
-                if (randomChild.Age < 8)
+                if (randomChild.Age <= 7)
                 {
-                    randomChild.EducationLevel = kindergarten
-                        [_random.Next(1, kindergarten.Length)];
+                    randomChild.EducationLevel = kindergartenName
+                        [_random.Next(1, kindergartenName.Length)];
                 }
                 else
                 {
-                    randomChild.EducationLevel = school
-                        [_random.Next(1, school.Length)];
+                    randomChild.EducationLevel = schoolName
+                        [_random.Next(1, schoolName.Length)];
                 }
             }
 

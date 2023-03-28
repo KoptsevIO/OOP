@@ -118,7 +118,7 @@ namespace Model
             }
             else
             {
-                return $"\nИмя {name} не установлено. ";
+                return $"\nИмя {name} не установлено, ";
             }
         }
 
@@ -136,7 +136,7 @@ namespace Model
             info += "\nМесто учёбы: ";
             if (string.IsNullOrEmpty(EducationLevel))
             {
-                info += "Ребёнок не учится ни в детском саду," +
+                info += "Ребёнок не учится ни в детском саду, " +
                     "ни в школе.";
             }
             else

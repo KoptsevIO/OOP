@@ -177,7 +177,7 @@ namespace Model
 
             if (MaritalStatus == MaritalStatus.Married)
             {
-                info += $"Партнёр: {Partner.Name} " +
+                info += $"\nПартнёр: {Partner.Name} " +
                     $"{Partner.Surname}, ";
             }
 

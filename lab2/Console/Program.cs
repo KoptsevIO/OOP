@@ -15,17 +15,15 @@ namespace ConsoleApp
         {
             PersonList personlist1 = new PersonList();
 
+            // Заполнение списка рандомными персонами.
             for (int i = 0; i < 7; i++)
             {
                 personlist1.Add(RandomPerson.GetAdultOrChild());
             }
 
-            // п.3 (b)
-            // Вывод списков в консоль
-            Console.WriteLine("Список 1: ");
+            // Вывод списка в консоль
+            Console.WriteLine("Список персон: ");
             PrintList(personlist1);
-
-            _ = Console.ReadKey();
 
         }
 
@@ -37,7 +35,7 @@ namespace ConsoleApp
         {
             for (int item = 0; item < personlist.PeopleCount(); item++)
             {
-                Console.WriteLine($"\nПерсона № {item}");
+                Console.WriteLine($"\nПерсона № {item + 1}");
 
                 var person = personlist.PeopleFindByIndex(item);
                 Console.WriteLine(person.PersonOutputConsole());
