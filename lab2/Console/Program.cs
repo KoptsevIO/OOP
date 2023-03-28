@@ -41,28 +41,5 @@ namespace ConsoleApp
                 Console.WriteLine(person.PersonOutputConsole());
             }
         }
-
-        /// <summary>
-        /// Метод проверяет введёные пользовелелем слова.
-        /// Можно вводить буквы и тире.
-        /// </summary>
-        /// <param name="word">Слово.</param>
-        /// <returns>слово.</returns>
-        /// <exception cref="ArgumentException">Слово.</exception>
-        private static string CheckNames(string word)
-        {
-            Regex wordsAndHyphens = new Regex(@"^[A-z,А-я,-]+$");
-
-            if (!wordsAndHyphens.IsMatch(word))
-            {
-                throw new ArgumentException("Не удалось распознать" +
-                    " имя/фамилию, введите ещё раз!" +
-                    "\n(разрешено вводить только буквы и дефис)");
-            }
-            else
-            {
-                return word;
-            }
-        }
     }
 }
