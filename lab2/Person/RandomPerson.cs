@@ -110,7 +110,7 @@ namespace Model
             }
 
             string[] work = { "Сфетофор.", "Командор.", "Абрикос.",
-                "Пяторочка.", "Полюс.", "РУСАЛ." };
+                "Пятёрочка.", "Полюс.", "РУСАЛ." };
 
             var getWork = _random.Next(0, 4);
 
@@ -175,7 +175,7 @@ namespace Model
 
             if (hasEducationLevel > 0)
             {
-                if (randomChild.Age <= 7)
+                if (randomChild.Age > 1 && randomChild.Age < 8)
                 {
                     randomChild.EducationLevel = kindergartenName
                         [_random.Next(1, kindergartenName.Length)];

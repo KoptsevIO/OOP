@@ -277,7 +277,7 @@ dotnet_diagnostic.IDE0059.severity = error
 csharp_style_unused_value_assignment_preference = discard_variable
 
 # Remove unused parameter
-dotnet_diagnostic.IDE0060.severity = error
+dotnet_diagnostic.IDE0060.severity = none
 dotnet_code_quality_unused_parameters = all
 
 # Remove unnecessary suppression
