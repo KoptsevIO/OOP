@@ -41,26 +41,6 @@ namespace Model
         public const int Max = 90;
 
         /// <summary>
-        /// Минимальное значении серии паспорта.
-        /// </summary>
-        public const int PassportSerieMin = 0001;
-
-        /// <summary>
-        /// Максимальное значении серии паспорта.
-        /// </summary>
-        public const int PassportSerieMax = 9999;
-
-        /// <summary>
-        /// Минимальное значении номера паспорта.
-        /// </summary>
-        public const int PassportNumberMin = 000001;
-
-        /// <summary>
-        /// Максимальное значении номера паспорта.
-        /// </summary>
-        public const int PassportNumberMax = 999999;
-
-        /// <summary>
         /// Ссылка на супруга / супругу.
         /// </summary>
         public Adult Partner

@@ -31,14 +31,14 @@ namespace ConsoleApp
             {
                 case Adult adult:
                     {
-                        Console.WriteLine("\nЭто Adult");
+                        Console.WriteLine("Это Adult");
                         Console.Write(adult.PersonOutputConsole());
                         break;
                     }
 
                 case Child child:
                     {
-                        Console.WriteLine("\nЭто Child");
+                        Console.WriteLine("Это Child");
                         Console.Write(child.PersonOutputConsole());
                         break;
                     }
