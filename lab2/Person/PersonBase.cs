@@ -96,7 +96,7 @@ namespace Model
         /// <param name="surname">Фамилия.</param>
         /// <param name="gender">Гендер.</param>
         /// <param name="age">Возраст.</param>
-        public PersonBase(string name, string surname, Gender gender, int age)
+        protected PersonBase(string name, string surname, Gender gender, int age)
         {
             Name = name;
             Surname = surname;
@@ -104,19 +104,21 @@ namespace Model
             Age = age;
         }
 
-        //TODO: protected
+        //TODO: protected +
+
         /// <summary>
         /// Конструктор по умолчанию.
         /// </summary>
-        public PersonBase()
+        protected PersonBase()
         { }
 
-        //TODO: rename
+        //TODO: rename +
+
         /// <summary>
         /// Метод вывода персоны в консоль.
         /// </summary>
         /// <returns>Персона.</returns>
-        public virtual string PersonOutputConsole()
+        public virtual string GetInfo()
         {
             return $"Имя: {_name}, фамилия: {_surname}, пол: {_gender}" +
                 $" и возраст: {_age}";

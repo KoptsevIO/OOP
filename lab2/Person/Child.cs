@@ -21,12 +21,12 @@ namespace Model
         private string _educationLevel;
 
         /// <summary>
-        /// Минимальный возраст.
+        /// Минимальный возраст Child.
         /// </summary>
         public const int Min = 1;
 
         /// <summary>
-        /// Максимальный возраст.
+        /// Максимальный возраст Child.
         /// </summary>
         public const int Max = 17;
 
@@ -126,9 +126,9 @@ namespace Model
         /// Метод представления Child.
         /// </summary>
         /// <returns>Информацию о Child.</returns>
-        public override string PersonOutputConsole()
+        public override string GetInfo()
         {
-            string info = base.PersonOutputConsole();
+            string info = base.GetInfo();
 
             info += CheckParents(Mom, "матери");
             info += CheckParents(Dad, "отца");

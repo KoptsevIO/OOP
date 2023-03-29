@@ -32,16 +32,14 @@ namespace ConsoleApp
                 case Adult adult:
                     {
                         Console.WriteLine("Это Adult");
-                        //TODO: переделать
-                        Console.Write(adult.PersonOutputConsole());
+                        Console.Write(adult.GetInfo());
                         break;
                     }
 
                 case Child child:
                     {
                         Console.WriteLine("Это Child");
-                        //TODO: переделать
-                        Console.Write(child.PersonOutputConsole());
+                        Console.Write(child.GetInfo());
                         break;
                     }
 
@@ -61,7 +59,7 @@ namespace ConsoleApp
                 Console.WriteLine($"\nПерсона № {item + 1}");
 
                 var person = personlist.PeopleFindByIndex(item);
-                Console.WriteLine(person.PersonOutputConsole());
+                Console.WriteLine(person.GetInfo());
             }
         }
     }

@@ -5,7 +5,6 @@ namespace Model
     /// </summary>
     public class Adult : PersonBase
     {
-        //TODO:
         /// <summary>
         /// Серия паспорта.
         /// </summary>
@@ -32,16 +31,15 @@ namespace Model
         private Adult _partner;
 
         /// <summary>
-        /// Минимальный возраст.
+        /// Минимальный возраст Adult.
         /// </summary>
         public const int Min = 18;
 
         /// <summary>
-        /// Максимальный возраст.
+        /// Максимальный возраст Adult.
         /// </summary>
         public const int Max = 90;
 
-        //TODO: auto properties
         /// <summary>
         /// Ссылка на супруга / супругу.
         /// </summary>
@@ -58,7 +56,6 @@ namespace Model
             }
         }
 
-        //TODO: check
         /// <summary>
         /// Свойство серия паспорта.
         /// </summary>
@@ -75,7 +72,6 @@ namespace Model
             }
         }
 
-        //TODO: check
         /// <summary>
         /// Свойство номер паспорта.
         /// </summary>
@@ -125,7 +121,7 @@ namespace Model
         }
 
         /// <summary>
-        /// Свойство возраст.
+        /// Свойство возраст Adult.
         /// </summary>
         public override int Age
         {
@@ -149,14 +145,13 @@ namespace Model
             }
         }
 
-        //TODO: rename
         /// <summary>
-        /// Метод представления.
+        /// Метод представления Adult.
         /// </summary>
-        /// <returns>Информация о персоне.</returns>
-        public override string PersonOutputConsole()
+        /// <returns>Информация о Adult.</returns>
+        public override string GetInfo()
         {
-            string info = base.PersonOutputConsole();
+            string info = base.GetInfo();
             info += $"\nДанные паспорта: {PassportSerie} {PassportNumber}, " +
                 $"\nСемейное положение: {MaritalStatus}";
 

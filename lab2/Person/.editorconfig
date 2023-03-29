@@ -1321,3 +1321,6 @@ dotnet_diagnostic.SA1611.severity = none
 
 # SA1401: Fields should be private
 dotnet_diagnostic.SA1401.severity = none
+
+# SA1005: Single line comments should begin with single space
+dotnet_diagnostic.SA1005.severity = none
