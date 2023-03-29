@@ -21,12 +21,12 @@ namespace Model
         private string _educationLevel;
 
         /// <summary>
-        /// Минимальный возраст Child.
+        /// Минимальный возраст.
         /// </summary>
         public const int Min = 1;
 
         /// <summary>
-        /// Максимальный возраст Child.
+        /// Максимальный возраст.
         /// </summary>
         public const int Max = 17;
 
@@ -63,7 +63,7 @@ namespace Model
         }
 
         /// <summary>
-        /// Место учёбы Child.
+        /// Место учёбы.
         /// </summary>
         public string EducationLevel
         {
@@ -79,7 +79,7 @@ namespace Model
         }
 
         /// <summary>
-        /// Свойство возраст Child.
+        /// Свойство возраст.
         /// </summary>
         public override int Age
         {
@@ -123,9 +123,9 @@ namespace Model
         }
 
         /// <summary>
-        /// Метод представления Child.
+        /// Метод представления данных.
         /// </summary>
-        /// <returns>Информацию о Child.</returns>
+        /// <returns>Информацию о персоне.</returns>
         public override string GetInfo()
         {
             string info = base.GetInfo();

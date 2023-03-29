@@ -118,7 +118,7 @@ namespace Model
 
             if (getPassport > 0)
             {
-                randomAdult.PassportSerie = passportSerie[_random.Next(0,
+                randomAdult.PassportSeries = passportSerie[_random.Next(0,
                     passportSerie.Length)];
                 randomAdult.PassportNumber = passportNumber[_random.Next(0,
                     passportNumber.Length)];

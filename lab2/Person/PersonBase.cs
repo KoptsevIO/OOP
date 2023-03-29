@@ -70,25 +70,15 @@ namespace Model
         /// <summary>
         /// Пол персоны.
         /// </summary>
-        public Gender Gender
-        {
-            get
-            {
-                return _gender;
-            }
-
-            set
-            {
-                _gender = value;
-            }
-        }
+        public Gender Gender { get; set; }
 
         /// <summary>
         /// Абстрактный возраст персоны.
         /// </summary>
         public abstract int Age { get; set; }
 
-        //TODO: protected
+        //TODO: protected +
+
         /// <summary>
         /// Конструктор персон.
         /// </summary>

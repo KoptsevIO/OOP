@@ -8,7 +8,7 @@ namespace Model
         /// <summary>
         /// Серия паспорта.
         /// </summary>
-        private int _passportSerie;
+        private int _passportSeries;
 
         /// <summary>
         /// Номер паспорта.
@@ -31,12 +31,12 @@ namespace Model
         private Adult _partner;
 
         /// <summary>
-        /// Минимальный возраст Adult.
+        /// Минимальный возраст.
         /// </summary>
         public const int Min = 18;
 
         /// <summary>
-        /// Максимальный возраст Adult.
+        /// Максимальный возраст.
         /// </summary>
         public const int Max = 90;
 
@@ -59,16 +59,16 @@ namespace Model
         /// <summary>
         /// Свойство серия паспорта.
         /// </summary>
-        public int PassportSerie
+        public int PassportSeries
         {
             get
             {
-                return _passportSerie;
+                return _passportSeries;
             }
 
             set
             {
-                _passportSerie = value;
+                _passportSeries = value;
             }
         }
 
@@ -121,7 +121,7 @@ namespace Model
         }
 
         /// <summary>
-        /// Свойство возраст Adult.
+        /// Свойство возраст.
         /// </summary>
         public override int Age
         {
@@ -146,13 +146,13 @@ namespace Model
         }
 
         /// <summary>
-        /// Метод представления Adult.
+        /// Метод представления данных.
         /// </summary>
-        /// <returns>Информация о Adult.</returns>
+        /// <returns>Данные персоны.</returns>
         public override string GetInfo()
         {
             string info = base.GetInfo();
-            info += $"\nДанные паспорта: {PassportSerie} {PassportNumber}, " +
+            info += $"\nДанные паспорта: {PassportSeries} {PassportNumber}, " +
                 $"\nСемейное положение: {MaritalStatus}";
 
             if (MaritalStatus == MaritalStatus.Married)
