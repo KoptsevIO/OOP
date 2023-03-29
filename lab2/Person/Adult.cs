@@ -5,6 +5,7 @@ namespace Model
     /// </summary>
     public class Adult : PersonBase
     {
+        //TODO:
         /// <summary>
         /// Серия паспорта.
         /// </summary>
@@ -31,15 +32,16 @@ namespace Model
         private Adult _partner;
 
         /// <summary>
-        /// Минимальный возраст Adult.
+        /// Минимальный возраст.
         /// </summary>
         public const int Min = 18;
 
         /// <summary>
-        /// Максимальный возраст Adult.
+        /// Максимальный возраст.
         /// </summary>
         public const int Max = 90;
 
+        //TODO: auto properties
         /// <summary>
         /// Ссылка на супруга / супругу.
         /// </summary>
@@ -56,6 +58,7 @@ namespace Model
             }
         }
 
+        //TODO: check
         /// <summary>
         /// Свойство серия паспорта.
         /// </summary>
@@ -72,6 +75,7 @@ namespace Model
             }
         }
 
+        //TODO: check
         /// <summary>
         /// Свойство номер паспорта.
         /// </summary>
@@ -121,7 +125,7 @@ namespace Model
         }
 
         /// <summary>
-        /// Свойство возраст Adult.
+        /// Свойство возраст.
         /// </summary>
         public override int Age
         {
@@ -145,10 +149,11 @@ namespace Model
             }
         }
 
+        //TODO: rename
         /// <summary>
-        /// Метод представления Adult.
+        /// Метод представления.
         /// </summary>
-        /// <returns>Информация о Adult.</returns>
+        /// <returns>Информация о персоне.</returns>
         public override string PersonOutputConsole()
         {
             string info = base.PersonOutputConsole();

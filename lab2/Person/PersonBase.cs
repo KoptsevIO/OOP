@@ -88,6 +88,7 @@ namespace Model
         /// </summary>
         public abstract int Age { get; set; }
 
+        //TODO: protected
         /// <summary>
         /// Конструктор персон.
         /// </summary>
@@ -103,12 +104,14 @@ namespace Model
             Age = age;
         }
 
+        //TODO: protected
         /// <summary>
         /// Конструктор по умолчанию.
         /// </summary>
         public PersonBase()
         { }
 
+        //TODO: rename
         /// <summary>
         /// Метод вывода персоны в консоль.
         /// </summary>

@@ -32,6 +32,7 @@ namespace ConsoleApp
                 case Adult adult:
                     {
                         Console.WriteLine("Это Adult");
+                        //TODO: переделать
                         Console.Write(adult.PersonOutputConsole());
                         break;
                     }
@@ -39,6 +40,7 @@ namespace ConsoleApp
                 case Child child:
                     {
                         Console.WriteLine("Это Child");
+                        //TODO: переделать
                         Console.Write(child.PersonOutputConsole());
                         break;
                     }

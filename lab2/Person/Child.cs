@@ -21,12 +21,12 @@ namespace Model
         private string _educationLevel;
 
         /// <summary>
-        /// Минимальный возраст Child.
+        /// Минимальный возраст.
         /// </summary>
         public const int Min = 1;
 
         /// <summary>
-        /// Максимальный возраст Child.
+        /// Максимальный возраст.
         /// </summary>
         public const int Max = 17;
 

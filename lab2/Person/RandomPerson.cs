@@ -50,7 +50,6 @@ namespace Model
             {
                 person.Gender = (Gender)random.Next(2);
             }
-
             else
             {
                 person.Gender = gender;
@@ -63,7 +62,6 @@ namespace Model
                 person.Surname = manSurname
                     [new Random().Next(manSurname.Length)];
             }
-
             else
             {
                 person.Name = womanName[new Random().Next(womanName.Length)];
@@ -91,17 +89,11 @@ namespace Model
 
             if (maritalstatus == MaritalStatus.Married)
             {
-                if (randomAdult.Gender == Gender.Male)
-                {
-                    randomAdult.Partner = GetRandomAdult(
-                        MaritalStatus.Married, randomAdult, Gender.Female);
-                }
-
-                else
-                {
-                    randomAdult.Partner = GetRandomAdult(
-                        MaritalStatus.Married, randomAdult, Gender.Male);
-                }
+                var tmpGender = randomAdult.Gender == Gender.Male
+                    ? Gender.Female
+                    : Gender.Male;
+                randomAdult.Partner = GetRandomAdult(
+                        MaritalStatus.Married, randomAdult, tmpGender);
             }
 
             else
