@@ -23,12 +23,12 @@ namespace Model
         /// <summary>
         /// Минимальный возраст.
         /// </summary>
-        public const int Min = 1;
+        public const int MinAge = 1;
 
         /// <summary>
         /// Максимальный возраст.
         /// </summary>
-        public const int Max = 17;
+        public const int MaxAge = 17;
 
         /// <summary>
         /// Информация об отце.
@@ -90,11 +90,11 @@ namespace Model
 
             set
             {
-                if (value > Max || value < Min)
+                if (value > MaxAge || value < MinAge)
                 {
                     throw new ArgumentException($"Введён некорректный" +
                         $" возвраст Child, введите возраст" +
-                        $" от {Min} до {Max} лет!");
+                        $" от {MinAge} до {MaxAge} лет!");
                 }
                 else
                 {

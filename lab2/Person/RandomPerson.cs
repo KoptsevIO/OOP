@@ -82,7 +82,7 @@ namespace Model
             Adult randomAdult = new Adult();
             GetRandomPerson(randomAdult, gender);
 
-            randomAdult.Age = _random.Next(Adult.Min, Adult.Max);
+            randomAdult.Age = _random.Next(Adult.MinAge, Adult.MaxAge);
 
             MaritalStatus maritalstatus = (MaritalStatus)_random.Next(2);
             randomAdult.MaritalStatus = maritalstatus;
@@ -95,7 +95,6 @@ namespace Model
                 randomAdult.Partner = GetRandomAdult(
                         MaritalStatus.Married, randomAdult, tmpGender);
             }
-
             else
             {
                 randomAdult.MaritalStatus = status;
@@ -137,7 +136,7 @@ namespace Model
             GetRandomPerson(randomChild);
 
             randomChild.Age = _random.Next
-                (Child.Min, Child.Max);
+                (Child.MinAge, Child.MaxAge);
 
             var hasMom = _random.Next(0, 5);
 
