@@ -118,16 +118,15 @@ namespace Model
         /// Метод определения любимого мультфильма.
         /// </summary>
         /// <returns>Название любимого мультфильма.</returns>
-        public static string GetFavoriteCartoon()
+        public string GetFavoriteCartoon()
         {
             string[] cartoons = { "Том и Джерри", "Атлантида", "Аркадий " +
-                    "паровозов", "Шрек", "Тайна третьей планеты", "Мулан"};
+                    "Паровозов", "Шрек", "Тайна третьей планеты", "Мулан"};
 
             var randomCartoons = cartoons
                 [new Random().Next(cartoons.Length)];
 
-            return $"Название любимого мультфильма ребёнка: " +
-                $"{randomCartoons}";
+            return $"{Name} любит мультфильм \"{randomCartoons}\".\n";
         }
     }
 }

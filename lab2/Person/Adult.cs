@@ -176,19 +176,22 @@ namespace Model
         }
 
         /// <summary>
-        /// Метод игры в русскую рулетку.
+        /// Метод воспроизведения игры в русскую рулетку.
         /// </summary>
         /// <returns>Результат игры.</returns>
-        public static string PlayRussianRoulet()
+        public string PlayRussianRoulet()
         {
             Random random = new Random();
 
-            var randomActcions = random.Next(0, 6);
+            var randomActcions = random.Next(6);
             var gameResult = randomActcions == 0
-                ? "убит"
-                : "выжил";
+                ? "проигрыш"
+                : "победа";
 
-            return $"Результат игры в русскую рулетку: {gameResult}";
+            return $"{Name} начинает игру в \"Русскую рулетку\". " +
+                $"\nПатрон находится в каморе №1. \nВыстрел из каморы" +
+                $" №{randomActcions + 1}. \nРезультат игры в русскую " +
+                $"рулетку: {gameResult}.\n";
         }
     }
 }

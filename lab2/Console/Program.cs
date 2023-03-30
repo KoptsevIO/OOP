@@ -32,14 +32,14 @@ namespace ConsoleApp
                 case Adult adult:
                     {
                         Console.WriteLine("Это Adult");
-                        Console.Write(adult.GetInfo());
+                        Console.Write(adult.PlayRussianRoulet());
                         break;
                     }
 
                 case Child child:
                     {
                         Console.WriteLine("Это Child");
-                        Console.Write(child.GetInfo());
+                        Console.Write(child.GetFavoriteCartoon());
                         break;
                     }
 
