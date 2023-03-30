@@ -27,6 +27,7 @@ namespace ConsoleApp
             _ = Console.ReadLine();
 
             // Определение типа четвёртого элмента списка personlist1
+            // и примение методов, присущих этому классу
             switch (personlist1.PeopleFindByIndex(3))
             {
                 case Adult adult:
