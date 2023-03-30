@@ -33,50 +33,17 @@ namespace Model
         /// <summary>
         /// Информация об отце.
         /// </summary>
-        public Adult Dad
-        {
-            get
-            {
-                return _dad;
-            }
-
-            set
-            {
-                _dad = value;
-            }
-        }
+        public Adult Dad { get; set; }
 
         /// <summary>
         /// Информация об отце.
         /// </summary>
-        public Adult Mom
-        {
-            get
-            {
-                return _mom;
-            }
-
-            set
-            {
-                _mom = value;
-            }
-        }
+        public Adult Mom { get; set; }
 
         /// <summary>
         /// Место учёбы.
         /// </summary>
-        public string EducationLevel
-        {
-            get
-            {
-                return _educationLevel;
-            }
-
-            set
-            {
-                _educationLevel = value;
-            }
-        }
+        public string EducationLevel { get; set; }
 
         /// <summary>
         /// Свойство возраст.
@@ -145,6 +112,22 @@ namespace Model
             }
 
             return info;
+        }
+
+        /// <summary>
+        /// Метод определения любимого мультфильма.
+        /// </summary>
+        /// <returns>Название любимого мультфильма.</returns>
+        public static string GetFavoriteCartoon()
+        {
+            string[] cartoons = { "Том и Джерри", "Атлантида", "Аркадий " +
+                    "паровозов", "Шрек", "Тайна третьей планеты", "Мулан"};
+
+            var randomCartoons = cartoons
+                [new Random().Next(cartoons.Length)];
+
+            return $"Название любимого мультфильма ребёнка: " +
+                $"{randomCartoons}";
         }
     }
 }
