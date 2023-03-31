@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CapacityReactance.cs" />
-    <Compile Include="ImpedanceBase.cs" />
-    <Compile Include="InductanceReactance.cs" />
-    <Compile Include="Resistance.cs" />
+    <Compile Include="Condenser.cs" />
+    <Compile Include="PassiveElementBase.cs" />
+    <Compile Include="Inductance.cs" />
+    <Compile Include="Resistor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
