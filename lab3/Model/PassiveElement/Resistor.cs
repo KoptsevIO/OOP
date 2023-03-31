@@ -1,4 +1,7 @@
-﻿namespace PassiveElement
+﻿using System.ComponentModel;
+using System.Numerics;
+
+namespace PassiveElement
 {
     /// <summary>
     /// Класс Resistor.
@@ -16,23 +19,19 @@
         public float Resistance { get; set; }
 
         /// <summary>
-        /// Полное сопротивление.
+        /// Свойство сопротивление.
         /// </summary>
-        public override float Impedance
-        {
-            get
-            {
-                return Resistance;
-            }
-        }
+        public override float Impedance => Resistance;
 
         /// <summary>
-        /// Расчёт полного сопротивления.
+        /// Метод расчёта сопротивления.
         /// </summary>
-        /// <returns>Impedance.</returns>
-        public override float CalculationImpedance()
+        /// <param name="impedance"></param>
+        /// <returns>impedance.</returns>
+        public override Complex CalculationImpedance(Complex impedance)
         {
-            return Impedance;
+            impedance = new Complex(Impedance, 0);
+            return impedance;
         }
     }
 }

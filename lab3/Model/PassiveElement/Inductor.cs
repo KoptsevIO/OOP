@@ -1,4 +1,6 @@
-﻿namespace PassiveElement
+﻿using System.Numerics;
+
+namespace PassiveElement
 {
     /// <summary>
     /// Класс Inductor.
@@ -11,12 +13,12 @@
         protected float _inductance;
 
         /// <summary>
-        /// Свойство ёмкость.
+        /// Свойство индуктивность.
         /// </summary>
         public float Inductance { get; set; }
 
         /// <summary>
-        /// Полное сопротивление.
+        /// Свойство сопротивление.
         /// </summary>
         public override float Impedance
         {
@@ -27,12 +29,14 @@
         }
 
         /// <summary>
-        /// Расчёт полного сопротивления.
+        /// Метод расчёта сопротивления.
         /// </summary>
-        /// <returns>Impedance.</returns>
-        public override float CalculationImpedance()
+        /// <param name="impedance"></param>
+        /// <returns>impedance.</returns>
+        public override Complex CalculationImpedance(Complex impedance)
         {
-            return Impedance;
+            impedance = new Complex(0, Impedance);
+            return impedance;
         }
     }
 }

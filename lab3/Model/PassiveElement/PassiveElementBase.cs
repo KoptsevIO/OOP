@@ -1,4 +1,6 @@
-﻿namespace PassiveElement
+﻿using System.Numerics;
+
+namespace PassiveElement
 {
     /// <summary>
     /// Класс ImpedanceBase.
@@ -11,18 +13,19 @@
         protected const int Angularfrequency = 314;
 
         /// <summary>
-        /// Полное сопротивление.
+        /// Сопротивление.
         /// </summary>
         protected float _impedance;
 
         /// <summary>
-        /// Свойство полное сопротивление.
+        /// Свойство сопротивление.
         /// </summary>
         public abstract float Impedance { get; }
 
         /// <summary>
         /// Метод расчёта сопротивления.
         /// </summary>
-        public abstract float CalculationImpedance();
+        /// <returns>impedance.</returns>
+        public abstract Complex CalculationImpedance(Complex impedance);
     }
 }
