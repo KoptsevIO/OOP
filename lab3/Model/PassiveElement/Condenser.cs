@@ -24,7 +24,7 @@ namespace PassiveElement
         {
             get
             {
-                return - 1 / (Capacity * Angularfrequency);
+                return - 1000000 / (Capacity * Angularfrequency);
             }
         }
 

@@ -24,7 +24,7 @@ namespace PassiveElement
         {
             get
             {
-                return (Inductance * Angularfrequency);
+                return (Inductance * Angularfrequency / 1000);
             }
         }
 
