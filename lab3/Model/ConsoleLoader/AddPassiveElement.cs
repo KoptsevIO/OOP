@@ -6,7 +6,7 @@ namespace ConsoleLoader
     /// <summary>
     /// Класс ConsoleAddPassiveElement.
     /// </summary>
-    public class ConsoleAddPassiveElement
+    public class AddPassiveElement
     {
         /// <summary>
         /// Метод проверки ввода числа.
@@ -37,7 +37,7 @@ namespace ConsoleLoader
         /// </summary>
         /// <exception cref="ArgumentException">ArgumentException.
         /// </exception>
-        public static void AddPassiveElement()
+        public static void AddElement()
         {
             PassiveElementBase element = new Resistor();
 
