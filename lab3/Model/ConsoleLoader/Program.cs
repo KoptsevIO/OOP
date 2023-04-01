@@ -1,4 +1,13 @@
-﻿using System.Numerics;
+﻿namespace ConsoleLoader
+{
+    public class Program
+    {
+        private static void Main()
+        {
+            Console.WriteLine("Программа расчёта сопротивления " +
+                "пассивных элементов");
 
-Complex complex = new Complex(1, 2);
-Console.WriteLine(complex.ToString());
+
+        }
+    }
+}
