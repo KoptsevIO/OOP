@@ -29,7 +29,7 @@
 
                 if (action == 1)
                 {
-                    AddPassiveElement.AddElement();
+                    ConsoleAddPassiveElement.AddPassiveElement();
                 }
                 else if (action == 2)
                 {

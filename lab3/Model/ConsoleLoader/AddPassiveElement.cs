@@ -4,9 +4,9 @@ using System.Numerics;
 namespace ConsoleLoader
 {
     /// <summary>
-    /// Класс AddPassiveElement.
+    /// Класс ConsoleAddPassiveElement.
     /// </summary>
-    public class AddPassiveElement
+    public class ConsoleAddPassiveElement
     {
         /// <summary>
         /// Метод проверки ввода числа.
@@ -37,7 +37,7 @@ namespace ConsoleLoader
         /// </summary>
         /// <exception cref="ArgumentException">ArgumentException.
         /// </exception>
-        public static void AddElement()
+        public static void AddPassiveElement()
         {
             PassiveElementBase element = new Resistor();
 
