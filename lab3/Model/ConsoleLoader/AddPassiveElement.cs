@@ -4,7 +4,7 @@ using System.Numerics;
 namespace ConsoleLoader
 {
     /// <summary>
-    /// Класс ConsoleAddPassiveElement.
+    /// Класс AddPassiveElement.
     /// </summary>
     public class AddPassiveElement
     {
@@ -33,7 +33,7 @@ namespace ConsoleLoader
         }
 
         /// <summary>
-        /// Метод добавления параметров пассивным элементам.
+        /// Метод добавления параметров пассивных элементов.
         /// </summary>
         /// <exception cref="ArgumentException">ArgumentException.
         /// </exception>
