@@ -4,7 +4,7 @@ using System.Numerics;
 namespace PassiveElement
 {
     /// <summary>
-    /// Класс ImpedanceBase.
+    /// Класс PassiveElementBase.
     /// </summary>
     public abstract class PassiveElementBase
     {

@@ -15,7 +15,17 @@ namespace PassiveElement
         /// <summary>
         /// Свойство ёмкость.
         /// </summary>
-        public float Capacity { get; set; }
+        public float Capacity
+        {
+            get
+            {
+                return _capacity;
+            }
+            set
+            {
+                _capacity = CheckNumber(value);
+            }
+        }
 
         /// <summary>
         /// Свойство сопротивление.

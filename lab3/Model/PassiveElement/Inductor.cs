@@ -15,7 +15,17 @@ namespace PassiveElement
         /// <summary>
         /// Свойство индуктивность.
         /// </summary>
-        public float Inductance { get; set; }
+        public float Inductance
+        {
+            get
+            {
+                return _inductance;
+            }
+            set
+            {
+                _inductance = CheckNumber(value);
+            }
+        }
 
         /// <summary>
         /// Свойство сопротивление.

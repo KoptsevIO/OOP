@@ -16,7 +16,17 @@ namespace PassiveElement
         /// <summary>
         /// Свойство активное сопротивление.
         /// </summary>
-        public float Resistance { get; set; }
+        public float Resistance
+        {
+            get
+            {
+                return _resistance;
+            }
+            set
+            {
+                _resistance = CheckNumber(value);
+            }
+        }
 
         /// <summary>
         /// Свойство сопротивление.
