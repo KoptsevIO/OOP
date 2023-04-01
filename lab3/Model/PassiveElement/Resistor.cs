@@ -26,11 +26,10 @@ namespace PassiveElement
         /// <summary>
         /// Метод расчёта сопротивления.
         /// </summary>
-        /// <param name="impedance"></param>
         /// <returns>impedance.</returns>
-        public override Complex CalculationImpedance(Complex impedance)
+        public override Complex CalculationImpedance()
         {
-            impedance = new Complex(Impedance, 0);
+            Complex impedance = new Complex(Impedance, 0);
             return impedance;
         }
     }
