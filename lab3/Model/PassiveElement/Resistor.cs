@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 
 namespace PassiveElement
 {
@@ -10,12 +11,12 @@ namespace PassiveElement
         /// <summary>
         /// Активное сопротивление.
         /// </summary>
-        protected float _resistance;
+        protected double _resistance;
 
         /// <summary>
         /// Свойство активное сопротивление.
         /// </summary>
-        public float Resistance
+        public double Resistance
         {
             get
             {
@@ -30,7 +31,7 @@ namespace PassiveElement
         /// <summary>
         /// Свойство сопротивление.
         /// </summary>
-        public override float Impedance => Resistance;
+        public override double Impedance => Math.Round(Resistance, 3);
 
         /// <summary>
         /// Метод расчёта сопротивления.

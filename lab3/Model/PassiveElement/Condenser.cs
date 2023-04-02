@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 
 namespace PassiveElement
 {
@@ -10,12 +11,12 @@ namespace PassiveElement
         /// <summary>
         /// Ёмкость.
         /// </summary>
-        protected float _capacity;
+        protected double _capacity;
 
         /// <summary>
         /// Свойство ёмкость.
         /// </summary>
-        public float Capacity
+        public double Capacity
         {
             get
             {
@@ -30,11 +31,12 @@ namespace PassiveElement
         /// <summary>
         /// Свойство сопротивление.
         /// </summary>
-        public override float Impedance  
+        public override double Impedance  
         {
             get
             {
-                return - 1000000 / (Capacity * Angularfrequency);
+                return Math.Round(- 1000000 / (Capacity * 
+                    Angularfrequency), 3);
             }
         }
 

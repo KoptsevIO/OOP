@@ -16,12 +16,12 @@ namespace PassiveElement
         /// <summary>
         /// Сопротивление.
         /// </summary>
-        protected float _impedance;
+        protected double _impedance;
 
         /// <summary>
         /// Свойство сопротивление.
         /// </summary>
-        public abstract float Impedance { get; }
+        public abstract double Impedance { get; }
 
         /// <summary>
         /// Метод расчёта сопротивления.
@@ -35,7 +35,7 @@ namespace PassiveElement
         /// <returns>number.</returns>
         /// <exception cref="ArgumentException">ArgumentException.
         /// </exception>
-        protected static float CheckNumber(float number)
+        protected static double CheckNumber(double number)
         {
             if (number <= 0)
             {

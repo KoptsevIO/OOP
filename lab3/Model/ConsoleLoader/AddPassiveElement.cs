@@ -14,15 +14,15 @@ namespace ConsoleLoader
         /// <param name="number"></param>
         /// <returns>checkNumber.</returns>
         /// <exception cref="ArgumentException">.</exception>
-        private static float CheckNumber(string number)
+        private static double CheckNumber(string number)
         {
             if (number.Contains('.'))
             {
                 number = number.Replace('.', ',');
             }
 
-            bool isParsed = float.TryParse(number,
-                        out float checkNumber);
+            bool isParsed = double.TryParse(number,
+                        out double checkNumber);
 
             if (isParsed != true)
             {

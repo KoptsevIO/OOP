@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 
 namespace PassiveElement
 {
@@ -10,12 +11,12 @@ namespace PassiveElement
         /// <summary>
         /// Индуктивность.
         /// </summary>
-        protected float _inductance;
+        protected double _inductance;
 
         /// <summary>
         /// Свойство индуктивность.
         /// </summary>
-        public float Inductance
+        public double Inductance
         {
             get
             {
@@ -30,11 +31,11 @@ namespace PassiveElement
         /// <summary>
         /// Свойство сопротивление.
         /// </summary>
-        public override float Impedance
+        public override double Impedance
         {
             get
             {
-                return (Inductance * Angularfrequency / 1000);
+                return Math.Round(Inductance * Angularfrequency / 1000, 3);
             }
         }
 
