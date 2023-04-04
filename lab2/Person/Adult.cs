@@ -6,6 +6,26 @@ namespace Model
     public class Adult : PersonBase
     {
         /// <summary>
+        /// Минимальное значение серии паспорта.
+        /// </summary>
+        private const int _minPassportSeries = 0001;
+
+        /// <summary>
+        /// Максимальное значение серии паспорта.
+        /// </summary>
+        private const int _maxPassportSeries = 9999;
+
+        /// <summary>
+        /// Минимальное значение номера паспорта.
+        /// </summary>
+        private const int _minPassportNumber = 000001;
+
+        /// <summary>
+        /// Максимальное значение номера паспорта.
+        /// </summary>
+        private const int _maxPassportNumber = 999999;
+
+        /// <summary>
         /// Серия паспорта.
         /// </summary>
         private int _passportSeries;
@@ -52,7 +72,15 @@ namespace Model
 
             set
             {
-                _partner = value;
+                if (value != null && value.Gender == Gender)
+                {
+                    throw new ArgumentException
+                        ($"Партнёр должен быть противоположного пола");
+                }
+                else
+                {
+                    _partner = value;
+                }
             }
         }
 
@@ -68,7 +96,8 @@ namespace Model
 
             set
             {
-                _passportSeries = value;
+                _passportSeries = CheckNumber(value, _minPassportSeries,
+                    _maxPassportSeries);
             }
         }
 
@@ -84,41 +113,20 @@ namespace Model
 
             set
             {
-                _passportNumber = value;
+                _passportNumber = CheckNumber(value, _minPassportNumber,
+                    _maxPassportNumber);
             }
         }
 
         /// <summary>
         /// Свойство семейное положение.
         /// </summary>
-        public MaritalStatus MaritalStatus
-        {
-            get
-            {
-                return _maritalStatus;
-            }
-
-            set
-            {
-                _maritalStatus = value;
-            }
-        }
+        public MaritalStatus MaritalStatus { get; set; }
 
         /// <summary>
         /// Свойство место работы.
         /// </summary>
-        public string Workplace
-        {
-            get
-            {
-                return _workplace;
-            }
-
-            set
-            {
-                _workplace = value;
-            }
-        }
+        public string Workplace { get; set; }
 
         /// <summary>
         /// Свойство возраст.
@@ -132,16 +140,7 @@ namespace Model
 
             set
             {
-                if (value > MaxAge || value < MinAge)
-                {
-                    throw new ArgumentException($"Введён некорректный" +
-                        $" возвраст Adult, введите возраст" +
-                        $" от {MinAge} до {MaxAge} лет!");
-                }
-                else
-                {
-                    _age = value;
-                }
+                _age = CheckNumber(value, MinAge, MaxAge);
             }
         }
 
@@ -152,7 +151,8 @@ namespace Model
         public override string GetInfo()
         {
             string info = base.GetInfo();
-            info += $"\nДанные паспорта: {PassportSeries} {PassportNumber}, " +
+            info += $"\nДанные паспорта: {PassportSeries} " +
+                $"{PassportNumber}, " +
                 $"\nСемейное положение: {MaritalStatus}";
 
             if (MaritalStatus == MaritalStatus.Married)

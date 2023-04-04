@@ -40,6 +40,7 @@ namespace Model
             set
             {
                 _name = ConvertToRightRegister(value);
+
                 if (_surname != null)
                 {
                     CheckLanguage(_name, _surname);
@@ -101,6 +102,28 @@ namespace Model
         /// </summary>
         protected PersonBase()
         { }
+
+        /// <summary>
+        /// Метод проверки введённого числа.
+        /// </summary>
+        /// <param name="value">value.</param>
+        /// <param name="min">минимальное значение.</param>
+        /// <param name="max">максимальное значение.</param>
+        /// <returns>value.</returns>
+        /// <exception cref="ArgumentException">ArgumentException.</exception>
+        protected static int CheckNumber(int value, int min, int max)
+        {
+            if (value > max || value < min)
+            {
+                throw new ArgumentException($"Введёно некорректное" +
+                    $" число, значение должно быть" +
+                    $" от {min} до {max}!");
+            }
+            else
+            {
+                return value;
+            }
+        }
 
         //TODO: rename +
 

@@ -33,12 +33,34 @@ namespace Model
         /// <summary>
         /// Информация об отце.
         /// </summary>
-        public Adult Dad { get; set; }
+        public Adult Dad
+        {
+            get
+            {
+                return _dad;
+            }
+
+            set
+            {
+                _dad = CheckAdultGender(value, Gender.Male);
+            }
+        }
 
         /// <summary>
         /// Информация об отце.
         /// </summary>
-        public Adult Mom { get; set; }
+        public Adult Mom
+        {
+            get
+            {
+                return _dad;
+            }
+
+            set
+            {
+                _dad = CheckAdultGender(value, Gender.Female);
+            }
+        }
 
         /// <summary>
         /// Место учёбы.
@@ -57,16 +79,7 @@ namespace Model
 
             set
             {
-                if (value > MaxAge || value < MinAge)
-                {
-                    throw new ArgumentException($"Введён некорректный" +
-                        $" возвраст Child, введите возраст" +
-                        $" от {MinAge} до {MaxAge} лет!");
-                }
-                else
-                {
-                    _age = value;
-                }
+                _age = CheckNumber(value, MinAge, MaxAge);
             }
         }
 
@@ -86,6 +99,26 @@ namespace Model
             else
             {
                 return $"\nИмя {name} не установлено, ";
+            }
+        }
+
+        /// <summary>
+        /// Метод проверки гендера родителя.
+        /// </summary>
+        /// <param name="value">value.</param>
+        /// <param name="gender">gender.</param>
+        /// <returns>value.</returns>
+        /// <exception cref="ArgumentException">ArgumentException.</exception>
+        private static Adult CheckAdultGender(Adult value, Gender gender)
+        {
+            if (value.Gender != gender)
+            {
+                throw new ArgumentException
+                    ("Несоответствие гендера родителя.");
+            }
+            else
+            {
+                return value;
             }
         }
 
