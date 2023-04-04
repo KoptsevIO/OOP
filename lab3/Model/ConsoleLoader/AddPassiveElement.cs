@@ -47,7 +47,8 @@ namespace ConsoleLoader
                     $"2 - конденсатор,\n3 - катушка индуктивности." +
                     $"\nРасчёт сопротивления пассивного элемента: ");
 
-                int who = int.Parse(Console.ReadLine());
+                bool isParsed = int.TryParse(Console.ReadLine(), 
+                    out int who);
 
                 switch (who)
                 {
