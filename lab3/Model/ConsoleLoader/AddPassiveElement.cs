@@ -45,7 +45,7 @@ namespace ConsoleLoader
             {
                 Console.Write($"1 - резистор,\n" +
                     $"2 - конденсатор,\n3 - катушка индуктивности." +
-                    $"\nРасчёт сопротивления пассивного элемента: ");
+                    $"\nВыберете пассивный элемент: ");
 
                 bool isParsed = int.TryParse(Console.ReadLine(), 
                     out int who);
@@ -86,7 +86,7 @@ namespace ConsoleLoader
 
                     resistor.Resistance = CheckNumber(Console.ReadLine());
 
-                }), "резистор"),
+                }), "в резисторе"),
                 (new Action(() =>
                 {
                     Resistor resistor = (Resistor)element;
@@ -94,7 +94,7 @@ namespace ConsoleLoader
                         "резистора, Ом: " + resistor.CalculationImpedance()
                         + "\n");
                     _ = Console.ReadKey();
-                }), "резистор")
+                }), "в резисторе")
             };
 
             var actionCondenser = new List<(Action, string)>
@@ -106,7 +106,7 @@ namespace ConsoleLoader
 
                     condenser.Capacity = CheckNumber(Console.ReadLine());
 
-                }), "конденсатор"),
+                }), "в конденсаторе"),
                 (new Action(() =>
                 {
                     Console.WriteLine($"Комплексное сопротивление " +
@@ -114,7 +114,7 @@ namespace ConsoleLoader
                         $"{element.CalculationImpedance()}" + "\n");
                     _ = Console.ReadKey();
 
-                }), "конденсатор")
+                }), "в конденсаторе")
             };
 
             var actionInductor = new List<(Action, string)>
@@ -127,7 +127,7 @@ namespace ConsoleLoader
 
                     inductor.Inductance = CheckNumber(Console.ReadLine());
 
-                }), "катушка индуктивности"),
+                }), "в катушке индуктивности"),
                 (new Action(() =>
                 {
                     Console.WriteLine($"Комплексное сопротивление" +
@@ -135,11 +135,11 @@ namespace ConsoleLoader
                         $"{element.CalculationImpedance()}" + "\n");
                     _ = Console.ReadKey();
 
-                }), "катушка индуктивности")
+                }), "в катушке индуктивности")
             };
 
             // Выбор пассивного элемента
-            ActionHandler(actionStart, "Пассивный элемент");
+            ActionHandler(actionStart, "в пассивный элемент");
 
             var passiveElementActionDictionary = new Dictionary<Type, 
                 List<(Action, string)>>
@@ -175,8 +175,8 @@ namespace ConsoleLoader
                 catch (ArgumentException exception)
                 {
 
-                    Console.WriteLine($"Incorrect {propertyName}. " +
-                            $"Error: {exception.Message}");
+                    Console.WriteLine($"Некоректный ввод {propertyName}. " +
+                            $"Ошибка: {exception.Message}");
 
                 }
             }
