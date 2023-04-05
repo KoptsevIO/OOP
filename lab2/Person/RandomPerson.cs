@@ -110,8 +110,11 @@ namespace Model
                 randomAdult.Workplace = work[_random.Next(0, work.Length)];
             }
 
-            int[] passportSerie = { 4452, 4352, 4252, 4152 };
-            int[] passportNumber = { 842156, 832156, 954123, 852156 };
+            int[] passportSerie = { 4452, 4352, 4252, 4152, 4051, 3944,
+                3659, 2019, 4155, 4569, 4128, 5547 };
+            int[] passportNumber = { 842156, 832156, 954123, 852156,
+                544656, 851464, 564656, 545662, 894612, 654665, 564699,
+                166465 };
 
             var getPassport = _random.Next();
 
