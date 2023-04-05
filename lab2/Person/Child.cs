@@ -53,12 +53,12 @@ namespace Model
         {
             get
             {
-                return _dad;
+                return _mom;
             }
 
             set
             {
-                _dad = CheckAdultGender(value, Gender.Female);
+                _mom = CheckAdultGender(value, Gender.Female);
             }
         }
 
@@ -108,7 +108,8 @@ namespace Model
         /// <param name="value">value.</param>
         /// <param name="gender">gender.</param>
         /// <returns>value.</returns>
-        /// <exception cref="ArgumentException">ArgumentException.</exception>
+        /// <exception cref="ArgumentException">ArgumentException.
+        /// </exception>
         private static Adult CheckAdultGender(Adult value, Gender gender)
         {
             if (value.Gender != gender)
