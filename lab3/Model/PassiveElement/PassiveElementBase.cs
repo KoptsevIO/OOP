@@ -39,7 +39,7 @@ namespace PassiveElement
         {
             if (number <= 0)
             {
-                throw new ArgumentException("Число должно быть" +
+                throw new ArgumentException("число должно быть" +
                     " положительным.");
             }
             else
