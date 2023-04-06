@@ -24,7 +24,7 @@ namespace ConsoleLoader
             bool isParsed = double.TryParse(number,
                         out double checkNumber);
 
-            if (isParsed != true)
+            if (isParsed)
             {
                 throw new ArgumentException("введите число!");
             }
@@ -48,9 +48,9 @@ namespace ConsoleLoader
                     $"\nВыберете пассивный элемент: ");
 
                 bool isParsed = int.TryParse(Console.ReadLine(), 
-                    out int who);
+                    out int what);
 
-                switch (who)
+                switch (what)
                 {
                     case 1:
                         {
