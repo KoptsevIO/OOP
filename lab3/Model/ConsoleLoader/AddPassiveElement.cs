@@ -105,7 +105,7 @@ namespace ConsoleLoader
                 (new Action(() =>
                 {
                     Condenser condenser = (Condenser)element;
-                    Console.Write("Введите ёмкость конденсатора, мкФ: ");
+                    Console.Write("Введите ёмкость конденсатора, Ф: ");
 
                     condenser.Capacity = CheckNumber(Console.ReadLine());
 
@@ -128,7 +128,7 @@ namespace ConsoleLoader
                 {
                     Inductor inductor = (Inductor)element;
                     Console.Write("Введите индуктивность катушки" +
-                        " индуктивности, мГн: ");
+                        " индуктивности, Гн: ");
 
                     inductor.Inductance = CheckNumber(Console.ReadLine());
 

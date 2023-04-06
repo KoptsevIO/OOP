@@ -35,7 +35,7 @@ namespace PassiveElement
         {
             get
             {
-                return new Complex(0, -1000000 / (Capacity *
+                return new Complex(0, -1 / (Capacity *
                     _angularFrequency));
             }
         }
