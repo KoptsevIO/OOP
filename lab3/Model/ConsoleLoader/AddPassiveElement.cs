@@ -24,7 +24,7 @@ namespace ConsoleLoader
             bool isParsed = double.TryParse(number,
                         out double checkNumber);
 
-            if (isParsed)
+            if (!isParsed)
             {
                 throw new ArgumentException("введите число!");
             }

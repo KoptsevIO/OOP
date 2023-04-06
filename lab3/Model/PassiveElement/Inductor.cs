@@ -35,7 +35,7 @@ namespace PassiveElement
         {
             get
             {
-                return Math.Round(Inductance * Angularfrequency / 1000, 3);
+                return Math.Round(Inductance * _angularFrequency / 1000, 3);
             }
         }
 
