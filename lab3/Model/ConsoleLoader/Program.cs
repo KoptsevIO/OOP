@@ -21,11 +21,12 @@
                     "\nВвод: ");
                 bool isParsed = short.TryParse(Console.ReadLine(),
                             out short numberAction);
-                if (isParsed != true)
+                if (!isParsed)
                 {
                     Console.WriteLine("Введите число 1 или 2!");
                 }
 
+                //TODO: switch-case
                 if (numberAction == 1)
                 {
                     AddPassiveElement.AddElement();

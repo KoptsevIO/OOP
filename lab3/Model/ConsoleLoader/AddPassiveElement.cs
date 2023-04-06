@@ -47,6 +47,7 @@ namespace ConsoleLoader
                     $"2 - конденсатор,\n3 - катушка индуктивности." +
                     $"\nВыберете пассивный элемент: ");
 
+                //TODO: not used
                 bool isParsed = int.TryParse(Console.ReadLine(), 
                     out int what);
 
@@ -92,6 +93,7 @@ namespace ConsoleLoader
                     Resistor resistor = (Resistor)element;
                     Console.WriteLine("Комплексное сопротивление " +
                         "резистора, Ом: " + RoundComplexNumber
+                        //TODO: duplication
                         (resistor.GetImpedance(), 3)
                         + "\n");
                     _ = Console.ReadKey();
@@ -112,6 +114,7 @@ namespace ConsoleLoader
                 {
                     Console.WriteLine($"Комплексное сопротивление " +
                         $"конденсатора, Ом: " +
+                        //TODO: duplication
                         $"{RoundComplexNumber(element.GetImpedance(), 3)}" +
                         $"" + "\n");
                     _ = Console.ReadKey();
@@ -134,6 +137,7 @@ namespace ConsoleLoader
                 {
                     Console.WriteLine($"Комплексное сопротивление" +
                         $"катушки индуктивности, Ом: " +
+                        //TODO: duplication
                         $"{RoundComplexNumber(element.GetImpedance(), 3)}" +
                         $"\n");
                     _ = Console.ReadKey();
@@ -199,7 +203,7 @@ namespace ConsoleLoader
             var complexImaginary = Math.Round(complex.Imaginary,
                 roundedNumber);
             
-            return complex = new Complex(complexReal, complexImaginary);
+            return new Complex(complexReal, complexImaginary);
         }
     }
 }
