@@ -92,8 +92,7 @@ namespace ConsoleLoader
                     Resistor resistor = (Resistor)element;
                     Console.WriteLine("Комплексное сопротивление " +
                         "резистора, Ом: " + RoundComplexNumber
-                        (resistor.Impedance)
-                        + "\n");
+                        (resistor.Impedance)+ "\n");
                     _ = Console.ReadKey();
                 }), "резистора")
             };
@@ -113,7 +112,7 @@ namespace ConsoleLoader
                     Console.WriteLine($"Комплексное сопротивление " +
                         $"конденсатора, Ом: " +
                         $"{RoundComplexNumber(element.Impedance)}" +
-                        $"" + "\n");
+                        $"\n");
                     _ = Console.ReadKey();
 
                 }), "конденсатора")
@@ -186,17 +185,18 @@ namespace ConsoleLoader
         }
 
         /// <summary>
-        /// Метод округления комплесного числа.
+        /// Метод округления комплексного числа.
         /// </summary>
         /// <param name="complex">Комплекс.</param>
-        /// TODO: добавить дефолтное значение
-        /// <param name="roundedNumber">число, до которого производится
-        /// округление</param>
+        /// <param name="roundNumber">Число, до которого требуется
+        /// округление.</param>
         /// <returns>Округлённый комплекс.</returns>
-        private static Complex RoundComplexNumber(Complex complex)
+        private static Complex RoundComplexNumber(Complex complex,
+            int roundNumber = 3)
         {
-            var complexReal = Math.Round(complex.Real, 3);
-            var complexImaginary = Math.Round(complex.Imaginary, 3);
+            var complexReal = Math.Round(complex.Real, roundNumber);
+            var complexImaginary = Math.Round(complex.Imaginary,
+                roundNumber);
             
             return new Complex(complexReal, complexImaginary);
         }
