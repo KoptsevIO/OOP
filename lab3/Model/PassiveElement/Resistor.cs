@@ -31,16 +31,6 @@ namespace PassiveElement
         /// <summary>
         /// Свойство сопротивление.
         /// </summary>
-        public override double Impedance => Resistance;
-
-        /// <summary>
-        /// Метод расчёта сопротивления.
-        /// </summary>
-        /// <returns>impedance.</returns>
-        public override Complex GetImpedance()
-        {
-            Complex impedance = new Complex(Impedance, 0);
-            return impedance;
-        }
+        public override Complex Impedance => Resistance;
     }
 }

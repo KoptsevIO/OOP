@@ -47,8 +47,8 @@ namespace ConsoleLoader
                     $"2 - конденсатор,\n3 - катушка индуктивности." +
                     $"\nВыберете пассивный элемент: ");
 
-                //TODO: not used
-                bool isParsed = int.TryParse(Console.ReadLine(), 
+                //TODO: not used +
+                _ = int.TryParse(Console.ReadLine(), 
                     out int what);
 
                 switch (what)
@@ -93,8 +93,8 @@ namespace ConsoleLoader
                     Resistor resistor = (Resistor)element;
                     Console.WriteLine("Комплексное сопротивление " +
                         "резистора, Ом: " + RoundComplexNumber
-                        //TODO: duplication
-                        (resistor.GetImpedance(), 3)
+                        //TODO: duplication +
+                        (resistor.Impedance)
                         + "\n");
                     _ = Console.ReadKey();
                 }), "резистора")
@@ -114,8 +114,8 @@ namespace ConsoleLoader
                 {
                     Console.WriteLine($"Комплексное сопротивление " +
                         $"конденсатора, Ом: " +
-                        //TODO: duplication
-                        $"{RoundComplexNumber(element.GetImpedance(), 3)}" +
+                        //TODO: duplication +
+                        $"{RoundComplexNumber(element.Impedance)}" +
                         $"" + "\n");
                     _ = Console.ReadKey();
 
@@ -137,8 +137,8 @@ namespace ConsoleLoader
                 {
                     Console.WriteLine($"Комплексное сопротивление" +
                         $"катушки индуктивности, Ом: " +
-                        //TODO: duplication
-                        $"{RoundComplexNumber(element.GetImpedance(), 3)}" +
+                        //TODO: duplication +
+                        $"{RoundComplexNumber(element.Impedance)}" +
                         $"\n");
                     _ = Console.ReadKey();
 
@@ -196,12 +196,10 @@ namespace ConsoleLoader
         /// <param name="roundedNumber">число, до которого производится
         /// округление</param>
         /// <returns>Округлённый комплекс.</returns>
-        private static Complex RoundComplexNumber(Complex complex,
-            int roundedNumber)
+        private static Complex RoundComplexNumber(Complex complex)
         {
-            var complexReal = Math.Round(complex.Real, roundedNumber);
-            var complexImaginary = Math.Round(complex.Imaginary,
-                roundedNumber);
+            var complexReal = Math.Round(complex.Real, 3);
+            var complexImaginary = Math.Round(complex.Imaginary, 3);
             
             return new Complex(complexReal, complexImaginary);
         }

@@ -8,7 +8,7 @@ namespace PassiveElement
     /// </summary>
     public abstract class PassiveElementBase
     {
-        //TODO:
+        //TODO: +
         /// <summary>
         /// Угловая частота электрического тока.
         /// </summary>
@@ -20,14 +20,9 @@ namespace PassiveElement
         protected double _impedance;
 
         /// <summary>
-        /// Свойство сопротивление.
+        /// Метод расчёта полного сопротивления.
         /// </summary>
-        public abstract double Impedance { get; }
-
-        /// <summary>
-        /// Метод расчёта сопротивления.
-        /// </summary>
-        public abstract Complex GetImpedance();
+        public abstract Complex Impedance { get; }
 
         /// <summary>
         /// Метод проверки введённого числа.

@@ -26,19 +26,24 @@
                     Console.WriteLine("Введите число 1 или 2!");
                 }
 
-                //TODO: switch-case
-                if (numberAction == 1)
+                //TODO: switch-case +
+                switch (numberAction)
                 {
-                    AddPassiveElement.AddElement();
-                }
-                else if (numberAction == 2)
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Не распознана команда. \n" +
+                    case 1:
+                        {
+                            AddPassiveElement.AddElement();
+                            break;
+                        }
+                    case 2:
+                        {
+                            return;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Не распознана команда. \n" +
                         "Ведите заново.");
+                            break;
+                        }
                 }
             }
         }

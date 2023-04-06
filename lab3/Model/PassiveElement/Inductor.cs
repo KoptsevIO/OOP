@@ -31,22 +31,13 @@ namespace PassiveElement
         /// <summary>
         /// Свойство сопротивление.
         /// </summary>
-        public override double Impedance
+        public override Complex Impedance
         {
             get
             {
-                return Inductance * _angularFrequency / 1000;
+                return new Complex(0, Inductance * _angularFrequency
+                    / 1000);
             }
-        }
-
-        /// <summary>
-        /// Метод расчёта сопротивления.
-        /// </summary>
-        /// <returns>impedance.</returns>
-        public override Complex GetImpedance()
-        {
-            Complex impedance = new Complex(0, Impedance);
-            return impedance;
         }
     }
 }
