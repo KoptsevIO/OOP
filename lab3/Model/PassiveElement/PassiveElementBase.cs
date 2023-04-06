@@ -8,7 +8,6 @@ namespace PassiveElement
     /// </summary>
     public abstract class PassiveElementBase
     {
-        //TODO: +
         /// <summary>
         /// Угловая частота электрического тока.
         /// </summary>

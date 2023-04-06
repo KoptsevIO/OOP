@@ -47,7 +47,6 @@ namespace ConsoleLoader
                     $"2 - конденсатор,\n3 - катушка индуктивности." +
                     $"\nВыберете пассивный элемент: ");
 
-                //TODO: not used +
                 _ = int.TryParse(Console.ReadLine(), 
                     out int what);
 
@@ -93,7 +92,6 @@ namespace ConsoleLoader
                     Resistor resistor = (Resistor)element;
                     Console.WriteLine("Комплексное сопротивление " +
                         "резистора, Ом: " + RoundComplexNumber
-                        //TODO: duplication +
                         (resistor.Impedance)
                         + "\n");
                     _ = Console.ReadKey();
@@ -114,7 +112,6 @@ namespace ConsoleLoader
                 {
                     Console.WriteLine($"Комплексное сопротивление " +
                         $"конденсатора, Ом: " +
-                        //TODO: duplication +
                         $"{RoundComplexNumber(element.Impedance)}" +
                         $"" + "\n");
                     _ = Console.ReadKey();
@@ -137,7 +134,6 @@ namespace ConsoleLoader
                 {
                     Console.WriteLine($"Комплексное сопротивление" +
                         $"катушки индуктивности, Ом: " +
-                        //TODO: duplication +
                         $"{RoundComplexNumber(element.Impedance)}" +
                         $"\n");
                     _ = Console.ReadKey();
@@ -193,6 +189,7 @@ namespace ConsoleLoader
         /// Метод округления комплесного числа.
         /// </summary>
         /// <param name="complex">Комплекс.</param>
+        /// TODO: добавить дефолтное значение
         /// <param name="roundedNumber">число, до которого производится
         /// округление</param>
         /// <returns>Округлённый комплекс.</returns>

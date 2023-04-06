@@ -26,7 +26,6 @@
                     Console.WriteLine("Введите число 1 или 2!");
                 }
 
-                //TODO: switch-case +
                 switch (numberAction)
                 {
                     case 1:
