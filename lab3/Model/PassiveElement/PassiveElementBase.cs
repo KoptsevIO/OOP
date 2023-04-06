@@ -12,7 +12,7 @@ namespace PassiveElement
         /// <summary>
         /// Угловая частота электрического тока.
         /// </summary>
-        protected const int _angularFrequency = 314;
+        protected const double _angularFrequency = 100 * Math.PI;
 
         /// <summary>
         /// Сопротивление.
