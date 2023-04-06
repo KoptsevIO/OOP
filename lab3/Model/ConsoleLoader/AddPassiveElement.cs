@@ -91,7 +91,7 @@ namespace ConsoleLoader
                 {
                     Resistor resistor = (Resistor)element;
                     Console.WriteLine("Комплексное сопротивление " +
-                        "резистора, Ом: " + resistor.CalculationImpedance()
+                        "резистора, Ом: " + resistor.GetImpedance()
                         + "\n");
                     _ = Console.ReadKey();
                 }), "резистора")
@@ -111,7 +111,7 @@ namespace ConsoleLoader
                 {
                     Console.WriteLine($"Комплексное сопротивление " +
                         $"конденсатора, Ом: " +
-                        $"{element.CalculationImpedance()}" + "\n");
+                        $"{element.GetImpedance()}" + "\n");
                     _ = Console.ReadKey();
 
                 }), "конденсатора")
@@ -132,7 +132,7 @@ namespace ConsoleLoader
                 {
                     Console.WriteLine($"Комплексное сопротивление" +
                         $"катушки индуктивности, Ом: " +
-                        $"{element.CalculationImpedance()}" + "\n");
+                        $"{element.GetImpedance()}" + "\n");
                     _ = Console.ReadKey();
 
                 }), "катушки индуктивности")

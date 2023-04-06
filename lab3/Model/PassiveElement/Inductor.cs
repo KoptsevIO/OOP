@@ -43,7 +43,7 @@ namespace PassiveElement
         /// Метод расчёта сопротивления.
         /// </summary>
         /// <returns>impedance.</returns>
-        public override Complex CalculationImpedance()
+        public override Complex GetImpedance()
         {
             Complex impedance = new Complex(0, Impedance);
             return impedance;

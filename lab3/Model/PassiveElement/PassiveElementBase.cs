@@ -26,7 +26,7 @@ namespace PassiveElement
         /// <summary>
         /// Метод расчёта сопротивления.
         /// </summary>
-        public abstract Complex CalculationImpedance();
+        public abstract Complex GetImpedance();
 
         /// <summary>
         /// Метод проверки введённого числа.
