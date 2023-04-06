@@ -31,7 +31,7 @@ namespace PassiveElement
         /// <summary>
         /// Свойство сопротивление.
         /// </summary>
-        public override double Impedance => Math.Round(Resistance, 3);
+        public override double Impedance => Resistance;
 
         /// <summary>
         /// Метод расчёта сопротивления.

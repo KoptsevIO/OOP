@@ -35,8 +35,7 @@ namespace PassiveElement
         {
             get
             {
-                return Math.Round(- 1000000 / (Capacity * 
-                    _angularFrequency), 3);
+                return - 1000000 / (Capacity * _angularFrequency);
             }
         }
 
