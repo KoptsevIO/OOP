@@ -20,18 +20,18 @@
                     "пассивных элементов - введите 1.\n" +
                     "Закончить выполнение программы - введите 2." +
                     "\nВвод: ");
-                bool result = short.TryParse(Console.ReadLine(),
-                            out short action);
-                if (result != true)
+                bool isParsed = short.TryParse(Console.ReadLine(),
+                            out short numberAction);
+                if (isParsed != true)
                 {
                     Console.WriteLine("Введите число 1 или 2!");
                 }
 
-                if (action == 1)
+                if (numberAction == 1)
                 {
                     AddPassiveElement.AddElement();
                 }
-                else if (action == 2)
+                else if (numberAction == 2)
                 {
                     break;
                 }
