@@ -36,7 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Name = "MainForm";
-            Text = "Form1";
+            Text = "Main Form";
             TransparencyKey = Color.White;
             Load += MainForm_Load;
             ResumeLayout(false);
