@@ -28,72 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBoxMain = new GroupBox();
+            deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();
-            deletElement = new Button();
-            groupBoxMain.SuspendLayout();
+            groupBox1 = new GroupBox();
+            groupBoxElements.SuspendLayout();
             SuspendLayout();
             // 
-            // groupBoxMain
+            // deletElement
             // 
-            groupBoxMain.Controls.Add(deletElement);
-            groupBoxMain.Controls.Add(addElement);
-            groupBoxMain.Controls.Add(groupBoxElements);
-            groupBoxMain.Location = new Point(16, 31);
-            groupBoxMain.Name = "groupBoxMain";
-            groupBoxMain.Size = new Size(573, 391);
-            groupBoxMain.TabIndex = 0;
-            groupBoxMain.TabStop = false;
-            groupBoxMain.Text = "Программа расчёта комплексного сопротивления";
-            groupBoxMain.Enter += groupBox1_Enter;
+            deletElement.Location = new Point(330, 341);
+            deletElement.Name = "deletElement";
+            deletElement.Size = new Size(226, 39);
+            deletElement.TabIndex = 5;
+            deletElement.Text = "Удалить элемент";
+            deletElement.UseVisualStyleBackColor = true;
             // 
             // addElement
             // 
-            addElement.Location = new Point(12, 310);
+            addElement.Location = new Point(27, 341);
             addElement.Name = "addElement";
             addElement.Size = new Size(226, 39);
-            addElement.TabIndex = 1;
+            addElement.TabIndex = 4;
             addElement.Text = "Добавить элемент";
             addElement.UseVisualStyleBackColor = true;
             // 
             // groupBoxElements
             // 
-            groupBoxElements.Location = new Point(12, 39);
+            groupBoxElements.Controls.Add(groupBox1);
+            groupBoxElements.Location = new Point(12, 32);
             groupBoxElements.Name = "groupBoxElements";
-            groupBoxElements.Size = new Size(547, 195);
-            groupBoxElements.TabIndex = 0;
+            groupBoxElements.Size = new Size(577, 384);
+            groupBoxElements.TabIndex = 3;
             groupBoxElements.TabStop = false;
             groupBoxElements.Text = "Список элементов";
             // 
-            // button1
+            // groupBox1
             // 
-            deletElement.Location = new Point(315, 310);
-            deletElement.Name = "deletElement";
-            deletElement.Size = new Size(226, 39);
-            deletElement.TabIndex = 2;
-            deletElement.Text = "Удалить элемент";
-            deletElement.UseVisualStyleBackColor = true;
+            groupBox1.BackColor = SystemColors.ButtonHighlight;
+            groupBox1.Location = new Point(16, 44);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(543, 232);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(601, 450);
-            Controls.Add(groupBoxMain);
+            ClientSize = new Size(601, 435);
+            Controls.Add(deletElement);
+            Controls.Add(addElement);
+            Controls.Add(groupBoxElements);
             Name = "MainForm";
-            Text = "Main Form";
+            Text = "Программа расчёта комплексного сопротивлениия";
             TransparencyKey = Color.White;
             Load += MainForm_Load;
-            groupBoxMain.ResumeLayout(false);
+            groupBoxElements.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox groupBoxMain;
-        private GroupBox groupBoxElements;
-        private Button addElement;
         private Button deletElement;
+        private Button addElement;
+        private GroupBox groupBoxElements;
+        private GroupBox groupBox1;
     }
 }
