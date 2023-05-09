@@ -1,5 +1,8 @@
 namespace View
 {
+    /// <summary>
+    /// Класс Program.
+    /// </summary>
     public static class Program
     {
         /// <summary>
