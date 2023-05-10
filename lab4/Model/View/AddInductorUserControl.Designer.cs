@@ -31,19 +31,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            label2 = new Label();
             Inductance = new TextBox();
             SuspendLayout();
             // 
-            // label1
+            // label2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(14, 34);
-            label1.Name = "label1";
-            label1.Size = new Size(113, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Индуктивность";
-            label1.Click += label1_Click;
+            label2.AutoSize = true;
+            label2.Location = new Point(14, 34);
+            label2.Name = "label2";
+            label2.Size = new Size(113, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Индуктивность";
+            label2.Click += label2_Click;
             // 
             // Inductance
             // 
@@ -58,7 +58,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(Inductance);
-            Controls.Add(label1);
+            Controls.Add(label2);
             Name = "AddInductorUserControl";
             Size = new Size(402, 89);
             Load += AddInductorUserControl_Load;
@@ -68,7 +68,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label label2;
         private TextBox Inductance;
     }
 }

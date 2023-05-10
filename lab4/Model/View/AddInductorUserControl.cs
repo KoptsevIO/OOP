@@ -14,7 +14,7 @@ namespace View
     /// <summary>
     /// Класс параметров катушки индуктивности.
     /// </summary>
-    public partial class AddInductorUserControl : UserControl
+    public partial class AddInductorUserControl : UserControl, IAddElement
     {
         /// <summary>
         /// Добавление параметров катушки индуктивности.
@@ -24,7 +24,7 @@ namespace View
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

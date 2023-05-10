@@ -13,7 +13,7 @@ namespace View
     /// <summary>
     /// Класс добавления параетров конденсатора. 
     /// </summary>
-    public partial class AddCondenserUserControl : UserControl
+    public partial class AddCondenserUserControl : UserControl, IAddElement
     {
         /// <summary>
         /// Добавление параметров конденаторов.
