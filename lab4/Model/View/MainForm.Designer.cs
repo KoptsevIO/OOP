@@ -31,30 +31,37 @@
             deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();
+            buttonReset = new Button();
+            buttonFilterElement = new Button();
             groupBox1 = new GroupBox();
             groupBoxElements.SuspendLayout();
             SuspendLayout();
             // 
             // deletElement
             // 
-            deletElement.Location = new Point(330, 341);
+            deletElement.Location = new Point(18, 333);
             deletElement.Name = "deletElement";
             deletElement.Size = new Size(226, 39);
             deletElement.TabIndex = 5;
             deletElement.Text = "Удалить элемент";
             deletElement.UseVisualStyleBackColor = true;
+            deletElement.Click += deletElement_Click;
             // 
             // addElement
             // 
-            addElement.Location = new Point(27, 341);
+            addElement.Location = new Point(29, 318);
             addElement.Name = "addElement";
             addElement.Size = new Size(226, 39);
             addElement.TabIndex = 4;
             addElement.Text = "Добавить элемент";
             addElement.UseVisualStyleBackColor = true;
+            addElement.Click += addElement_Click;
             // 
             // groupBoxElements
             // 
+            groupBoxElements.Controls.Add(buttonReset);
+            groupBoxElements.Controls.Add(buttonFilterElement);
+            groupBoxElements.Controls.Add(deletElement);
             groupBoxElements.Controls.Add(groupBox1);
             groupBoxElements.Location = new Point(12, 32);
             groupBoxElements.Name = "groupBoxElements";
@@ -62,6 +69,26 @@
             groupBoxElements.TabIndex = 3;
             groupBoxElements.TabStop = false;
             groupBoxElements.Text = "Список элементов";
+            // 
+            // buttonReset
+            // 
+            buttonReset.Location = new Point(442, 336);
+            buttonReset.Name = "buttonReset";
+            buttonReset.Size = new Size(108, 29);
+            buttonReset.TabIndex = 7;
+            buttonReset.Text = "Сброс";
+            buttonReset.UseVisualStyleBackColor = true;
+            buttonReset.Click += buttonReset_Click;
+            // 
+            // buttonFilterElement
+            // 
+            buttonFilterElement.Location = new Point(442, 293);
+            buttonFilterElement.Name = "buttonFilterElement";
+            buttonFilterElement.Size = new Size(108, 29);
+            buttonFilterElement.TabIndex = 6;
+            buttonFilterElement.Text = "Фильтр";
+            buttonFilterElement.UseVisualStyleBackColor = true;
+            buttonFilterElement.Click += buttonFilterElement_Click;
             // 
             // groupBox1
             // 
@@ -71,13 +98,13 @@
             groupBox1.Size = new Size(543, 232);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            groupBox1.Enter += groupBox1_Enter_1;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(601, 435);
-            Controls.Add(deletElement);
             Controls.Add(addElement);
             Controls.Add(groupBoxElements);
             Name = "MainForm";
@@ -94,5 +121,7 @@
         private Button addElement;
         private GroupBox groupBoxElements;
         private GroupBox groupBox1;
+        private Button buttonFilterElement;
+        private Button buttonReset;
     }
 }

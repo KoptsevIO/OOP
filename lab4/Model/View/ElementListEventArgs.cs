@@ -22,7 +22,8 @@ namespace View
         /// Список элементов.
         /// </summary>
         /// <param name="element">Элемент.</param>
-        public ElementListEventArgs(BindingList<PassiveElementBase> element)
+        public ElementListEventArgs(BindingList<PassiveElementBase> 
+            element)
         {
             ElementList = element;
         }
