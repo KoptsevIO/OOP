@@ -1,9 +1,9 @@
 ﻿namespace View
 {
     /// <summary>
-    /// Дизайн формы AddResistorUserControl.
+    /// Дизайн формы AddCondenserUserControl.
     /// </summary>
-    partial class AddResistorUserControl
+    partial class AddCondenserUserControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -31,44 +31,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            Resistance = new TextBox();
+            label3 = new Label();
+            Capacitance = new TextBox();
             SuspendLayout();
             // 
-            // label1
+            // label3
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(14, 34);
-            label1.Name = "label1";
-            label1.Size = new Size(187, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Активное сопротивление";
-            label1.Click += label1_Click;
+            label3.AutoSize = true;
+            label3.Location = new Point(14, 34);
+            label3.Name = "label3";
+            label3.Size = new Size(187, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Ёмкость конденсатора";
+            label3.Click += label3_Click;
             // 
-            // Resistance
+            // Capacitance
             // 
-            Resistance.Location = new Point(234, 33);
-            Resistance.Name = "Resistance";
-            Resistance.Size = new Size(147, 27);
-            Resistance.TabIndex = 1;
-            Resistance.TextChanged += Resistance_TextChanged;
+            Capacitance.Location = new Point(234, 33);
+            Capacitance.Name = "Capacitance";
+            Capacitance.Size = new Size(147, 27);
+            Capacitance.TabIndex = 1;
+            Capacitance.TextChanged += Capacitance_TextChanged;
             // 
-            // AddResistorUserControl
+            // AddCondenserUserControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(Resistance);
-            Controls.Add(label1);
-            Name = "AddResistorUserControl";
+            Controls.Add(Capacitance);
+            Controls.Add(label3);
+            Name = "AddCondenserUserControl";
             Size = new Size(402, 89);
-            Load += AddResistorUserControl_Load;
+            Load += AddCondenserUserControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox Resistance;
+        private Label label3;
+        private TextBox Capacitance;
     }
 }

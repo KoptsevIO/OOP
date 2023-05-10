@@ -33,5 +33,10 @@ namespace View
         {
 
         }
+
+        private void AddInductorUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

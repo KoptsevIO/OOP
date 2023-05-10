@@ -1,5 +1,8 @@
 ﻿namespace View
 {
+    /// <summary>
+    /// Дизайн формы AddInductorUserControl.
+    /// </summary>
     partial class AddInductorUserControl
     {
         /// <summary> 
@@ -58,6 +61,7 @@
             Controls.Add(label1);
             Name = "AddInductorUserControl";
             Size = new Size(402, 89);
+            Load += AddInductorUserControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }

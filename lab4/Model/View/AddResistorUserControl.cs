@@ -29,5 +29,10 @@ namespace View
 
         private void Resistance_TextChanged(object sender, EventArgs e)
         { }
+
+        private void AddResistorUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
