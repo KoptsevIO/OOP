@@ -38,7 +38,7 @@ namespace View
         {
 
         }
-        
+
         /// <summary>
         /// Метод добавления конденсатора.
         /// </summary>

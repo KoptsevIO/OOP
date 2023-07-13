@@ -22,6 +22,11 @@ namespace View
 
         }
 
+        /// <summary>
+        /// Добавление нового элемента.
+        /// </summary>
+        /// <param name="sender">name.</param>
+        /// <param name="e">name.</param>
         private void addElement_Click(object sender, EventArgs e)
         {
             var addElementForm = new AddElementForm();

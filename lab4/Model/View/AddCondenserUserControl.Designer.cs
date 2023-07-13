@@ -38,9 +38,9 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(14, 34);
+            label3.Location = new Point(16, 36);
             label3.Name = "label3";
-            label3.Size = new Size(187, 20);
+            label3.Size = new Size(166, 20);
             label3.TabIndex = 0;
             label3.Text = "Ёмкость конденсатора";
             label3.Click += label3_Click;
