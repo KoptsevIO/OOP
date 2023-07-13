@@ -24,7 +24,13 @@ namespace View
 
         private void addElement_Click(object sender, EventArgs e)
         {
+            var addElementForm = new AddElementForm();
 
+            //addElementForm.FigureAdded += (sender, figureEventArgs) =>
+            //{
+            //    _figureList.Add(((FigureEventArgs)figureEventArgs).Figure);
+            //};
+            addElementForm.ShowDialog();
         }
 
         private void deletElement_Click(object sender, EventArgs e)

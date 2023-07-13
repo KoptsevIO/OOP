@@ -92,7 +92,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = SystemColors.ButtonHighlight;
+            groupBox1.BackColor = SystemColors.AppWorkspace;
             groupBox1.Location = new Point(16, 44);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(543, 232);

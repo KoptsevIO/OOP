@@ -34,5 +34,16 @@ namespace View
         {
 
         }
+
+        /// <summary>
+        /// Метод добавления резистора.
+        /// </summary>
+        /// <returns>resistor.</returns>
+        public PassiveElementBase AddElement()
+        {
+            var resistor = new Resistor();
+
+            return resistor;
+        }
     }
 }

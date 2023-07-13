@@ -38,5 +38,16 @@ namespace View
         {
 
         }
+
+        /// <summary>
+        /// Метод добавления индуктивности.
+        /// </summary>
+        /// <returns></returns>
+        public PassiveElementBase AddElement()
+        {
+            var inductor = new Inductor();
+
+            return inductor;
+        }
     }
 }

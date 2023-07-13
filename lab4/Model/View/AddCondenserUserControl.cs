@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassiveElement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,17 @@ namespace View
         private void Capacitance_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        
+        /// <summary>
+        /// Метод добавления конденсатора.
+        /// </summary>
+        /// <returns>condenser.</returns>
+        public PassiveElementBase AddElement()
+        {
+            var condenser = new Condenser();
+
+            return condenser;
         }
     }
 }
