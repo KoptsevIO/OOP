@@ -32,8 +32,7 @@ namespace View
 #endif
             string[] elements = { "Резистор", "Индуктивность", "Конденсатор" };
 
-            choicElementComboBox.Items.AddRange(new string[]
-                 { elements[0], elements[1], elements[2] });
+            choicElementComboBox.Items.AddRange(elements);
 
             dictionaryUserControl = new Dictionary<string, UserControl>()
             {
