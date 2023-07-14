@@ -68,7 +68,7 @@ namespace View
 
         private void confirmationButton_Click(object sender, EventArgs e)
         {
-
+            DialogResult = DialogResult.OK;
         }
     }
 }
