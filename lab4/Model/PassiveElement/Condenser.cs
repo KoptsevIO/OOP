@@ -14,6 +14,28 @@ namespace PassiveElement
         protected double _capacity;
 
         /// <summary>
+        /// Тип элемента.
+        /// </summary>
+        public override string ElementType
+        {
+            get
+            {
+                return $"Конденсатор";
+            }
+        }
+
+        /// <summary>
+        /// Параметры.
+        /// </summary>
+        public override string Parameter
+        {
+            get
+            {
+                return $"С = {Capacity}";
+            }
+        }
+
+        /// <summary>
         /// Свойство ёмкость.
         /// </summary>
         public double Capacity

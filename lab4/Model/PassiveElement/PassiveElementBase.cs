@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Numerics;
 
 namespace PassiveElement
@@ -17,6 +18,18 @@ namespace PassiveElement
         /// Сопротивление.
         /// </summary>
         protected double _impedance;
+
+        /// <summary>
+        /// Тип элемента.
+        /// </summary>
+        [DisplayName("Тип элемента")]
+        public abstract string ElementType { get; }
+
+        /// <summary>
+        /// Метод возвращения параметра элемента.
+        /// </summary>
+        [DisplayName("Параметр")]
+        public virtual string Parameter { get; }
 
         /// <summary>
         /// Метод расчёта полного сопротивления.

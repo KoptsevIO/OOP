@@ -33,8 +33,9 @@
             groupBoxElements = new GroupBox();
             buttonReset = new Button();
             buttonFilterElement = new Button();
-            groupBox1 = new GroupBox();
+            dataGridView1 = new DataGridView();
             groupBoxElements.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // deletElement
@@ -59,10 +60,10 @@
             // 
             // groupBoxElements
             // 
+            groupBoxElements.Controls.Add(dataGridView1);
             groupBoxElements.Controls.Add(buttonReset);
             groupBoxElements.Controls.Add(buttonFilterElement);
             groupBoxElements.Controls.Add(deletElement);
-            groupBoxElements.Controls.Add(groupBox1);
             groupBoxElements.Location = new Point(12, 32);
             groupBoxElements.Name = "groupBoxElements";
             groupBoxElements.Size = new Size(577, 384);
@@ -90,15 +91,16 @@
             buttonFilterElement.UseVisualStyleBackColor = true;
             buttonFilterElement.Click += buttonFilterElement_Click;
             // 
-            // groupBox1
+            // dataGridView1
             // 
-            groupBox1.BackColor = SystemColors.AppWorkspace;
-            groupBox1.Location = new Point(16, 44);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(543, 232);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter_1;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(17, 26);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(533, 254);
+            dataGridView1.TabIndex = 8;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // MainForm
             // 
@@ -112,6 +114,7 @@
             TransparencyKey = Color.White;
             Load += MainForm_Load;
             groupBoxElements.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -120,8 +123,8 @@
         private Button deletElement;
         private Button addElement;
         private GroupBox groupBoxElements;
-        private GroupBox groupBox1;
         private Button buttonFilterElement;
         private Button buttonReset;
+        private DataGridView dataGridView1;
     }
 }

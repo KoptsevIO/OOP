@@ -14,6 +14,28 @@ namespace PassiveElement
         protected double _resistance;
 
         /// <summary>
+        /// Тип элемента.
+        /// </summary>
+        public override string ElementType
+        {
+            get
+            {
+                return $"Резистор";
+            }
+        }
+
+        /// <summary>
+        /// Параметры.
+        /// </summary>
+        public override string Parameter
+        {
+            get
+            {
+                return $"R = {Resistance}";
+            }
+        }
+
+        /// <summary>
         /// Свойство активное сопротивление.
         /// </summary>
         public double Resistance

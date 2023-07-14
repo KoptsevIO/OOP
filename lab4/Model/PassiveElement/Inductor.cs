@@ -14,6 +14,28 @@ namespace PassiveElement
         protected double _inductance;
 
         /// <summary>
+        /// Тип элемента.
+        /// </summary>
+        public override string ElementType
+        {
+            get
+            {
+                return $"Индуктивность";
+            }
+        }
+
+        /// <summary>
+        /// Параметры.
+        /// </summary>
+        public override string Parameter
+        {
+            get
+            {
+                return $"С = {Inductance}";
+            }
+        }
+
+        /// <summary>
         /// Свойство индуктивность.
         /// </summary>
         public double Inductance

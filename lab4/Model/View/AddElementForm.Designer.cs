@@ -89,6 +89,7 @@
             canselButton.TabIndex = 1;
             canselButton.Text = "Отмена";
             canselButton.UseVisualStyleBackColor = true;
+            canselButton.Click += canselButton_Click;
             // 
             // confirmationButton
             // 

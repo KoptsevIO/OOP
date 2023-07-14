@@ -16,6 +16,11 @@ namespace View
             dictionaryUserControl;
 
         /// <summary>
+        /// Событие добавления элемента.
+        /// </summary>
+        public EventHandler<EventArgs> ElementAdded;
+
+        /// <summary>
         /// Метка используемого UserControl.
         /// </summary>
         private UserControl userControl;
@@ -68,7 +73,26 @@ namespace View
 
         private void confirmationButton_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            try
+            {
+                var currentFigureControlName = choicElementComboBox.SelectedItem.ToString();
+                var currentFigureControl = dictionaryUserControl[currentFigureControlName];
+                var eventArgs = new ElementEventArgs(((IAddElement)currentFigureControl).AddElement());
+                ElementAdded?.Invoke(this, eventArgs);
+                DialogResult = DialogResult.OK;
+            }
+            catch
+            {
+                MessageBox.Show("Введено некорректное значение!\n" +
+                    "Введите одно положительное десятичное число" +
+                    " в каждое текстовое поле.",
+                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void canselButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
