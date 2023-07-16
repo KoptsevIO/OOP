@@ -31,7 +31,7 @@ namespace PassiveElement
         {
             get
             {
-                return $"С = {Capacity}";
+                return $"С = {Capacity} Ф";
             }
         }
 

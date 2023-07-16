@@ -31,9 +31,9 @@
             deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();
+            dataGridView1 = new DataGridView();
             buttonReset = new Button();
             buttonFilterElement = new Button();
-            dataGridView1 = new DataGridView();
             groupBoxElements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -71,6 +71,18 @@
             groupBoxElements.TabStop = false;
             groupBoxElements.Text = "Список элементов";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(17, 26);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(533, 254);
+            dataGridView1.TabIndex = 8;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
             // buttonReset
             // 
             buttonReset.Location = new Point(442, 336);
@@ -90,17 +102,6 @@
             buttonFilterElement.Text = "Фильтр";
             buttonFilterElement.UseVisualStyleBackColor = true;
             buttonFilterElement.Click += buttonFilterElement_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(17, 26);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(533, 254);
-            dataGridView1.TabIndex = 8;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // MainForm
             // 

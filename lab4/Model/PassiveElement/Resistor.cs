@@ -31,7 +31,7 @@ namespace PassiveElement
         {
             get
             {
-                return $"R = {Resistance}";
+                return $"R = {Resistance} Ом";
             }
         }
 

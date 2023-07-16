@@ -34,6 +34,7 @@ namespace PassiveElement
         /// <summary>
         /// Метод расчёта полного сопротивления.
         /// </summary>
+        [DisplayName("Полное сопротивление, Ом")]
         public abstract Complex Impedance { get; }
 
         /// <summary>
