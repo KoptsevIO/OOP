@@ -74,7 +74,15 @@ namespace View
 
         private void deletElement_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedCells.Count != 0)
+            {
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    _elementsList.Remove(row.DataBoundItem as PassiveElementBase);
 
+                    _filteredList.Remove(row.DataBoundItem as PassiveElementBase);
+                }
+            }
         }
 
         private void buttonFilterElement_Click(object sender, EventArgs e)
