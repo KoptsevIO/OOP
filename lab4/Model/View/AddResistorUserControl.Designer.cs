@@ -43,7 +43,6 @@
             label1.Size = new Size(187, 20);
             label1.TabIndex = 0;
             label1.Text = "Активное сопротивление";
-            label1.Click += label1_Click;
             // 
             // Resistance
             // 
@@ -51,7 +50,7 @@
             Resistance.Name = "Resistance";
             Resistance.Size = new Size(147, 27);
             Resistance.TabIndex = 1;
-            Resistance.TextChanged += Resistance_TextChanged;
+            Resistance.KeyPress += Resistance_KeyPress;
             // 
             // AddResistorUserControl
             // 

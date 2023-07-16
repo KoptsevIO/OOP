@@ -24,16 +24,8 @@ namespace View
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        { }
-
-        private void Resistance_TextChanged(object sender, EventArgs e)
-        { }
-
         private void AddResistorUserControl_Load(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         /// <summary>
         /// Метод добавления резистора.
@@ -43,7 +35,20 @@ namespace View
         {
             var resistor = new Resistor();
 
+            resistor.Resistance = Checks.CheckNumber(Resistance.Text);
+
             return resistor;
         }
+
+        /// <summary>
+        /// Контроль ввода значений.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Resistance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Checks.CheckInput(e);
+        }
+
     }
 }

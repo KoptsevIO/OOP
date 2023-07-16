@@ -43,7 +43,6 @@
             label3.Size = new Size(166, 20);
             label3.TabIndex = 0;
             label3.Text = "Ёмкость конденсатора";
-            label3.Click += label3_Click;
             // 
             // Capacitance
             // 
@@ -51,7 +50,7 @@
             Capacitance.Name = "Capacitance";
             Capacitance.Size = new Size(147, 27);
             Capacitance.TabIndex = 1;
-            Capacitance.TextChanged += Capacitance_TextChanged;
+            Capacitance.KeyPress += Capacitance_KeyPress;
             // 
             // AddCondenserUserControl
             // 

@@ -1,4 +1,6 @@
-﻿namespace View
+﻿using System.Windows.Forms;
+
+namespace View
 {
     partial class MainForm
     {
@@ -28,6 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();
@@ -73,15 +77,14 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(17, 26);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(533, 254);
-            dataGridView1.TabIndex = 8;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.TabIndex = 0;
             // 
             // buttonReset
             // 

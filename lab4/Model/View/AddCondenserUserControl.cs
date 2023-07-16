@@ -29,16 +29,6 @@ namespace View
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Capacitance_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// Метод добавления конденсатора.
         /// </summary>
@@ -47,7 +37,19 @@ namespace View
         {
             var condenser = new Condenser();
 
+            condenser.Capacity = Checks.CheckNumber(Capacitance.Text);
+
             return condenser;
+        }
+
+        /// <summary>
+        /// Контроль ввода значений.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Capacitance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Checks.CheckInput(e);
         }
     }
 }

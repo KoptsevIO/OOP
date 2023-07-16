@@ -31,7 +31,7 @@ namespace PassiveElement
         {
             get
             {
-                return $"I = {Inductance} Гн";
+                return $"L = {Inductance} Гн";
             }
         }
 

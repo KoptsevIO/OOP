@@ -24,16 +24,6 @@ namespace View
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Inductance_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddInductorUserControl_Load(object sender, EventArgs e)
         {
 
@@ -47,7 +37,20 @@ namespace View
         {
             var inductor = new Inductor();
 
+            inductor.Inductance = Checks.CheckNumber(Inductance.Text);
+
             return inductor;
         }
+
+        /// <summary>
+        /// Контроль ввода значений.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Inductance_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Checks.CheckInput(e);
+        }
+
     }
 }

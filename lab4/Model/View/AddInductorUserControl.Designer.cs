@@ -43,7 +43,6 @@
             label2.Size = new Size(113, 20);
             label2.TabIndex = 0;
             label2.Text = "Индуктивность";
-            label2.Click += label2_Click;
             // 
             // Inductance
             // 
@@ -51,7 +50,7 @@
             Inductance.Name = "Inductance";
             Inductance.Size = new Size(147, 27);
             Inductance.TabIndex = 1;
-            Inductance.TextChanged += Inductance_TextChanged;
+            Inductance.KeyPress += Inductance_KeyPress;
             // 
             // AddInductorUserControl
             // 
