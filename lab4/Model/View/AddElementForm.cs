@@ -12,7 +12,7 @@ namespace View
 {
     public partial class AddElementForm : Form
     {
-        private readonly Dictionary<string, UserControl>
+        public readonly Dictionary<string, UserControl>
             dictionaryUserControl;
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace View
         /// <summary>
         /// Метка используемого UserControl.
         /// </summary>
-        private UserControl userControl;
+        public UserControl userControl;
 
         public AddElementForm()
         {
@@ -93,6 +93,22 @@ namespace View
         private void canselButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void randomButton_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+
+            choicElementComboBox.SelectedIndex = random.Next(0, 3);
+
+            //TODO:  упростить
+            foreach (TextBox textbox in userControl.Controls.OfType<TextBox>())
+            {
+                if (textbox.Visible && String.IsNullOrEmpty(textbox.Text))
+                {
+                    textbox.Text = random.Next(1, 100).ToString();
+                }
+            }
         }
     }
 }

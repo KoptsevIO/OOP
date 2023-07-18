@@ -35,6 +35,7 @@
             choicElementComboBox = new ComboBox();
             canselButton = new Button();
             confirmationButton = new Button();
+            randomButton = new Button();
             choicElementGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -101,11 +102,22 @@
             confirmationButton.UseVisualStyleBackColor = true;
             confirmationButton.Click += confirmationButton_Click;
             // 
+            // randomButton
+            // 
+            randomButton.Location = new Point(315, 296);
+            randomButton.Name = "randomButton";
+            randomButton.Size = new Size(166, 29);
+            randomButton.TabIndex = 2;
+            randomButton.Text = "Случайный элемент";
+            randomButton.UseVisualStyleBackColor = true;
+            randomButton.Click += randomButton_Click;
+            // 
             // AddElementForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(608, 331);
+            Controls.Add(randomButton);
             Controls.Add(choicElementGroupBox);
             Controls.Add(canselButton);
             Controls.Add(confirmationButton);
@@ -125,5 +137,6 @@
         private AddResistorUserControl addResistorUserControl1;
         private AddInductorUserControl addInductorUserControl1;
         private AddCondenserUserControl addCondenserUserControl1;
+        private Button randomButton;
     }
 }

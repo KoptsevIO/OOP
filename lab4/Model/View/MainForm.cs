@@ -16,6 +16,15 @@ namespace View
         /// </summary>
         private BindingList<PassiveElementBase> _filteredList = new();
 
+        /// <summary>
+        /// Экземпляр формы AddForm.
+        /// </summary>
+        private AddElementForm _addForm = new AddElementForm();
+
+        /// <summary>
+        /// Событие добавления элемента.
+        /// </summary>
+        public EventHandler<EventArgs> ElementAdded;
 
         public MainForm()
         {
@@ -100,5 +109,38 @@ namespace View
 
         }
 
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    Random random = new Random();
+            
+        //    ComboBox comboBox = _addForm.choicElementComboBox;            
+
+        //    comboBox.SelectedIndex = random.Next(0, 3);
+
+        //    UserControl userControl = _addForm.userControl;
+
+        //    foreach (TextBox textbox in userControl.Controls.OfType<TextBox>())
+        //    {
+        //        if (textbox.Visible && String.IsNullOrEmpty(textbox.Text))
+        //        {
+        //            textbox.Text = random.Next(1, 100).ToString();
+        //        }
+        //    }
+
+        //    Dictionary<string, UserControl> dictionaryUserControl = _addForm.dictionaryUserControl;
+
+
+        //    var currentFigureControlName = comboBox.SelectedItem.ToString();
+        //    var currentFigureControl = dictionaryUserControl[currentFigureControlName];
+        //    var eventArgs = new ElementEventArgs(((IAddElement)currentFigureControl).AddElement());
+        //    ElementAdded?.Invoke(this, eventArgs);
+        //    //DialogResult = DialogResult.OK;
+
+        //    _addForm.ElementAdded += (sender, figureEventArgs) =>
+        //    {
+        //        _elementsList.Add(((ElementEventArgs)figureEventArgs).Element);
+        //    };
+
+        //}
     }
 }

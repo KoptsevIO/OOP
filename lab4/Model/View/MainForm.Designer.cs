@@ -30,14 +30,13 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();
             dataGridView1 = new DataGridView();
             buttonReset = new Button();
             buttonFilterElement = new Button();
+            buttonRandom = new Button();
             groupBoxElements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -64,6 +63,7 @@ namespace View
             // 
             // groupBoxElements
             // 
+            groupBoxElements.Controls.Add(buttonRandom);
             groupBoxElements.Controls.Add(dataGridView1);
             groupBoxElements.Controls.Add(buttonReset);
             groupBoxElements.Controls.Add(buttonFilterElement);
@@ -77,20 +77,20 @@ namespace View
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.InactiveCaption;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(17, 26);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(533, 254);
-            dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.TabIndex = 0;
             // 
             // buttonReset
             // 
-            buttonReset.Location = new Point(442, 336);
+            buttonReset.Location = new Point(442, 333);
             buttonReset.Name = "buttonReset";
-            buttonReset.Size = new Size(108, 29);
+            buttonReset.Size = new Size(108, 39);
             buttonReset.TabIndex = 7;
             buttonReset.Text = "Сброс";
             buttonReset.UseVisualStyleBackColor = true;
@@ -98,13 +98,22 @@ namespace View
             // 
             // buttonFilterElement
             // 
-            buttonFilterElement.Location = new Point(442, 293);
+            buttonFilterElement.Location = new Point(442, 287);
             buttonFilterElement.Name = "buttonFilterElement";
-            buttonFilterElement.Size = new Size(108, 29);
+            buttonFilterElement.Size = new Size(108, 38);
             buttonFilterElement.TabIndex = 6;
             buttonFilterElement.Text = "Фильтр";
             buttonFilterElement.UseVisualStyleBackColor = true;
             buttonFilterElement.Click += buttonFilterElement_Click;
+            // 
+            // buttonRandom
+            // 
+            buttonRandom.Location = new Point(257, 287);
+            buttonRandom.Name = "buttonRandom";
+            buttonRandom.Size = new Size(171, 86);
+            buttonRandom.TabIndex = 8;
+            buttonRandom.Text = "Добавить случайный элемент";
+            buttonRandom.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -130,5 +139,6 @@ namespace View
         private Button buttonFilterElement;
         private Button buttonReset;
         private DataGridView dataGridView1;
+        private Button buttonRandom;
     }
 }
