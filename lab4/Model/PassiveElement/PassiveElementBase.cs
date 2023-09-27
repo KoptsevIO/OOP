@@ -1,12 +1,16 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Numerics;
+using System.Xml.Serialization;
 
 namespace PassiveElement
 {
     /// <summary>
     /// Класс PassiveElementBase.
     /// </summary>
+    [XmlInclude(typeof(Condenser))]
+    [XmlInclude(typeof(Inductor))]
+    [XmlInclude(typeof(Resistor))]
     public abstract class PassiveElementBase
     {
         /// <summary>

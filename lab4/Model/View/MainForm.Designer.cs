@@ -40,8 +40,8 @@ namespace View
             buttonFilterElement = new Button();
             toolStrip1 = new ToolStrip();
             File = new ToolStripDropDownButton();
-            SaveFile = new ToolStripMenuItem();
             OpenFile = new ToolStripMenuItem();
+            SaveFile = new ToolStripMenuItem();
             groupBoxElements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             toolStrip1.SuspendLayout();
@@ -135,26 +135,19 @@ namespace View
             toolStrip1.Items.AddRange(new ToolStripItem[] { File });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(524, 25);
+            toolStrip1.Size = new Size(524, 27);
             toolStrip1.TabIndex = 5;
             toolStrip1.Text = "toolStrip1";
             // 
             // File
             // 
-            File.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            File.DropDownItems.AddRange(new ToolStripItem[] { SaveFile, OpenFile });
+            File.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            File.DropDownItems.AddRange(new ToolStripItem[] { OpenFile, SaveFile });
             File.Image = (Image)resources.GetObject("File.Image");
             File.ImageTransparentColor = Color.Magenta;
             File.Name = "File";
-            File.Size = new Size(29, 22);
-            File.Text = "toolStripDropDownButton1";
-            // 
-            // SaveFile
-            // 
-            SaveFile.Name = "SaveFile";
-            SaveFile.Size = new Size(191, 24);
-            SaveFile.Text = "Сохранить файл";
-            SaveFile.Click += SaveFile_Click;
+            File.Size = new Size(58, 24);
+            File.Text = "Файл";
             // 
             // OpenFile
             // 
@@ -162,6 +155,13 @@ namespace View
             OpenFile.Size = new Size(191, 24);
             OpenFile.Text = "Открыть файл";
             OpenFile.Click += OpenFile_Click;
+            // 
+            // SaveFile
+            // 
+            SaveFile.Name = "SaveFile";
+            SaveFile.Size = new Size(191, 24);
+            SaveFile.Text = "Сохранить файл";
+            SaveFile.Click += SaveFile_Click;
             // 
             // MainForm
             // 
@@ -195,7 +195,7 @@ namespace View
         private Button buttonDeleteElements;
         private ToolStrip toolStrip1;
         private ToolStripDropDownButton File;
-        private ToolStripMenuItem SaveFile;
         private ToolStripMenuItem OpenFile;
+        private ToolStripMenuItem SaveFile;
     }
 }

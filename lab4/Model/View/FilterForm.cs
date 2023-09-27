@@ -54,7 +54,7 @@ namespace View
             {
                 if (ImpedanceTextBox.Text != "")
                 {
-                    //impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
+                    //impedance = CheckNumber(ImpedanceTextBox.Text);
                 }
             }
             catch
