@@ -60,7 +60,7 @@ namespace View
             // 
             // addElement
             // 
-            addElement.Location = new Point(25, 274);
+            addElement.Location = new Point(16, 215);
             addElement.Margin = new Padding(3, 2, 3, 2);
             addElement.Name = "addElement";
             addElement.Size = new Size(198, 29);
@@ -72,11 +72,12 @@ namespace View
             // groupBoxElements
             // 
             groupBoxElements.Controls.Add(buttonDeleteElements);
+            groupBoxElements.Controls.Add(addElement);
             groupBoxElements.Controls.Add(dataGridView1);
             groupBoxElements.Controls.Add(buttonReset);
             groupBoxElements.Controls.Add(buttonFilterElement);
             groupBoxElements.Controls.Add(deletElement);
-            groupBoxElements.Location = new Point(10, 60);
+            groupBoxElements.Location = new Point(10, 31);
             groupBoxElements.Margin = new Padding(3, 2, 3, 2);
             groupBoxElements.Name = "groupBoxElements";
             groupBoxElements.Padding = new Padding(3, 2, 3, 2);
@@ -135,7 +136,7 @@ namespace View
             toolStrip1.Items.AddRange(new ToolStripItem[] { File });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(524, 27);
+            toolStrip1.Size = new Size(522, 25);
             toolStrip1.TabIndex = 5;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -146,20 +147,20 @@ namespace View
             File.Image = (Image)resources.GetObject("File.Image");
             File.ImageTransparentColor = Color.Magenta;
             File.Name = "File";
-            File.Size = new Size(58, 24);
+            File.Size = new Size(49, 22);
             File.Text = "Файл";
             // 
             // OpenFile
             // 
             OpenFile.Name = "OpenFile";
-            OpenFile.Size = new Size(191, 24);
+            OpenFile.Size = new Size(180, 22);
             OpenFile.Text = "Открыть файл";
             OpenFile.Click += OpenFile_Click;
             // 
             // SaveFile
             // 
             SaveFile.Name = "SaveFile";
-            SaveFile.Size = new Size(191, 24);
+            SaveFile.Size = new Size(180, 22);
             SaveFile.Text = "Сохранить файл";
             SaveFile.Click += SaveFile_Click;
             // 
@@ -167,9 +168,8 @@ namespace View
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(524, 361);
+            ClientSize = new Size(522, 329);
             Controls.Add(toolStrip1);
-            Controls.Add(addElement);
             Controls.Add(groupBoxElements);
             Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";

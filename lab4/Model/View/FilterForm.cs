@@ -62,7 +62,7 @@ namespace View
             {
                 if (ImpedanceTextBox.Text != "")
                 {
-                    //impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
+                    impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
                 }
             }
             catch
@@ -84,7 +84,7 @@ namespace View
             {
                 if (ImpedanceTextBox2.Text != "")
                 {
-                    //impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
+                    impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
                 }
             }
             catch
@@ -136,7 +136,7 @@ namespace View
                         {
                             if (ImpedanceCheckBox.Checked)
                             {
-                                impedance = new Complex(real: impedance1, imaginary: impedance2);
+                                impedance = new Complex(impedance1, impedance2);
                                 if (element.Impedance == impedance)
                                 {
                                     count++;
