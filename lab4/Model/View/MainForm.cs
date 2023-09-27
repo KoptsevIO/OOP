@@ -26,6 +26,9 @@ namespace View
         /// </summary>
         public EventHandler<EventArgs> ElementAdded;
 
+        /// <summary>
+        /// Основная форма.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -45,7 +48,8 @@ namespace View
 
         private void buttonFiterElement(object sender, EventArgs e)
         {
-
+            var newFilterForm = new FilterForm(_elementsList);
+            newFilterForm.Show();
         }
 
         /// <summary>
@@ -94,9 +98,20 @@ namespace View
             }
         }
 
-        private void buttonFilterElement_Click(object sender, EventArgs e)
+        private void buttonFilterElement_Click(object sender,
+            EventArgs e)
         {
+            var newFilterForm = new FilterForm(_elementsList);
+            newFilterForm.Show();
+            newFilterForm.ElementFiltered += 
+                (sender, elementEventArgs) =>
+            {
+                dataGridView1.DataSource = 
+                ((ElementListEventArgs)elementEventArgs).ElementList;
 
+                _filteredList = 
+                ((ElementListEventArgs)elementEventArgs).ElementList;
+            };
         }
 
         private void groupBox1_Enter_1(object sender, EventArgs e)
@@ -109,38 +124,5 @@ namespace View
 
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    Random random = new Random();
-            
-        //    ComboBox comboBox = _addForm.choicElementComboBox;            
-
-        //    comboBox.SelectedIndex = random.Next(0, 3);
-
-        //    UserControl userControl = _addForm.userControl;
-
-        //    foreach (TextBox textbox in userControl.Controls.OfType<TextBox>())
-        //    {
-        //        if (textbox.Visible && String.IsNullOrEmpty(textbox.Text))
-        //        {
-        //            textbox.Text = random.Next(1, 100).ToString();
-        //        }
-        //    }
-
-        //    Dictionary<string, UserControl> dictionaryUserControl = _addForm.dictionaryUserControl;
-
-
-        //    var currentFigureControlName = comboBox.SelectedItem.ToString();
-        //    var currentFigureControl = dictionaryUserControl[currentFigureControlName];
-        //    var eventArgs = new ElementEventArgs(((IAddElement)currentFigureControl).AddElement());
-        //    ElementAdded?.Invoke(this, eventArgs);
-        //    //DialogResult = DialogResult.OK;
-
-        //    _addForm.ElementAdded += (sender, figureEventArgs) =>
-        //    {
-        //        _elementsList.Add(((ElementEventArgs)figureEventArgs).Element);
-        //    };
-
-        //}
     }
 }

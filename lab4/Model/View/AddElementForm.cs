@@ -101,7 +101,6 @@ namespace View
 
             choicElementComboBox.SelectedIndex = random.Next(0, 3);
 
-            //TODO:  упростить
             foreach (TextBox textbox in userControl.Controls.OfType<TextBox>())
             {
                 if (textbox.Visible && String.IsNullOrEmpty(textbox.Text))

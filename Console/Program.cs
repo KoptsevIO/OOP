@@ -47,7 +47,7 @@ namespace ConsoleApp
             Console.WriteLine("\nСписок 2: ");
             PrintList(personlist2);
 
-            _ = Console.ReadKey();
+            //_ = Console.ReadKey();
 
             // п.3 (c)
             // Добавление нового человека в первый список
