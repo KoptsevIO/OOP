@@ -132,6 +132,7 @@
             ImpedanceTextBox.Name = "ImpedanceTextBox";
             ImpedanceTextBox.Size = new Size(27, 23);
             ImpedanceTextBox.TabIndex = 4;
+            ImpedanceTextBox.TextChanged += textBoxImpedance_TextChanged;
             // 
             // Impedancelabel
             // 
@@ -149,6 +150,7 @@
             ImpedanceTextBox2.Name = "ImpedanceTextBox2";
             ImpedanceTextBox2.Size = new Size(27, 23);
             ImpedanceTextBox2.TabIndex = 6;
+            ImpedanceTextBox2.TextChanged += textBoxImpedance2_TextChanged;
             // 
             // FilterForm
             // 

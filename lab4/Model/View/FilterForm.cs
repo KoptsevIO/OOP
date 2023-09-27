@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,7 +30,9 @@ namespace View
         /// <summary>
         /// Сопротивление.
         /// </summary>
-        private float impedance;
+        private double impedance1;
+        private double impedance2;
+        private Complex impedance;
 
         /// <summary>
         /// Обработчик события.
@@ -47,6 +50,11 @@ namespace View
             ImpedanceTextBox2.Enabled = false;
         }
 
+        /// <summary>
+        /// Ввод вещественного
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBoxImpedance_TextChanged(object sender,
             EventArgs e)
         {
@@ -54,7 +62,29 @@ namespace View
             {
                 if (ImpedanceTextBox.Text != "")
                 {
-                    //impedance = CheckNumber(ImpedanceTextBox.Text);
+                    //impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Введите корректное число!",
+                    "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Ввод мнимого
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBoxImpedance2_TextChanged(object sender,
+            EventArgs e)
+        {
+            try
+            {
+                if (ImpedanceTextBox2.Text != "")
+                {
+                    //impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
                 }
             }
             catch
@@ -106,6 +136,7 @@ namespace View
                         {
                             if (ImpedanceCheckBox.Checked)
                             {
+                                impedance = new Complex(real: impedance1, imaginary: impedance2);
                                 if (element.Impedance == impedance)
                                 {
                                     count++;
