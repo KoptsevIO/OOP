@@ -10,10 +10,15 @@ using System.Windows.Forms;
 
 namespace View
 {
+    /// <summary>
+    /// Форма добавления новых элементов.
+    /// </summary>
     public partial class AddElementForm : Form
     {
-        public readonly Dictionary<string, UserControl>
-            dictionaryUserControl;
+        /// <summary>
+        /// Словарь UserControl.
+        /// </summary>
+        public Dictionary<string, UserControl>dictionaryUserControl;
 
         /// <summary>
         /// Событие добавления элемента.
@@ -25,21 +30,27 @@ namespace View
         /// </summary>
         public UserControl userControl;
 
+        /// <summary>
+        /// Форма добавления фигур.
+        /// </summary>
         public AddElementForm()
         {
             InitializeComponent();
 
-            choicElementComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            choicElementComboBox.DropDownStyle = 
+                System.Windows.Forms.ComboBoxStyle.DropDownList;
 
             confirmationButton.Enabled = false;
 #if !DEBUG
             button3.Visible = false;
 #endif
-            string[] elements = { "Резистор", "Индуктивность", "Конденсатор" };
+            string[] elements = { "Резистор", "Индуктивность",
+                "Конденсатор" };
 
             choicElementComboBox.Items.AddRange(elements);
 
-            dictionaryUserControl = new Dictionary<string, UserControl>()
+            dictionaryUserControl = new Dictionary<string, 
+                UserControl>()
             {
                 {elements[0], addResistorUserControl1},
                 {elements[1], addInductorUserControl1},
@@ -47,6 +58,11 @@ namespace View
             };
         }
 
+        /// <summary>
+        /// Метод загрузки форм.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void AddElementForm_Load(object sender, EventArgs e)
         {
             addResistorUserControl1.Visible = false;
@@ -54,7 +70,15 @@ namespace View
             addCondenserUserControl1.Visible = false;
         }
 
-        private void choicElementComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Выпадающий список.
+        /// Действие которое выполняется когда
+        /// выбрали фигуру из выпадающего списка.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void choicElementComboBox_SelectedIndexChanged(object sender,
+            EventArgs e)
         {
             string elementType = choicElementComboBox.SelectedItem.ToString();
 
@@ -71,13 +95,25 @@ namespace View
 
         }
 
-        private void confirmationButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Применить.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void confirmationButton_Click(object sender,
+            EventArgs e)
         {
             try
             {
-                var currentFigureControlName = choicElementComboBox.SelectedItem.ToString();
-                var currentFigureControl = dictionaryUserControl[currentFigureControlName];
-                var eventArgs = new ElementEventArgs(((IAddElement)currentFigureControl).AddElement());
+                var currentFigureControlName = 
+                    choicElementComboBox.SelectedItem.ToString();
+
+                var currentFigureControl = 
+                    dictionaryUserControl[currentFigureControlName];
+
+                var eventArgs = 
+                    new ElementEventArgs(((IAddElement)
+                    currentFigureControl).AddElement());
                 ElementAdded?.Invoke(this, eventArgs);
                 DialogResult = DialogResult.OK;
             }
@@ -86,15 +122,26 @@ namespace View
                 MessageBox.Show("Введено некорректное значение!\n" +
                     "Введите одно положительное десятичное число" +
                     " в каждое текстовое поле.",
-                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Ошибка", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
             }
         }
 
+        /// <summary>
+        /// Закрыть.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void canselButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Рандом.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void randomButton_Click(object sender, EventArgs e)
         {
             Random random = new Random();

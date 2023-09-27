@@ -8,12 +8,12 @@ namespace View
     public partial class MainForm : Form
     {
         /// <summary>
-		/// Cписок элементов
+		/// Cписок элементов.
 		/// </summary>
 		private BindingList<PassiveElementBase> _elementsList = new();
 
         /// <summary>
-        /// Отфильтрованый список
+        /// Отфильтрованый список.
         /// </summary>
         private BindingList<PassiveElementBase> _filteredList = new();
 
@@ -41,18 +41,30 @@ namespace View
         private readonly XmlSerializer _serializer =
             new XmlSerializer(typeof(BindingList<PassiveElementBase>));
 
+        /// <summary>
+        /// Выделение памяти.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // Выделение памяти
             _elementsList = new BindingList<PassiveElementBase>();
             CreateTable(_elementsList, dataGridView1);
         }
 
+        /// <summary>
+        /// Группбокс 1.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void groupBox1_Enter(object sender, EventArgs e)
-        {
+        { }
 
-        }
-
+        /// <summary>
+        /// Кнопка фильтрация.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void buttonFiterElement(object sender, EventArgs e)
         {
             var newFilterForm = new FilterForm(_elementsList);
@@ -70,13 +82,19 @@ namespace View
 
             addElementForm.ElementAdded += (sender, figureEventArgs) =>
             {
-                _elementsList.Add(((ElementEventArgs)figureEventArgs).Element);
+                _elementsList.Add(((ElementEventArgs)figureEventArgs).
+                    Element);
             };
             addElementForm.ShowDialog();
         }
 
-        public static void CreateTable(BindingList<PassiveElementBase> elements,
-      DataGridView dataGridView)
+        /// <summary>
+        /// Создание таблицы DataGrid.
+        /// </summary>
+        /// <param name="elements">elements.</param>
+        /// <param name="dataGridView">dataGrid.</param>
+        public static void CreateTable(BindingList<PassiveElementBase> 
+            elements, DataGridView dataGridView)
         {
             dataGridView.RowHeadersVisible = false;
             var source = new BindingSource(elements, null);
@@ -92,47 +110,74 @@ namespace View
                 DataGridViewSelectionMode.FullRowSelect;
         }
 
+        /// <summary>
+        /// Кнопка удаления элементов.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void deletElement_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedCells.Count != 0)
             {
-                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                foreach (DataGridViewRow row in 
+                    dataGridView1.SelectedRows)
                 {
-                    _elementsList.Remove(row.DataBoundItem as PassiveElementBase);
+                    _elementsList.Remove(row.DataBoundItem as 
+                        PassiveElementBase);
 
-                    _filteredList.Remove(row.DataBoundItem as PassiveElementBase);
+                    _filteredList.Remove(row.DataBoundItem as 
+                        PassiveElementBase);
                 }
             }
         }
 
+        /// <summary>
+        /// Кнопка фильтрации.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void buttonFilterElement_Click(object sender,
             EventArgs e)
         {
             var newFilterForm = new FilterForm(_elementsList);
             newFilterForm.Show();
-            newFilterForm.ElementFiltered += (sender, elementEventArgs) =>
+            newFilterForm.ElementFiltered += (sender, 
+                elementEventArgs) =>
             {
-                dataGridView1.DataSource = ((ElementListEventArgs)elementEventArgs).ElementList;
+                dataGridView1.DataSource = ((ElementListEventArgs)
+                elementEventArgs).ElementList;
 
-                _filteredList = ((ElementListEventArgs)elementEventArgs).ElementList;
+                _filteredList = ((ElementListEventArgs)
+                elementEventArgs).ElementList;
             };
         }
 
         /// <summary>
         /// Удаление списка элементов.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void buttonDeleteElements_Click(object sender, EventArgs e)
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void buttonDeleteElements_Click(object sender, 
+            EventArgs e)
         {
             _elementsList.Clear();
         }
 
+        /// <summary>
+        /// Кнопка сброса.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void buttonReset_Click(object sender, EventArgs e)
         {
             CreateTable(_elementsList, dataGridView1);
         }
 
+        /// <summary>
+        /// Сохранение файла.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void SaveFile_Click(object sender, EventArgs e)
         {
             if (_elementsList.Count == 0)
@@ -161,6 +206,11 @@ namespace View
             }
         }
 
+        /// <summary>
+        /// Открытие файла.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void OpenFile_Click(object sender, EventArgs e)
         {
             var openFileDialog = new OpenFileDialog

@@ -14,7 +14,8 @@ namespace View
     /// <summary>
     /// Класс добавления параетров конденсатора. 
     /// </summary>
-    public partial class AddCondenserUserControl : UserControl, IAddElement
+    public partial class AddCondenserUserControl : UserControl,
+        IAddElement
     {
         /// <summary>
         /// Добавление параметров конденаторов.
@@ -24,10 +25,14 @@ namespace View
             InitializeComponent();
         }
 
-        private void AddCondenserUserControl_Load(object sender, EventArgs e)
-        {
-
-        }
+        /// <summary>
+        /// Добавление конденсатора.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void AddCondenserUserControl_Load(object sender,
+            EventArgs e)
+        { }
 
         /// <summary>
         /// Метод добавления конденсатора.
@@ -45,9 +50,10 @@ namespace View
         /// <summary>
         /// Контроль ввода значений.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Capacitance_KeyPress(object sender, KeyPressEventArgs e)
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void Capacitance_KeyPress(object sender, 
+            KeyPressEventArgs e)
         {
             Checks.CheckInput(e);
         }

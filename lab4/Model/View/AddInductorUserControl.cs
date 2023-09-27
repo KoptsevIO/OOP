@@ -14,7 +14,8 @@ namespace View
     /// <summary>
     /// Класс параметров катушки индуктивности.
     /// </summary>
-    public partial class AddInductorUserControl : UserControl, IAddElement
+    public partial class AddInductorUserControl : UserControl,
+        IAddElement
     {
         /// <summary>
         /// Добавление параметров катушки индуктивности.
@@ -24,15 +25,19 @@ namespace View
             InitializeComponent();
         }
 
-        private void AddInductorUserControl_Load(object sender, EventArgs e)
-        {
-
-        }
+        /// <summary>
+        /// Добавление индуктивности.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void AddInductorUserControl_Load(object sender,
+            EventArgs e)
+        { }
 
         /// <summary>
         /// Метод добавления индуктивности.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>inductor.</returns>
         public PassiveElementBase AddElement()
         {
             var inductor = new Inductor();
@@ -45,9 +50,10 @@ namespace View
         /// <summary>
         /// Контроль ввода значений.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Inductance_KeyPress(object sender, KeyPressEventArgs e)
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void Inductance_KeyPress(object sender, 
+            KeyPressEventArgs e)
         {
             Checks.CheckInput(e);
         }

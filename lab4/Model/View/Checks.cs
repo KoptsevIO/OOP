@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace View
 {
+    /// <summary>
+    /// Класс проверок.
+    /// </summary>
     public class Checks
     {
         /// <summary>

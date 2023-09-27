@@ -12,9 +12,11 @@ using System.Windows.Forms;
 namespace View
 {
     /// <summary>
-    /// Добавление параметров резистора на форму AddResistorUserControl.
+    /// Добавление параметров резистора на форму 
+    /// AddResistorUserControl.
     /// </summary>
-    public partial class AddResistorUserControl : UserControl, IAddElement
+    public partial class AddResistorUserControl : UserControl, 
+        IAddElement
     {
         /// <summary>
         /// Добавление параллелепипеда.
@@ -24,7 +26,13 @@ namespace View
             InitializeComponent();
         }
 
-        private void AddResistorUserControl_Load(object sender, EventArgs e)
+        /// <summary>
+        /// Добавление индуктивности.
+        /// </summary>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void AddResistorUserControl_Load(object sender, 
+            EventArgs e)
         { }
 
         /// <summary>
@@ -43,9 +51,10 @@ namespace View
         /// <summary>
         /// Контроль ввода значений.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Resistance_KeyPress(object sender, KeyPressEventArgs e)
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
+        private void Resistance_KeyPress(object sender, 
+            KeyPressEventArgs e)
         {
             Checks.CheckInput(e);
         }

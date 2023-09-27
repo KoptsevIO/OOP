@@ -28,10 +28,18 @@ namespace View
         private BindingList<PassiveElementBase> _listElementsFilter;
 
         /// <summary>
-        /// Сопротивление.
+        /// Вещественная часть комплексного сопротивления.
         /// </summary>
         private double impedance1;
+
+        /// <summary>
+        /// Мнимая часть комплексного сопротивления.
+        /// </summary>
         private double impedance2;
+
+        /// <summary>
+        /// Комплексное сопротивление.
+        /// </summary>
         private Complex impedance;
 
         /// <summary>
@@ -53,8 +61,8 @@ namespace View
         /// <summary>
         /// Ввод вещественного
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void textBoxImpedance_TextChanged(object sender,
             EventArgs e)
         {
@@ -62,21 +70,23 @@ namespace View
             {
                 if (ImpedanceTextBox.Text != "")
                 {
-                    impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
+                    impedance = 
+                        Utils.CheckNumber(ImpedanceTextBox.Text);
                 }
             }
             catch
             {
                 MessageBox.Show("Введите корректное число!",
-                    "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Ошибка!", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
             }
         }
 
         /// <summary>
         /// Ввод мнимого
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void textBoxImpedance2_TextChanged(object sender,
             EventArgs e)
         {
@@ -84,16 +94,23 @@ namespace View
             {
                 if (ImpedanceTextBox2.Text != "")
                 {
-                    impedance = Utils.CheckNumber(ImpedanceTextBox.Text);
+                    impedance = 
+                        Utils.CheckNumber(ImpedanceTextBox.Text);
                 }
             }
             catch
             {
                 MessageBox.Show("Введите корректное число!",
-                    "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    "Ошибка!", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
             }
         }
 
+        /// <summary>
+        /// Флажок активации поля ввода сопротивления.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkBox1_CheckedChanged(object sender,
             EventArgs e)
         {
@@ -105,10 +122,10 @@ namespace View
         }
 
         /// <summary>
-        /// Кнопка поиска
+        /// Кнопка поиска.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">.</param>
+        /// <param name="e">.</param>
         private void buttonFilter_Click(object sender, EventArgs e)
         {
             _listElementsFilter = new BindingList<PassiveElementBase>();
@@ -136,7 +153,8 @@ namespace View
                         {
                             if (ImpedanceCheckBox.Checked)
                             {
-                                impedance = new Complex(impedance1, impedance2);
+                                impedance = new Complex(impedance1,
+                                    impedance2);
                                 if (element.Impedance == impedance)
                                 {
                                     count++;

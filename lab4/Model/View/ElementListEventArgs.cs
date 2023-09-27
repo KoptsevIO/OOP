@@ -16,7 +16,8 @@ namespace View
         /// <summary>
         /// Свойство список элементов.
         /// </summary>
-        public BindingList<PassiveElementBase> ElementList { get; set; }
+        public BindingList<PassiveElementBase> ElementList 
+        { get; set; }
 
         /// <summary>
         /// Список элементов.
