@@ -30,6 +30,7 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();
@@ -37,8 +38,13 @@ namespace View
             dataGridView1 = new DataGridView();
             buttonReset = new Button();
             buttonFilterElement = new Button();
+            toolStrip1 = new ToolStrip();
+            File = new ToolStripDropDownButton();
+            SaveFile = new ToolStripMenuItem();
+            OpenFile = new ToolStripMenuItem();
             groupBoxElements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // deletElement
@@ -54,7 +60,7 @@ namespace View
             // 
             // addElement
             // 
-            addElement.Location = new Point(25, 238);
+            addElement.Location = new Point(25, 274);
             addElement.Margin = new Padding(3, 2, 3, 2);
             addElement.Name = "addElement";
             addElement.Size = new Size(198, 29);
@@ -70,7 +76,7 @@ namespace View
             groupBoxElements.Controls.Add(buttonReset);
             groupBoxElements.Controls.Add(buttonFilterElement);
             groupBoxElements.Controls.Add(deletElement);
-            groupBoxElements.Location = new Point(10, 24);
+            groupBoxElements.Location = new Point(10, 60);
             groupBoxElements.Margin = new Padding(3, 2, 3, 2);
             groupBoxElements.Name = "groupBoxElements";
             groupBoxElements.Padding = new Padding(3, 2, 3, 2);
@@ -84,9 +90,9 @@ namespace View
             buttonDeleteElements.Location = new Point(225, 215);
             buttonDeleteElements.Margin = new Padding(3, 2, 3, 2);
             buttonDeleteElements.Name = "buttonDeleteElements";
-            buttonDeleteElements.Size = new Size(150, 64);
+            buttonDeleteElements.Size = new Size(149, 42);
             buttonDeleteElements.TabIndex = 8;
-            buttonDeleteElements.Text = "Добавить случайный элемент";
+            buttonDeleteElements.Text = "Удалить список элементов";
             buttonDeleteElements.UseVisualStyleBackColor = true;
             buttonDeleteElements.Click += buttonDeleteElements_Click;
             // 
@@ -111,6 +117,7 @@ namespace View
             buttonReset.TabIndex = 7;
             buttonReset.Text = "Сброс";
             buttonReset.UseVisualStyleBackColor = true;
+            buttonReset.Click += buttonReset_Click;
             // 
             // buttonFilterElement
             // 
@@ -123,11 +130,45 @@ namespace View
             buttonFilterElement.UseVisualStyleBackColor = true;
             buttonFilterElement.Click += buttonFilterElement_Click;
             // 
+            // toolStrip1
+            // 
+            toolStrip1.Items.AddRange(new ToolStripItem[] { File });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(524, 25);
+            toolStrip1.TabIndex = 5;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // File
+            // 
+            File.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            File.DropDownItems.AddRange(new ToolStripItem[] { SaveFile, OpenFile });
+            File.Image = (Image)resources.GetObject("File.Image");
+            File.ImageTransparentColor = Color.Magenta;
+            File.Name = "File";
+            File.Size = new Size(29, 22);
+            File.Text = "toolStripDropDownButton1";
+            // 
+            // SaveFile
+            // 
+            SaveFile.Name = "SaveFile";
+            SaveFile.Size = new Size(191, 24);
+            SaveFile.Text = "Сохранить файл";
+            SaveFile.Click += SaveFile_Click;
+            // 
+            // OpenFile
+            // 
+            OpenFile.Name = "OpenFile";
+            OpenFile.Size = new Size(191, 24);
+            OpenFile.Text = "Открыть файл";
+            OpenFile.Click += OpenFile_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(526, 326);
+            ClientSize = new Size(524, 361);
+            Controls.Add(toolStrip1);
             Controls.Add(addElement);
             Controls.Add(groupBoxElements);
             Margin = new Padding(3, 2, 3, 2);
@@ -137,7 +178,10 @@ namespace View
             Load += MainForm_Load;
             groupBoxElements.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -149,5 +193,9 @@ namespace View
         private Button buttonReset;
         private DataGridView dataGridView1;
         private Button buttonDeleteElements;
+        private ToolStrip toolStrip1;
+        private ToolStripDropDownButton File;
+        private ToolStripMenuItem SaveFile;
+        private ToolStripMenuItem OpenFile;
     }
 }

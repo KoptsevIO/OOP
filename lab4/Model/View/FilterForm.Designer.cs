@@ -86,9 +86,9 @@
             InductorCheckBox.Location = new Point(10, 57);
             InductorCheckBox.Margin = new Padding(3, 2, 3, 2);
             InductorCheckBox.Name = "InductorCheckBox";
-            InductorCheckBox.Size = new Size(158, 19);
+            InductorCheckBox.Size = new Size(109, 19);
             InductorCheckBox.TabIndex = 1;
-            InductorCheckBox.Text = "Катушка индуктивности";
+            InductorCheckBox.Text = "Индуктивность";
             InductorCheckBox.UseVisualStyleBackColor = true;
             // 
             // ResistorCheckBox

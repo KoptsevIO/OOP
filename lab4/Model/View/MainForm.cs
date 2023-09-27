@@ -1,6 +1,7 @@
 using PassiveElement;
 using System.ComponentModel;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace View
 {
@@ -33,6 +34,12 @@ namespace View
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Для файлов.
+        /// </summary>
+        private readonly XmlSerializer _serializer =
+            new XmlSerializer(typeof(BindingList<PassiveElementBase>));
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -111,9 +118,80 @@ namespace View
             };
         }
 
+        /// <summary>
+        /// Удаление списка элементов.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonDeleteElements_Click(object sender, EventArgs e)
         {
             _elementsList.Clear();
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            CreateTable(_elementsList, dataGridView1);
+        }
+
+        private void SaveFile_Click(object sender, EventArgs e)
+        {
+            if (_elementsList.Count == 0)
+            {
+                MessageBox.Show("Отсутствуют данные для сохранения.",
+                    "Данные не сохранены",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Файлы (*.elm)|*.elm|Все файлы (*.*)|*.*"
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var path = saveFileDialog.FileName.ToString();
+                using (FileStream file = System.IO.File.Create(path))
+                {
+                    _serializer.Serialize(file, _elementsList);
+                }
+                MessageBox.Show("Файл успешно сохранён.",
+                    "Сохранение завершено",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void OpenFile_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = "Файлы (*.elm)|*.elm|Все файлы (*.*)|*.*"
+            };
+
+            if (openFileDialog.ShowDialog() != DialogResult.OK) return;
+
+            var path = openFileDialog.FileName.ToString();
+            try
+            {
+                using (var file = new StreamReader(path))
+                {
+                    _elementsList = (BindingList<PassiveElementBase>)
+                        _serializer.Deserialize(file);
+                }
+
+                dataGridView1.DataSource = _elementsList;
+                dataGridView1.CurrentCell = null;
+                MessageBox.Show("Файл успешно загружен.",
+                    "Загрузка завершена",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Не удалось загрузить файл.\n" +
+                    "Файл повреждён или не соответствует формату.",
+                    "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
