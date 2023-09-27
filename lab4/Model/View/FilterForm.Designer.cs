@@ -32,6 +32,7 @@
         private void InitializeComponent()
         {
             filterGroupBox = new GroupBox();
+            label1 = new Label();
             CondenserCheckBox = new CheckBox();
             InductorCheckBox = new CheckBox();
             ResistorCheckBox = new CheckBox();
@@ -39,12 +40,14 @@
             ImpedanceCheckBox = new CheckBox();
             ImpedanceTextBox = new TextBox();
             Impedancelabel = new Label();
+            ImpedanceTextBox2 = new TextBox();
             filterGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // filterGroupBox
             // 
             filterGroupBox.BackColor = SystemColors.Control;
+            filterGroupBox.Controls.Add(label1);
             filterGroupBox.Controls.Add(CondenserCheckBox);
             filterGroupBox.Controls.Add(InductorCheckBox);
             filterGroupBox.Controls.Add(ResistorCheckBox);
@@ -52,11 +55,19 @@
             filterGroupBox.Margin = new Padding(3, 2, 3, 2);
             filterGroupBox.Name = "filterGroupBox";
             filterGroupBox.Padding = new Padding(3, 2, 3, 2);
-            filterGroupBox.Size = new Size(190, 110);
+            filterGroupBox.Size = new Size(260, 155);
             filterGroupBox.TabIndex = 0;
             filterGroupBox.TabStop = false;
             filterGroupBox.Text = "Параметры фильтрации";
-            filterGroupBox.Enter += filterGroupBox_Enter;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(170, 123);
+            label1.Name = "label1";
+            label1.Size = new Size(21, 15);
+            label1.TabIndex = 7;
+            label1.Text = "+ j";
             // 
             // CondenserCheckBox
             // 
@@ -68,7 +79,6 @@
             CondenserCheckBox.TabIndex = 2;
             CondenserCheckBox.Text = "Конденсатор";
             CondenserCheckBox.UseVisualStyleBackColor = true;
-            CondenserCheckBox.CheckedChanged += condenserCheckBox_CheckedChanged;
             // 
             // InductorCheckBox
             // 
@@ -80,7 +90,6 @@
             InductorCheckBox.TabIndex = 1;
             InductorCheckBox.Text = "Катушка индуктивности";
             InductorCheckBox.UseVisualStyleBackColor = true;
-            InductorCheckBox.CheckedChanged += iductanceCheckBox_CheckedChanged;
             // 
             // ResistorCheckBox
             // 
@@ -92,18 +101,17 @@
             ResistorCheckBox.TabIndex = 0;
             ResistorCheckBox.Text = "Резистор";
             ResistorCheckBox.UseVisualStyleBackColor = true;
-            ResistorCheckBox.CheckedChanged += resistanceCheckBox_CheckedChanged;
             // 
             // filterButton
             // 
-            filterButton.Location = new Point(8, 170);
+            filterButton.Location = new Point(12, 180);
             filterButton.Margin = new Padding(3, 2, 3, 2);
             filterButton.Name = "filterButton";
-            filterButton.Size = new Size(216, 22);
+            filterButton.Size = new Size(258, 22);
             filterButton.TabIndex = 1;
             filterButton.Text = "Запуск фильтрации";
             filterButton.UseVisualStyleBackColor = true;
-            filterButton.Click += filterButton_Click;
+            filterButton.Click += buttonFilter_Click;
             // 
             // ImpedanceCheckBox
             // 
@@ -119,27 +127,35 @@
             // 
             // ImpedanceTextBox
             // 
-            ImpedanceTextBox.Location = new Point(138, 140);
+            ImpedanceTextBox.Location = new Point(148, 140);
             ImpedanceTextBox.Margin = new Padding(3, 2, 3, 2);
             ImpedanceTextBox.Name = "ImpedanceTextBox";
-            ImpedanceTextBox.Size = new Size(86, 23);
+            ImpedanceTextBox.Size = new Size(27, 23);
             ImpedanceTextBox.TabIndex = 4;
             // 
             // Impedancelabel
             // 
             Impedancelabel.AutoSize = true;
-            Impedancelabel.Location = new Point(199, 109);
+            Impedancelabel.Location = new Point(235, 146);
             Impedancelabel.Name = "Impedancelabel";
             Impedancelabel.Size = new Size(25, 15);
             Impedancelabel.TabIndex = 5;
             Impedancelabel.Text = "Ом";
-            Impedancelabel.Click += label1_Click;
+            // 
+            // ImpedanceTextBox2
+            // 
+            ImpedanceTextBox2.Location = new Point(200, 140);
+            ImpedanceTextBox2.Margin = new Padding(3, 2, 3, 2);
+            ImpedanceTextBox2.Name = "ImpedanceTextBox2";
+            ImpedanceTextBox2.Size = new Size(27, 23);
+            ImpedanceTextBox2.TabIndex = 6;
             // 
             // FilterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(236, 201);
+            ClientSize = new Size(282, 212);
+            Controls.Add(ImpedanceTextBox2);
             Controls.Add(Impedancelabel);
             Controls.Add(ImpedanceTextBox);
             Controls.Add(ImpedanceCheckBox);
@@ -164,5 +180,7 @@
         private CheckBox ImpedanceCheckBox;
         private TextBox ImpedanceTextBox;
         private Label Impedancelabel;
+        private TextBox ImpedanceTextBox2;
+        private Label label1;
     }
 }

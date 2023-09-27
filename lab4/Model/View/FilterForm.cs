@@ -44,6 +44,7 @@ namespace View
             InitializeComponent();
             _listElement = elements;
             ImpedanceTextBox.Enabled = false;
+            ImpedanceTextBox2.Enabled = false;
         }
 
         private void textBoxImpedance_TextChanged(object sender,
@@ -63,14 +64,15 @@ namespace View
             }
         }
 
-        //private void checkBoxImpedance_CheckedChanged(object sender,
-        //    EventArgs e)
-        //{
-        //    if (ImpedanceTextBox.Checked)
-        //    {
-        //        ImpedanceTextBox.Enabled = true;
-        //    }
-        //}
+        private void checkBox1_CheckedChanged(object sender,
+            EventArgs e)
+        {
+            if (ImpedanceCheckBox.Checked)
+            {
+                ImpedanceTextBox.Enabled = true;
+                ImpedanceTextBox2.Enabled = true;
+            }
+        }
 
         /// <summary>
         /// Кнопка поиска
@@ -151,26 +153,5 @@ namespace View
             ElementFiltered?.Invoke(this, eventArgs);
             Close();
         }
-
-        private void filterGroupBox_Enter(object sender, EventArgs e)
-        { }
-
-        private void filterButton_Click(object sender, EventArgs e)
-        { }
-
-        private void resistanceCheckBox_CheckedChanged(object sender, EventArgs e)
-        { }
-
-        private void iductanceCheckBox_CheckedChanged(object sender, EventArgs e)
-        { }
-
-        private void condenserCheckBox_CheckedChanged(object sender, EventArgs e)
-        { }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        { }
-
-        private void label1_Click(object sender, EventArgs e)
-        { }
     }
 }

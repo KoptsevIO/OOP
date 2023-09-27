@@ -103,26 +103,17 @@ namespace View
         {
             var newFilterForm = new FilterForm(_elementsList);
             newFilterForm.Show();
-            newFilterForm.ElementFiltered += 
-                (sender, elementEventArgs) =>
+            newFilterForm.ElementFiltered += (sender, elementEventArgs) =>
             {
-                dataGridView1.DataSource = 
-                ((ElementListEventArgs)elementEventArgs).ElementList;
+                dataGridView1.DataSource = ((ElementListEventArgs)elementEventArgs).ElementList;
 
-                _filteredList = 
-                ((ElementListEventArgs)elementEventArgs).ElementList;
+                _filteredList = ((ElementListEventArgs)elementEventArgs).ElementList;
             };
         }
 
-        private void groupBox1_Enter_1(object sender, EventArgs e)
+        private void buttonDeleteElements_Click(object sender, EventArgs e)
         {
-
+            _elementsList.Clear();
         }
-
-        private void buttonReset_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
