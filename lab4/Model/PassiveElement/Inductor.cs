@@ -57,7 +57,8 @@ namespace PassiveElement
         {
             get
             {
-                return new Complex(0, Inductance * _angularFrequency);
+                return new Complex(0, Math.Round(Inductance * 
+                    _angularFrequency / 1000));
             }
         }
     }

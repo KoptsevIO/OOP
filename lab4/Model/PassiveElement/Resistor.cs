@@ -53,6 +53,6 @@ namespace PassiveElement
         /// <summary>
         /// Свойство сопротивление.
         /// </summary>
-        public override Complex Impedance => Resistance;
+        public override Complex Impedance => Math.Round(Resistance);
     }
 }

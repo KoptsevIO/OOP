@@ -57,8 +57,8 @@ namespace PassiveElement
         {
             get
             {
-                return new Complex(0, -1 / (Capacity *
-                    _angularFrequency));
+                return new Complex(0, Math.Round(-1000000 / (Capacity *
+                    _angularFrequency)));
             }
         }
     }
