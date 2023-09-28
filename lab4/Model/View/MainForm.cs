@@ -5,6 +5,7 @@ using System.Xml.Serialization;
 
 namespace View
 {
+    //TODO: XML
     public partial class MainForm : Form
     {
         /// <summary>
@@ -17,11 +18,13 @@ namespace View
         /// </summary>
         private BindingList<PassiveElementBase> _filteredList = new();
 
+        //TODO: remove
         /// <summary>
         /// Ёкземпл€р формы AddForm.
         /// </summary>
         private AddElementForm _addForm = new AddElementForm();
 
+        //TODO: encapsulation
         /// <summary>
         /// —обытие добавлени€ элемента.
         /// </summary>
@@ -52,6 +55,7 @@ namespace View
             CreateTable(_elementsList, dataGridView1);
         }
 
+        //TODO: remove
         /// <summary>
         /// √руппбокс 1.
         /// </summary>
@@ -60,6 +64,7 @@ namespace View
         private void groupBox1_Enter(object sender, EventArgs e)
         { }
 
+        //TODO: RSDN
         /// <summary>
         ///  нопка фильтраци€.
         /// </summary>
@@ -101,7 +106,7 @@ namespace View
             dataGridView.DataSource = source;
             dataGridView.AllowUserToResizeColumns = false;
             dataGridView.AutoSizeColumnsMode =
-            DataGridViewAutoSizeColumnsMode.Fill;
+                DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView.DefaultCellStyle.Alignment =
                 DataGridViewContentAlignment.MiddleCenter;
             dataGridView.ColumnHeadersDefaultCellStyle.Alignment =
@@ -122,11 +127,8 @@ namespace View
                 foreach (DataGridViewRow row in 
                     dataGridView1.SelectedRows)
                 {
-                    _elementsList.Remove(row.DataBoundItem as 
-                        PassiveElementBase);
-
-                    _filteredList.Remove(row.DataBoundItem as 
-                        PassiveElementBase);
+                    _elementsList.Remove(row.DataBoundItem as PassiveElementBase);
+                    _filteredList.Remove(row.DataBoundItem as PassiveElementBase);
                 }
             }
         }
@@ -225,8 +227,8 @@ namespace View
             {
                 using (var file = new StreamReader(path))
                 {
-                    _elementsList = (BindingList<PassiveElementBase>)
-                        _serializer.Deserialize(file);
+                    _elementsList = 
+                        (BindingList<PassiveElementBase>) _serializer.Deserialize(file);
                 }
 
                 dataGridView1.DataSource = _elementsList;

@@ -57,6 +57,7 @@ namespace PassiveElement
         {
             get
             {
+                //TODO:const 
                 return new Complex(0, Math.Round(-1000000 / (Capacity *
                     _angularFrequency)));
             }

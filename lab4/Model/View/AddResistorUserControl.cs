@@ -26,6 +26,7 @@ namespace View
             InitializeComponent();
         }
 
+        //TODO: remove
         /// <summary>
         /// Добавление индуктивности.
         /// </summary>

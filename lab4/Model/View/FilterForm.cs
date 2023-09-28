@@ -27,6 +27,7 @@ namespace View
         /// </summary>
         private BindingList<PassiveElementBase> _listElementsFilter;
 
+        //TODO: duplication
         /// <summary>
         /// Вещественная часть комплексного сопротивления.
         /// </summary>
@@ -54,6 +55,7 @@ namespace View
         {
             InitializeComponent();
             _listElement = elements;
+            //TODO: rename
             ImpedanceTextBox.Enabled = false;
             ImpedanceTextBox2.Enabled = false;
         }
