@@ -46,48 +46,56 @@
             choicElementGroupBox.Controls.Add(addInductorUserControl1);
             choicElementGroupBox.Controls.Add(addCondenserUserControl1);
             choicElementGroupBox.Controls.Add(choicElementComboBox);
-            choicElementGroupBox.Location = new Point(25, 27);
+            choicElementGroupBox.Location = new Point(22, 11);
+            choicElementGroupBox.Margin = new Padding(3, 2, 3, 2);
             choicElementGroupBox.Name = "choicElementGroupBox";
-            choicElementGroupBox.Size = new Size(556, 263);
+            choicElementGroupBox.Padding = new Padding(3, 2, 3, 2);
+            choicElementGroupBox.Size = new Size(399, 206);
             choicElementGroupBox.TabIndex = 0;
             choicElementGroupBox.TabStop = false;
             choicElementGroupBox.Text = "Выбор элемента";
             // 
             // addResistorUserControl1
             // 
-            addResistorUserControl1.Location = new Point(54, 95);
+            addResistorUserControl1.Location = new Point(47, 86);
+            addResistorUserControl1.Margin = new Padding(3, 2, 3, 2);
             addResistorUserControl1.Name = "addResistorUserControl1";
-            addResistorUserControl1.Size = new Size(502, 111);
+            addResistorUserControl1.Size = new Size(352, 83);
             addResistorUserControl1.TabIndex = 5;
             // 
             // addInductorUserControl1
             // 
-            addInductorUserControl1.Location = new Point(48, 95);
+            addInductorUserControl1.Location = new Point(42, 87);
+            addInductorUserControl1.Margin = new Padding(3, 2, 3, 2);
             addInductorUserControl1.Name = "addInductorUserControl1";
-            addInductorUserControl1.Size = new Size(502, 111);
+            addInductorUserControl1.Size = new Size(341, 83);
             addInductorUserControl1.TabIndex = 4;
             // 
             // addCondenserUserControl1
             // 
-            addCondenserUserControl1.Location = new Point(38, 95);
+            addCondenserUserControl1.Location = new Point(33, 71);
+            addCondenserUserControl1.Margin = new Padding(3, 2, 3, 2);
             addCondenserUserControl1.Name = "addCondenserUserControl1";
-            addCondenserUserControl1.Size = new Size(502, 111);
+            addCondenserUserControl1.Size = new Size(350, 83);
             addCondenserUserControl1.TabIndex = 3;
             // 
             // choicElementComboBox
             // 
             choicElementComboBox.FormattingEnabled = true;
-            choicElementComboBox.Location = new Point(12, 29);
+            choicElementComboBox.Location = new Point(10, 42);
+            choicElementComboBox.Margin = new Padding(3, 2, 3, 2);
             choicElementComboBox.Name = "choicElementComboBox";
-            choicElementComboBox.Size = new Size(203, 28);
+            choicElementComboBox.Size = new Size(178, 23);
             choicElementComboBox.TabIndex = 2;
-            choicElementComboBox.SelectedIndexChanged += choicElementComboBox_SelectedIndexChanged;
+            choicElementComboBox.SelectedIndexChanged += 
+                choicElementComboBox_SelectedIndexChanged;
             // 
             // canselButton
             // 
-            canselButton.Location = new Point(170, 296);
+            canselButton.Location = new Point(149, 222);
+            canselButton.Margin = new Padding(3, 2, 3, 2);
             canselButton.Name = "canselButton";
-            canselButton.Size = new Size(130, 29);
+            canselButton.Size = new Size(114, 22);
             canselButton.TabIndex = 1;
             canselButton.Text = "Отмена";
             canselButton.UseVisualStyleBackColor = true;
@@ -95,9 +103,10 @@
             // 
             // confirmationButton
             // 
-            confirmationButton.Location = new Point(25, 296);
+            confirmationButton.Location = new Point(22, 222);
+            confirmationButton.Margin = new Padding(3, 2, 3, 2);
             confirmationButton.Name = "confirmationButton";
-            confirmationButton.Size = new Size(130, 29);
+            confirmationButton.Size = new Size(114, 22);
             confirmationButton.TabIndex = 0;
             confirmationButton.Text = "OK";
             confirmationButton.UseVisualStyleBackColor = true;
@@ -105,9 +114,10 @@
             // 
             // randomButton
             // 
-            randomButton.Location = new Point(315, 296);
+            randomButton.Location = new Point(276, 222);
+            randomButton.Margin = new Padding(3, 2, 3, 2);
             randomButton.Name = "randomButton";
-            randomButton.Size = new Size(166, 29);
+            randomButton.Size = new Size(145, 22);
             randomButton.TabIndex = 2;
             randomButton.Text = "Случайный элемент";
             randomButton.UseVisualStyleBackColor = true;
@@ -115,13 +125,14 @@
             // 
             // AddElementForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(608, 331);
+            ClientSize = new Size(440, 248);
             Controls.Add(randomButton);
             Controls.Add(choicElementGroupBox);
             Controls.Add(canselButton);
             Controls.Add(confirmationButton);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AddElementForm";
             Text = "Добавить элемент";
             Load += AddElementForm_Load;

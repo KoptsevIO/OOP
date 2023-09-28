@@ -18,7 +18,7 @@ namespace View
         /// <summary>
         /// Словарь UserControl.
         /// </summary>
-        public Dictionary<string, UserControl>dictionaryUserControl;
+        public Dictionary<string, UserControl> dictionaryUserControl;
 
         /// <summary>
         /// Событие добавления элемента.
@@ -37,7 +37,7 @@ namespace View
         {
             InitializeComponent();
 
-            choicElementComboBox.DropDownStyle = 
+            choicElementComboBox.DropDownStyle =
                 System.Windows.Forms.ComboBoxStyle.DropDownList;
 
             confirmationButton.Enabled = false;
@@ -49,7 +49,7 @@ namespace View
 
             choicElementComboBox.Items.AddRange(elements);
 
-            dictionaryUserControl = new Dictionary<string, 
+            dictionaryUserControl = new Dictionary<string,
                 UserControl>()
             {
                 {elements[0], addResistorUserControl1},
@@ -105,13 +105,13 @@ namespace View
         {
             try
             {
-                var currentFigureControlName = 
+                var currentFigureControlName =
                     choicElementComboBox.SelectedItem.ToString();
 
-                var currentFigureControl = 
+                var currentFigureControl =
                     dictionaryUserControl[currentFigureControlName];
 
-                var eventArgs = 
+                var eventArgs =
                     new ElementEventArgs(((IAddElement)
                     currentFigureControl).AddElement());
                 ElementAdded?.Invoke(this, eventArgs);
@@ -122,7 +122,7 @@ namespace View
                 MessageBox.Show("Введено некорректное значение!\n" +
                     "Введите одно положительное десятичное число" +
                     " в каждое текстовое поле.",
-                    "Ошибка", MessageBoxButtons.OK, 
+                    "Ошибка", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
         }

@@ -15,7 +15,7 @@ namespace View
     /// Добавление параметров резистора на форму 
     /// AddResistorUserControl.
     /// </summary>
-    public partial class AddResistorUserControl : UserControl, 
+    public partial class AddResistorUserControl : UserControl,
         IAddElement
     {
         /// <summary>
@@ -31,7 +31,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void AddResistorUserControl_Load(object sender, 
+        private void AddResistorUserControl_Load(object sender,
             EventArgs e)
         { }
 
@@ -53,7 +53,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void Resistance_KeyPress(object sender, 
+        private void Resistance_KeyPress(object sender,
             KeyPressEventArgs e)
         {
             Checks.CheckInput(e);

@@ -52,7 +52,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void Capacitance_KeyPress(object sender, 
+        private void Capacitance_KeyPress(object sender,
             KeyPressEventArgs e)
         {
             Checks.CheckInput(e);

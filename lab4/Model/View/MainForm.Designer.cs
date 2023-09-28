@@ -31,7 +31,8 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = 
+                new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();

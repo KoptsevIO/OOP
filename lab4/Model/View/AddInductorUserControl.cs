@@ -52,7 +52,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void Inductance_KeyPress(object sender, 
+        private void Inductance_KeyPress(object sender,
             KeyPressEventArgs e)
         {
             Checks.CheckInput(e);
