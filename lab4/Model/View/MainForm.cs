@@ -23,11 +23,11 @@ namespace View
 
         //TODO: remove +
 
-        //TODO: encapsulation
+        //TODO: encapsulation +
         /// <summary>
         /// Событие добавления элемента.
         /// </summary>
-        public EventHandler<EventArgs> ElementAdded;
+        private EventHandler<EventArgs> ElementAdded;
 
         /// <summary>
         /// Основная форма.

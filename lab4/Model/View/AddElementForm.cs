@@ -19,7 +19,7 @@ namespace View
         /// <summary>
         /// Словарь UserControl.
         /// </summary>
-        public Dictionary<string, UserControl> dictionaryUserControl;
+        private Dictionary<string, UserControl> dictionaryUserControl;
 
         /// <summary>
         /// Событие добавления элемента.
@@ -30,7 +30,7 @@ namespace View
         /// <summary>
         /// Метка используемого UserControl.
         /// </summary>
-        public UserControl userControl;
+        private UserControl userControl;
 
         /// <summary>
         /// Форма добавления фигур.
