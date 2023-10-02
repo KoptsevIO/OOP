@@ -74,7 +74,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "AddCondenserUserControl";
             Size = new Size(300, 67);
-            Load += AddCondenserUserControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }

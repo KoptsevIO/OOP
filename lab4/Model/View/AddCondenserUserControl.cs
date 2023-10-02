@@ -26,15 +26,7 @@ namespace View
             InitializeComponent();
         }
 
-        //TODO: remove
-        /// <summary>
-        /// Добавление конденсатора.
-        /// </summary>
-        /// <param name="sender">.</param>
-        /// <param name="e">.</param>
-        private void AddCondenserUserControl_Load(object sender,
-            EventArgs e)
-        { }
+        //TODO: remove +
 
         /// <summary>
         /// Метод добавления конденсатора.

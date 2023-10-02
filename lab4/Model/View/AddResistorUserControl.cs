@@ -26,15 +26,7 @@ namespace View
             InitializeComponent();
         }
 
-        //TODO: remove
-        /// <summary>
-        /// Добавление индуктивности.
-        /// </summary>
-        /// <param name="sender">.</param>
-        /// <param name="e">.</param>
-        private void AddResistorUserControl_Load(object sender,
-            EventArgs e)
-        { }
+        //TODO: remove +
 
         /// <summary>
         /// Метод добавления резистора.

@@ -74,7 +74,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "AddResistorUserControl";
             Size = new Size(300, 67);
-            Load += AddResistorUserControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }

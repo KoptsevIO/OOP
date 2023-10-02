@@ -74,7 +74,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "AddInductorUserControl";
             Size = new Size(300, 67);
-            Load += AddInductorUserControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }
