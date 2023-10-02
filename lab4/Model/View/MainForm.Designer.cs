@@ -31,8 +31,8 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             deletElement = new Button();
             addElement = new Button();
@@ -55,7 +55,7 @@ namespace View
             deletElement.Location = new Point(16, 250);
             deletElement.Margin = new Padding(3, 2, 3, 2);
             deletElement.Name = "deletElement";
-            deletElement.Size = new Size(198, 29);
+            deletElement.Size = new Size(225, 29);
             deletElement.TabIndex = 5;
             deletElement.Text = "Удалить элемент";
             deletElement.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@ namespace View
             addElement.Location = new Point(16, 215);
             addElement.Margin = new Padding(3, 2, 3, 2);
             addElement.Name = "addElement";
-            addElement.Size = new Size(198, 29);
+            addElement.Size = new Size(225, 29);
             addElement.TabIndex = 4;
             addElement.Text = "Добавить элемент";
             addElement.UseVisualStyleBackColor = true;
@@ -91,10 +91,10 @@ namespace View
             // 
             // buttonDeleteElements
             // 
-            buttonDeleteElements.Location = new Point(225, 215);
+            buttonDeleteElements.Location = new Point(247, 215);
             buttonDeleteElements.Margin = new Padding(3, 2, 3, 2);
             buttonDeleteElements.Name = "buttonDeleteElements";
-            buttonDeleteElements.Size = new Size(149, 42);
+            buttonDeleteElements.Size = new Size(252, 29);
             buttonDeleteElements.TabIndex = 8;
             buttonDeleteElements.Text = "Удалить список элементов";
             buttonDeleteElements.UseVisualStyleBackColor = true;
@@ -103,39 +103,39 @@ namespace View
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.InactiveCaption;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle6.Format = "N0";
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.Location = new Point(15, 20);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(466, 190);
+            dataGridView1.Size = new Size(484, 190);
             dataGridView1.TabIndex = 0;
             // 
             // buttonReset
             // 
-            buttonReset.Location = new Point(387, 250);
+            buttonReset.Location = new Point(376, 251);
             buttonReset.Margin = new Padding(3, 2, 3, 2);
             buttonReset.Name = "buttonReset";
-            buttonReset.Size = new Size(94, 29);
+            buttonReset.Size = new Size(123, 29);
             buttonReset.TabIndex = 7;
             buttonReset.Text = "Сброс";
             buttonReset.UseVisualStyleBackColor = true;
@@ -143,10 +143,10 @@ namespace View
             // 
             // buttonFilterElement
             // 
-            buttonFilterElement.Location = new Point(387, 215);
+            buttonFilterElement.Location = new Point(247, 251);
             buttonFilterElement.Margin = new Padding(3, 2, 3, 2);
             buttonFilterElement.Name = "buttonFilterElement";
-            buttonFilterElement.Size = new Size(94, 28);
+            buttonFilterElement.Size = new Size(123, 28);
             buttonFilterElement.TabIndex = 6;
             buttonFilterElement.Text = "Фильтр";
             buttonFilterElement.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@ namespace View
             toolStrip1.Items.AddRange(new ToolStripItem[] { File });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(522, 25);
+            toolStrip1.Size = new Size(540, 25);
             toolStrip1.TabIndex = 5;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -189,7 +189,7 @@ namespace View
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(522, 329);
+            ClientSize = new Size(540, 321);
             Controls.Add(toolStrip1);
             Controls.Add(groupBoxElements);
             FormBorderStyle = FormBorderStyle.FixedSingle;
