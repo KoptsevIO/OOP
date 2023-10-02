@@ -39,9 +39,9 @@
             ResistorCheckBox = new CheckBox();
             filterButton = new Button();
             ImpedanceCheckBox = new CheckBox();
-            ImpedanceTextBox = new TextBox();
+            ReImpedanceTextBox = new TextBox();
             Impedancelabel = new Label();
-            ImpedanceTextBox2 = new TextBox();
+            ImImpedanceTextBox = new TextBox();
             filterGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -124,15 +124,15 @@
             ImpedanceCheckBox.TabIndex = 3;
             ImpedanceCheckBox.Text = "Сопротивление";
             ImpedanceCheckBox.UseVisualStyleBackColor = true;
-            ImpedanceCheckBox.CheckedChanged += checkBox1_CheckedChanged;
+            ImpedanceCheckBox.CheckedChanged += checkBox_CheckedChanged;
             // 
             // ImpedanceTextBox
             // 
-            ImpedanceTextBox.Location = new Point(148, 140);
-            ImpedanceTextBox.Margin = new Padding(3, 2, 3, 2);
-            ImpedanceTextBox.Name = "ImpedanceTextBox";
-            ImpedanceTextBox.Size = new Size(27, 23);
-            ImpedanceTextBox.TabIndex = 4;
+            ReImpedanceTextBox.Location = new Point(148, 140);
+            ReImpedanceTextBox.Margin = new Padding(3, 2, 3, 2);
+            ReImpedanceTextBox.Name = "ImpedanceTextBox";
+            ReImpedanceTextBox.Size = new Size(27, 23);
+            ReImpedanceTextBox.TabIndex = 4;
             //ImpedanceTextBox.TextChanged += textBoxImpedance_TextChanged;
             // 
             // Impedancelabel
@@ -146,11 +146,11 @@
             // 
             // ImpedanceTextBox2
             // 
-            ImpedanceTextBox2.Location = new Point(200, 140);
-            ImpedanceTextBox2.Margin = new Padding(3, 2, 3, 2);
-            ImpedanceTextBox2.Name = "ImpedanceTextBox2";
-            ImpedanceTextBox2.Size = new Size(27, 23);
-            ImpedanceTextBox2.TabIndex = 6;
+            ImImpedanceTextBox.Location = new Point(200, 140);
+            ImImpedanceTextBox.Margin = new Padding(3, 2, 3, 2);
+            ImImpedanceTextBox.Name = "ImpedanceTextBox2";
+            ImImpedanceTextBox.Size = new Size(27, 23);
+            ImImpedanceTextBox.TabIndex = 6;
             //ImpedanceTextBox2.TextChanged += textBoxImpedance2_TextChanged;
             // 
             // FilterForm
@@ -158,9 +158,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(282, 212);
-            Controls.Add(ImpedanceTextBox2);
+            Controls.Add(ImImpedanceTextBox);
             Controls.Add(Impedancelabel);
-            Controls.Add(ImpedanceTextBox);
+            Controls.Add(ReImpedanceTextBox);
             Controls.Add(ImpedanceCheckBox);
             Controls.Add(filterButton);
             Controls.Add(filterGroupBox);
@@ -184,9 +184,9 @@
         private CheckBox ResistorCheckBox;
         private CheckBox CondenserCheckBox;
         private CheckBox ImpedanceCheckBox;
-        private TextBox ImpedanceTextBox;
+        private TextBox ReImpedanceTextBox;
         private Label Impedancelabel;
-        private TextBox ImpedanceTextBox2;
+        private TextBox ImImpedanceTextBox;
         private Label label1;
     }
 }

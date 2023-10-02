@@ -4,9 +4,9 @@ using System.Numerics;
 namespace PassiveElement
 {
     /// <summary>
-    /// Класс Condenser.
+    /// Класс Capacitor.
     /// </summary>
-    public class Condenser : PassiveElementBase
+    public class Capacitor : PassiveElementBase
     {
         /// <summary>
         /// Ёмкость.

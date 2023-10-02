@@ -8,7 +8,7 @@ namespace PassiveElement
     /// <summary>
     /// Класс PassiveElementBase.
     /// </summary>
-    [XmlInclude(typeof(Condenser))]
+    [XmlInclude(typeof(Capacitor))]
     [XmlInclude(typeof(Inductor))]
     [XmlInclude(typeof(Resistor))]
     public abstract class PassiveElementBase

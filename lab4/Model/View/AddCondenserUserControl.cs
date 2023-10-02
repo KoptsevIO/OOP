@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace View
 {
-    //TODO: rename
+    //TODO: rename +
     /// <summary>
     /// Класс добавления параетров конденсатора. 
     /// </summary>
@@ -31,14 +31,14 @@ namespace View
         /// <summary>
         /// Метод добавления конденсатора.
         /// </summary>
-        /// <returns>condenser.</returns>
+        /// <returns>Capacitor.</returns>
         public PassiveElementBase AddElement()
         {
-            var condenser = new Condenser();
+            var сapacitor = new Capacitor();
 
-            condenser.Capacity = Utils.CheckNumber(Capacitance.Text);
+            сapacitor.Capacity = Utils.CheckNumber(Capacitance.Text);
 
-            return condenser;
+            return сapacitor;
         }
 
         /// <summary>

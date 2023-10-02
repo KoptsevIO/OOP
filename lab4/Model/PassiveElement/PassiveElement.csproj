@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Condenser.cs" />
+    <Compile Include="Capacitor.cs" />
     <Compile Include="PassiveElementBase.cs" />
     <Compile Include="Inductor.cs" />
     <Compile Include="Resistor.cs" />

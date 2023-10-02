@@ -56,23 +56,23 @@ namespace View
         {
             InitializeComponent();
             _listElement = elements;
-            //TODO: rename
-            ImpedanceTextBox.Enabled = false;
-            ImpedanceTextBox2.Enabled = false;
+            //TODO: rename +
+            ReImpedanceTextBox.Enabled = false;
+            ImImpedanceTextBox.Enabled = false;
         }
 
         /// <summary>
         /// Флажок активации поля ввода сопротивления.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void checkBox1_CheckedChanged(object sender,
+        /// <param name="sender">/</param>
+        /// <param name="e">/</param>
+        private void checkBox_CheckedChanged(object sender,
             EventArgs e)
         {
             if (ImpedanceCheckBox.Checked)
             {
-                ImpedanceTextBox.Enabled = true;
-                ImpedanceTextBox2.Enabled = true;
+                ReImpedanceTextBox.Enabled = true;
+                ImImpedanceTextBox.Enabled = true;
             }
         }
 
@@ -90,15 +90,15 @@ namespace View
             double impedance2 = 0;
             try
             {
-                if (ImpedanceTextBox.Text != "")
+                if (ReImpedanceTextBox.Text != "")
                 {
                     impedance1 =
-                        Utils.CheckNumber(ImpedanceTextBox.Text);
+                        Utils.CheckNumber(ReImpedanceTextBox.Text);
                 }
-                if (ImpedanceTextBox2.Text != "")
+                if (ImImpedanceTextBox.Text != "")
                 {
                     impedance2 =
-                        Utils.CheckNumber(ImpedanceTextBox2.Text);
+                        Utils.CheckNumber(ImImpedanceTextBox.Text);
                 }
             }
             catch
@@ -128,7 +128,7 @@ namespace View
                 switch (element)
                 {
                     case Resistor when ResistorCheckBox.Checked:
-                    case Condenser when CondenserCheckBox.Checked:
+                    case Capacitor when CondenserCheckBox.Checked:
                     case Inductor when InductorCheckBox.Checked:
                         {
                             if (ImpedanceCheckBox.Checked)
