@@ -36,7 +36,7 @@ namespace View
         {
             var resistor = new Resistor();
 
-            resistor.Resistance = Checks.CheckNumber(Resistance.Text);
+            resistor.Resistance = Utils.CheckNumber(Resistance.Text);
 
             return resistor;
         }
@@ -49,7 +49,7 @@ namespace View
         private void Resistance_KeyPress(object sender,
             KeyPressEventArgs e)
         {
-            Checks.CheckInput(e);
+            Utils.CheckInput(e);
         }
 
     }

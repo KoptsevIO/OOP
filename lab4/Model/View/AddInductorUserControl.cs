@@ -35,7 +35,7 @@ namespace View
         {
             var inductor = new Inductor();
 
-            inductor.Inductance = Checks.CheckNumber(Inductance.Text);
+            inductor.Inductance = Utils.CheckNumber(Inductance.Text);
 
             return inductor;
         }
@@ -48,7 +48,7 @@ namespace View
         private void Inductance_KeyPress(object sender,
             KeyPressEventArgs e)
         {
-            Checks.CheckInput(e);
+            Utils.CheckInput(e);
         }
 
     }

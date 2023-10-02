@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace View
 {
-    //TODO: duplication
+    //TODO: duplication +
     /// <summary>
     /// Класс проверки введённых значений.
     /// </summary>

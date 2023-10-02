@@ -36,7 +36,7 @@ namespace View
         {
             var condenser = new Condenser();
 
-            condenser.Capacity = Checks.CheckNumber(Capacitance.Text);
+            condenser.Capacity = Utils.CheckNumber(Capacitance.Text);
 
             return condenser;
         }
@@ -49,7 +49,7 @@ namespace View
         private void Capacitance_KeyPress(object sender,
             KeyPressEventArgs e)
         {
-            Checks.CheckInput(e);
+            Utils.CheckInput(e);
         }
     }
 }
