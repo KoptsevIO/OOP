@@ -50,6 +50,5 @@ namespace View
         {
             Utils.CheckInput(e);
         }
-
     }
 }

@@ -16,7 +16,7 @@ namespace PassiveElement
         /// <summary>
         /// Приставка для расчёта сопротивления.
         /// </summary>
-        private const double _prefix = 10E-6;
+        private const double _prefix = 10E-7;
 
         /// <summary>
         /// Тип элемента.
@@ -36,7 +36,7 @@ namespace PassiveElement
         {
             get
             {
-                return $"С = {Capacity} Ф";
+                return $"С = {Capacity} мкФ";
             }
         }
 

@@ -66,7 +66,7 @@ namespace View
         /// </summary>
         /// <param name="sender">/</param>
         /// <param name="e">/</param>
-        private void checkBox_CheckedChanged(object sender,
+        private void CheckBox_CheckedChanged(object sender,
             EventArgs e)
         {
             if (ImpedanceCheckBox.Checked)
@@ -81,7 +81,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void buttonFilter_Click(object sender, EventArgs e)
+        private void ButtonFilter_Click(object sender, EventArgs e)
         {
             _listElementsFilter = new BindingList<PassiveElementBase>();
             int count = 0;

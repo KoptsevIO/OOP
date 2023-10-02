@@ -16,7 +16,7 @@ namespace PassiveElement
         /// <summary>
         /// Приставка для расчёта сопротивления.
         /// </summary>
-        private const double _prefix = 10E-3;
+        private const double _prefix = 10E-4;
 
         /// <summary>
         /// Тип элемента.
@@ -36,7 +36,7 @@ namespace PassiveElement
         {
             get
             {
-                return $"L = {Inductance} Гн";
+                return $"L = {Inductance} мГн";
             }
         }
 
@@ -63,8 +63,8 @@ namespace PassiveElement
             get
             {
                 //TODO:const +
-                return new Complex(0, (Inductance * 
-                    _angularFrequency * _prefix));
+                return new Complex(0, (Inductance * _prefix * 
+                    _angularFrequency));
             }
         }
     }

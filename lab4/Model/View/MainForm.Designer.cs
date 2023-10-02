@@ -31,8 +31,9 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = 
-                new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();
@@ -58,7 +59,7 @@ namespace View
             deletElement.TabIndex = 5;
             deletElement.Text = "Удалить элемент";
             deletElement.UseVisualStyleBackColor = true;
-            deletElement.Click += deletElement_Click;
+            deletElement.Click += DeletElement_Click;
             // 
             // addElement
             // 
@@ -69,7 +70,7 @@ namespace View
             addElement.TabIndex = 4;
             addElement.Text = "Добавить элемент";
             addElement.UseVisualStyleBackColor = true;
-            addElement.Click += addElement_Click;
+            addElement.Click += AddElement_Click;
             // 
             // groupBoxElements
             // 
@@ -97,12 +98,30 @@ namespace View
             buttonDeleteElements.TabIndex = 8;
             buttonDeleteElements.Text = "Удалить список элементов";
             buttonDeleteElements.UseVisualStyleBackColor = true;
-            buttonDeleteElements.Click += buttonDeleteElements_Click;
+            buttonDeleteElements.Click += ButtonDeleteElements_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.InactiveCaption;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(15, 20);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
@@ -120,7 +139,7 @@ namespace View
             buttonReset.TabIndex = 7;
             buttonReset.Text = "Сброс";
             buttonReset.UseVisualStyleBackColor = true;
-            buttonReset.Click += buttonReset_Click;
+            buttonReset.Click += ButtonReset_Click;
             // 
             // buttonFilterElement
             // 
@@ -131,7 +150,7 @@ namespace View
             buttonFilterElement.TabIndex = 6;
             buttonFilterElement.Text = "Фильтр";
             buttonFilterElement.UseVisualStyleBackColor = true;
-            buttonFilterElement.Click += buttonFilterElement_Click;
+            buttonFilterElement.Click += ButtonFilterElement_Click;
             // 
             // toolStrip1
             // 
@@ -155,14 +174,14 @@ namespace View
             // OpenFile
             // 
             OpenFile.Name = "OpenFile";
-            OpenFile.Size = new Size(180, 22);
+            OpenFile.Size = new Size(164, 22);
             OpenFile.Text = "Открыть файл";
             OpenFile.Click += OpenFile_Click;
             // 
             // SaveFile
             // 
             SaveFile.Name = "SaveFile";
-            SaveFile.Size = new Size(180, 22);
+            SaveFile.Size = new Size(164, 22);
             SaveFile.Text = "Сохранить файл";
             SaveFile.Click += SaveFile_Click;
             // 
@@ -173,7 +192,9 @@ namespace View
             ClientSize = new Size(522, 329);
             Controls.Add(toolStrip1);
             Controls.Add(groupBoxElements);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "MainForm";
             Text = "Программа расчёта комплексного сопротивлениия";
             TransparencyKey = Color.White;
@@ -184,9 +205,6 @@ namespace View
             toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
-            FormBorderStyle = 
-                System.Windows.Forms.FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
         }
 
         #endregion

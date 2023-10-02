@@ -112,7 +112,7 @@
             filterButton.TabIndex = 1;
             filterButton.Text = "Запуск фильтрации";
             filterButton.UseVisualStyleBackColor = true;
-            filterButton.Click += buttonFilter_Click;
+            filterButton.Click += ButtonFilter_Click;
             // 
             // ImpedanceCheckBox
             // 
@@ -124,7 +124,7 @@
             ImpedanceCheckBox.TabIndex = 3;
             ImpedanceCheckBox.Text = "Сопротивление";
             ImpedanceCheckBox.UseVisualStyleBackColor = true;
-            ImpedanceCheckBox.CheckedChanged += checkBox_CheckedChanged;
+            ImpedanceCheckBox.CheckedChanged += CheckBox_CheckedChanged;
             // 
             // ImpedanceTextBox
             // 

@@ -73,13 +73,13 @@ namespace View
         /// </summary>
         /// <param name="sender">name.</param>
         /// <param name="e">name.</param>
-        private void addElement_Click(object sender, EventArgs e)
+        private void AddElement_Click(object sender, EventArgs e)
         {
             var addElementForm = new AddElementForm();
 
-            addElementForm.ElementAdded += (sender, figureEventArgs) =>
+            addElementForm.ElementAdded += (sender, elementEventArgs) =>
             {
-                _elementsList.Add(((ElementEventArgs)figureEventArgs).
+                _elementsList.Add(((ElementEventArgs)elementEventArgs).
                     Element);
             };
             addElementForm.ShowDialog();
@@ -90,7 +90,7 @@ namespace View
         /// </summary>
         /// <param name="elements">elements.</param>
         /// <param name="dataGridView">dataGrid.</param>
-        public static void CreateTable(BindingList<PassiveElementBase> 
+        public static void CreateTable(BindingList<PassiveElementBase>
             elements, DataGridView dataGridView)
         {
             dataGridView.RowHeadersVisible = false;
@@ -112,11 +112,11 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void deletElement_Click(object sender, EventArgs e)
+        private void DeletElement_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedCells.Count != 0)
             {
-                foreach (DataGridViewRow row in 
+                foreach (DataGridViewRow row in
                     dataGridView1.SelectedRows)
                 {
                     _elementsList.Remove(row.DataBoundItem as PassiveElementBase);
@@ -130,12 +130,12 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void buttonFilterElement_Click(object sender,
+        private void ButtonFilterElement_Click(object sender,
             EventArgs e)
         {
             var newFilterForm = new FilterForm(_elementsList);
             newFilterForm.Show();
-            newFilterForm.ElementFiltered += (sender, 
+            newFilterForm.ElementFiltered += (sender,
                 elementEventArgs) =>
             {
                 dataGridView1.DataSource = ((ElementListEventArgs)
@@ -151,7 +151,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void buttonDeleteElements_Click(object sender, 
+        private void ButtonDeleteElements_Click(object sender,
             EventArgs e)
         {
             _elementsList.Clear();
@@ -162,7 +162,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void buttonReset_Click(object sender, EventArgs e)
+        private void ButtonReset_Click(object sender, EventArgs e)
         {
             CreateTable(_elementsList, dataGridView1);
         }
@@ -219,8 +219,8 @@ namespace View
             {
                 using (var file = new StreamReader(path))
                 {
-                    _elementsList = 
-                        (BindingList<PassiveElementBase>) _serializer.Deserialize(file);
+                    _elementsList =
+                        (BindingList<PassiveElementBase>)_serializer.Deserialize(file);
                 }
 
                 dataGridView1.DataSource = _elementsList;

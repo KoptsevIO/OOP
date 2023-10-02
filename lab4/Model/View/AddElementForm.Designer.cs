@@ -88,7 +88,7 @@
             choicElementComboBox.Size = new Size(178, 23);
             choicElementComboBox.TabIndex = 2;
             choicElementComboBox.SelectedIndexChanged += 
-                choicElementComboBox_SelectedIndexChanged;
+                СhoicElementComboBox_SelectedIndexChanged;
             // 
             // canselButton
             // 
@@ -99,7 +99,7 @@
             canselButton.TabIndex = 1;
             canselButton.Text = "Отмена";
             canselButton.UseVisualStyleBackColor = true;
-            canselButton.Click += canselButton_Click;
+            canselButton.Click += СanselButton_Click;
             // 
             // confirmationButton
             // 
@@ -110,7 +110,7 @@
             confirmationButton.TabIndex = 0;
             confirmationButton.Text = "OK";
             confirmationButton.UseVisualStyleBackColor = true;
-            confirmationButton.Click += confirmationButton_Click;
+            confirmationButton.Click += СonfirmationButton_Click;
             // 
             // randomButton
             // 
@@ -121,7 +121,7 @@
             randomButton.TabIndex = 2;
             randomButton.Text = "Случайный элемент";
             randomButton.UseVisualStyleBackColor = true;
-            randomButton.Click += randomButton_Click;
+            randomButton.Click += RandomButton_Click;
             // 
             // AddElementForm
             // 

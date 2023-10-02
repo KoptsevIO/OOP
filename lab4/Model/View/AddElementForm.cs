@@ -33,7 +33,7 @@ namespace View
         private UserControl userControl;
 
         /// <summary>
-        /// Форма добавления фигур.
+        /// Форма добавления элементов.
         /// </summary>
         public AddElementForm()
         {
@@ -79,7 +79,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void choicElementComboBox_SelectedIndexChanged(object sender,
+        private void СhoicElementComboBox_SelectedIndexChanged(object sender,
             EventArgs e)
         {
             string elementType = choicElementComboBox.SelectedItem.ToString();
@@ -102,7 +102,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void confirmationButton_Click(object sender,
+        private void СonfirmationButton_Click(object sender,
             EventArgs e)
         {
             try
@@ -134,7 +134,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void canselButton_Click(object sender, EventArgs e)
+        private void СanselButton_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -144,7 +144,7 @@ namespace View
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void randomButton_Click(object sender, EventArgs e)
+        private void RandomButton_Click(object sender, EventArgs e)
         {
             Random random = new Random();
 
