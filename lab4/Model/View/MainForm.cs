@@ -21,11 +21,7 @@ namespace View
         /// </summary>
         private BindingList<PassiveElementBase> _filteredList = new();
 
-        //TODO: remove
-        /// <summary>
-        /// Ёкземпл€р формы AddForm.
-        /// </summary>
-        private AddElementForm _addForm = new AddElementForm();
+        //TODO: remove +
 
         //TODO: encapsulation
         /// <summary>
@@ -58,14 +54,7 @@ namespace View
             CreateTable(_elementsList, dataGridView1);
         }
 
-        //TODO: remove
-        /// <summary>
-        /// √руппбокс 1.
-        /// </summary>
-        /// <param name="sender">.</param>
-        /// <param name="e">.</param>
-        private void groupBox1_Enter(object sender, EventArgs e)
-        { }
+        //TODO: remove +
 
         //TODO: RSDN
         /// <summary>
