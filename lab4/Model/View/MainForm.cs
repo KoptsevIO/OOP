@@ -56,13 +56,13 @@ namespace View
 
         //TODO: remove +
 
-        //TODO: RSDN
+        //TODO: RSDN +
         /// <summary>
         /// Кнопка фильтрация.
         /// </summary>
         /// <param name="sender">.</param>
         /// <param name="e">.</param>
-        private void buttonFiterElement(object sender, EventArgs e)
+        private void ButtonFiterElement(object sender, EventArgs e)
         {
             var newFilterForm = new FilterForm(_elementsList);
             newFilterForm.Show();
