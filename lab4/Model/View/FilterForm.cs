@@ -9,6 +9,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace View
 {
@@ -27,16 +28,16 @@ namespace View
         /// </summary>
         private BindingList<PassiveElementBase> _listElementsFilter;
 
-        //TODO: duplication
+        //TODO: duplication +
         /// <summary>
         /// Вещественная часть комплексного сопротивления.
         /// </summary>
-        private double impedance1;
+        //private double impedance1;
 
-        /// <summary>
-        /// Мнимая часть комплексного сопротивления.
-        /// </summary>
-        private double impedance2;
+        ///// <summary>
+        ///// Мнимая часть комплексного сопротивления.
+        ///// </summary>
+        //private double impedance2;
 
         /// <summary>
         /// Комплексное сопротивление.
@@ -58,54 +59,6 @@ namespace View
             //TODO: rename
             ImpedanceTextBox.Enabled = false;
             ImpedanceTextBox2.Enabled = false;
-        }
-
-        /// <summary>
-        /// Ввод вещественного
-        /// </summary>
-        /// <param name="sender">.</param>
-        /// <param name="e">.</param>
-        private void textBoxImpedance_TextChanged(object sender,
-            EventArgs e)
-        {
-            try
-            {
-                if (ImpedanceTextBox.Text != "")
-                {
-                    impedance = 
-                        Utils.CheckNumber(ImpedanceTextBox.Text);
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Введите корректное число!",
-                    "Ошибка!", MessageBoxButtons.OK, 
-                    MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// Ввод мнимого
-        /// </summary>
-        /// <param name="sender">.</param>
-        /// <param name="e">.</param>
-        private void textBoxImpedance2_TextChanged(object sender,
-            EventArgs e)
-        {
-            try
-            {
-                if (ImpedanceTextBox2.Text != "")
-                {
-                    impedance = 
-                        Utils.CheckNumber(ImpedanceTextBox.Text);
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Введите корректное число!",
-                    "Ошибка!", MessageBoxButtons.OK, 
-                    MessageBoxIcon.Error);
-            }
         }
 
         /// <summary>
@@ -133,6 +86,30 @@ namespace View
             _listElementsFilter = new BindingList<PassiveElementBase>();
             int count = 0;
 
+            double impedance1 = 0;
+            double impedance2 = 0;
+            try
+            {
+                if (ImpedanceTextBox.Text != "")
+                {
+                    impedance1 =
+                        Utils.CheckNumber(ImpedanceTextBox.Text);
+                }
+                if (ImpedanceTextBox2.Text != "")
+                {
+                    impedance2 =
+                        Utils.CheckNumber(ImpedanceTextBox2.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Введите корректное число!",
+                    "Ошибка!", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            impedance = new Complex(impedance1,impedance2);
+
             if (!InductorCheckBox.Checked
                 && !ResistorCheckBox.Checked
                 && !CondenserCheckBox.Checked
@@ -143,6 +120,7 @@ namespace View
                     MessageBoxIcon.Warning);
                 return;
             }
+
 
             foreach (PassiveElementBase element in _listElement)
             {
@@ -155,8 +133,6 @@ namespace View
                         {
                             if (ImpedanceCheckBox.Checked)
                             {
-                                impedance = new Complex(impedance1,
-                                    impedance2);
                                 if (element.Impedance == impedance)
                                 {
                                     count++;
@@ -185,24 +161,26 @@ namespace View
                         _listElementsFilter.Add(element);
                     }
                 }
+
+                ElementListEventArgs eventArgs;
+
+                if (count > 0)
+                {
+                    eventArgs = new ElementListEventArgs(_listElementsFilter);
+                }
+                else
+                {
+                    MessageBox.Show("Нет элементов удовлетворяющих фильтру!",
+                        "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    eventArgs = new ElementListEventArgs(_listElementsFilter);
+                    return;
+                }
+
+
+                ElementFiltered?.Invoke(this, eventArgs);
+                Close();
             }
 
-            ElementListEventArgs eventArgs;
-
-            if (count > 0)
-            {
-                eventArgs = new ElementListEventArgs(_listElementsFilter);
-            }
-            else
-            {
-                MessageBox.Show("Нет элементов удовлетворяющих фильтру!",
-                    "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                eventArgs = new ElementListEventArgs(_listElementsFilter);
-                return;
-            }
-
-            ElementFiltered?.Invoke(this, eventArgs);
-            Close();
         }
     }
 }

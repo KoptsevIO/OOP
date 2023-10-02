@@ -107,15 +107,15 @@ namespace View
         {
             try
             {
-                var currentFigureControlName =
+                var currentElementControlName =
                     choicElementComboBox.SelectedItem.ToString();
 
-                var currentFigureControl =
-                    dictionaryUserControl[currentFigureControlName];
+                var currentElementControl =
+                    dictionaryUserControl[currentElementControlName];
 
                 var eventArgs =
                     new ElementEventArgs(((IAddElement)
-                    currentFigureControl).AddElement());
+                    currentElementControl).AddElement());
                 ElementAdded?.Invoke(this, eventArgs);
                 DialogResult = DialogResult.OK;
             }
