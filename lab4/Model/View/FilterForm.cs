@@ -195,7 +195,7 @@ namespace View
             }
             else
             {
-                MessageBox.Show("Нет фигур удовлетворяющих фильтру!",
+                MessageBox.Show("Нет элементов удовлетворяющих фильтру!",
                     "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 eventArgs = new ElementListEventArgs(_listElementsFilter);
                 return;

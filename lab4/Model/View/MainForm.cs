@@ -5,7 +5,10 @@ using System.Xml.Serialization;
 
 namespace View
 {
-    //TODO: XML
+    //TODO: XML +
+    /// <summary>
+    /// MainForm.
+    /// </summary>
     public partial class MainForm : Form
     {
         /// <summary>
