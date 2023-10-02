@@ -15,13 +15,13 @@ namespace View
     /// <summary>
     /// Класс добавления параетров конденсатора. 
     /// </summary>
-    public partial class AddCondenserUserControl : UserControl,
+    public partial class AddCapacitorUserControl : UserControl,
         IAddElement
     {
         /// <summary>
         /// Добавление параметров конденаторов.
         /// </summary>
-        public AddCondenserUserControl()
+        public AddCapacitorUserControl()
         {
             InitializeComponent();
         }

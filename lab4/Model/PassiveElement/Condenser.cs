@@ -14,6 +14,11 @@ namespace PassiveElement
         protected double _capacity;
 
         /// <summary>
+        /// Приставка для расчёта сопротивления.
+        /// </summary>
+        private const double _prefix = 10E-6;
+
+        /// <summary>
         /// Тип элемента.
         /// </summary>
         public override string ElementType
@@ -57,8 +62,8 @@ namespace PassiveElement
         {
             get
             {
-                //TODO:const 
-                return new Complex(0, Math.Round(-1000000 / (Capacity *
+                //TODO:const +
+                return new Complex(0, (1 / (Capacity * _prefix *
                     _angularFrequency)));
             }
         }

@@ -184,6 +184,9 @@ namespace View
             toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
+            FormBorderStyle = 
+                System.Windows.Forms.FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
         }
 
         #endregion

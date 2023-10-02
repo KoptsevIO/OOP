@@ -32,7 +32,7 @@
             choicElementGroupBox = new GroupBox();
             addResistorUserControl1 = new AddResistorUserControl();
             addInductorUserControl1 = new AddInductorUserControl();
-            addCondenserUserControl1 = new AddCondenserUserControl();
+            addCondenserUserControl1 = new AddCapacitorUserControl();
             choicElementComboBox = new ComboBox();
             canselButton = new Button();
             confirmationButton = new Button();
@@ -138,6 +138,9 @@
             Load += AddElementForm_Load;
             choicElementGroupBox.ResumeLayout(false);
             ResumeLayout(false);
+            FormBorderStyle = 
+                System.Windows.Forms.FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
         }
 
         #endregion
@@ -148,7 +151,7 @@
         private ComboBox choicElementComboBox;
         private AddResistorUserControl addResistorUserControl1;
         private AddInductorUserControl addInductorUserControl1;
-        private AddCondenserUserControl addCondenserUserControl1;
+        private AddCapacitorUserControl addCondenserUserControl1;
         private Button randomButton;
     }
 }

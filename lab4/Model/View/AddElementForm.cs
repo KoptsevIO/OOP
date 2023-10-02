@@ -15,7 +15,7 @@ namespace View
     /// </summary>
     public partial class AddElementForm : Form
     {
-        //TODO: нарушение инкапсуляции
+        //TODO: нарушение инкапсуляции +
         /// <summary>
         /// Словарь UserControl.
         /// </summary>
@@ -26,7 +26,7 @@ namespace View
         /// </summary>
         public EventHandler<EventArgs> ElementAdded;
 
-        //TODO: нарушение инкапсуляции
+        //TODO: нарушение инкапсуляции +
         /// <summary>
         /// Метка используемого UserControl.
         /// </summary>

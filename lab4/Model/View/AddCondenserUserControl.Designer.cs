@@ -3,7 +3,7 @@
     /// <summary>
     /// Дизайн формы AddCondenserUserControl.
     /// </summary>
-    partial class AddCondenserUserControl
+    partial class AddCapacitorUserControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

@@ -171,6 +171,9 @@
             filterGroupBox.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
+            FormBorderStyle = 
+                System.Windows.Forms.FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
         }
 
         #endregion
