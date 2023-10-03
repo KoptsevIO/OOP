@@ -31,9 +31,10 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = 
+                new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             deletElement = new Button();
             addElement = new Button();
             groupBoxElements = new GroupBox();
@@ -52,7 +53,7 @@ namespace View
             // 
             // deletElement
             // 
-            deletElement.Location = new Point(16, 250);
+            deletElement.Location = new Point(16, 287);
             deletElement.Margin = new Padding(3, 2, 3, 2);
             deletElement.Name = "deletElement";
             deletElement.Size = new Size(225, 29);
@@ -63,7 +64,7 @@ namespace View
             // 
             // addElement
             // 
-            addElement.Location = new Point(16, 215);
+            addElement.Location = new Point(16, 252);
             addElement.Margin = new Padding(3, 2, 3, 2);
             addElement.Name = "addElement";
             addElement.Size = new Size(225, 29);
@@ -84,14 +85,14 @@ namespace View
             groupBoxElements.Margin = new Padding(3, 2, 3, 2);
             groupBoxElements.Name = "groupBoxElements";
             groupBoxElements.Padding = new Padding(3, 2, 3, 2);
-            groupBoxElements.Size = new Size(505, 288);
+            groupBoxElements.Size = new Size(505, 325);
             groupBoxElements.TabIndex = 3;
             groupBoxElements.TabStop = false;
             groupBoxElements.Text = "Список элементов";
             // 
             // buttonDeleteElements
             // 
-            buttonDeleteElements.Location = new Point(247, 215);
+            buttonDeleteElements.Location = new Point(247, 252);
             buttonDeleteElements.Margin = new Padding(3, 2, 3, 2);
             buttonDeleteElements.Name = "buttonDeleteElements";
             buttonDeleteElements.Size = new Size(252, 29);
@@ -103,36 +104,49 @@ namespace View
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.InactiveCaption;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.Format = "N0";
-            dataGridViewCellStyle6.NullValue = null;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = 
+                DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = 
+                new Font("Segoe UI", 9F, FontStyle.Regular, 
+                GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = 
+                SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = 
+                SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeightSizeMode = 
+                DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = 
+                DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, 
+                FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(15, 20);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(484, 190);
+            dataGridView1.Size = new Size(484, 228);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode = 
+                DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersHeightSizeMode = 
+                DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             // 
             // buttonReset
             // 
-            buttonReset.Location = new Point(376, 251);
+            buttonReset.Location = new Point(376, 288);
             buttonReset.Margin = new Padding(3, 2, 3, 2);
             buttonReset.Name = "buttonReset";
             buttonReset.Size = new Size(123, 29);
@@ -143,7 +157,7 @@ namespace View
             // 
             // buttonFilterElement
             // 
-            buttonFilterElement.Location = new Point(247, 251);
+            buttonFilterElement.Location = new Point(247, 288);
             buttonFilterElement.Margin = new Padding(3, 2, 3, 2);
             buttonFilterElement.Name = "buttonFilterElement";
             buttonFilterElement.Size = new Size(123, 28);
@@ -157,7 +171,7 @@ namespace View
             toolStrip1.Items.AddRange(new ToolStripItem[] { File });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(540, 25);
+            toolStrip1.Size = new Size(538, 25);
             toolStrip1.TabIndex = 5;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -189,7 +203,7 @@ namespace View
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(540, 321);
+            ClientSize = new Size(538, 367);
             Controls.Add(toolStrip1);
             Controls.Add(groupBoxElements);
             FormBorderStyle = FormBorderStyle.FixedSingle;
