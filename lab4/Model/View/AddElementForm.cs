@@ -158,5 +158,10 @@ namespace View
                 }
             }
         }
+
+        private void addInductorUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
