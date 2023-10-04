@@ -25,8 +25,6 @@ namespace View
             InitializeComponent();
         }
 
-        //TODO: remove +
-
         /// <summary>
         /// Метод добавления индуктивности.
         /// </summary>

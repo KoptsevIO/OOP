@@ -62,7 +62,6 @@ namespace PassiveElement
         {
             get
             {
-                //TODO:const +
                 return new Complex(0, (Inductance * _prefix * 
                     _angularFrequency));
             }

@@ -5,7 +5,6 @@ using System.Xml.Serialization;
 
 namespace View
 {
-    //TODO: XML +
     /// <summary>
     /// MainForm.
     /// </summary>
@@ -21,9 +20,7 @@ namespace View
         /// </summary>
         private BindingList<PassiveElementBase> _filteredList = new();
 
-        //TODO: remove +
 
-        //TODO: encapsulation +
         /// <summary>
         /// Событие добавления элемента.
         /// </summary>
@@ -54,9 +51,6 @@ namespace View
             CreateTable(_elementsList, dataGridView1);
         }
 
-        //TODO: remove +
-
-        //TODO: RSDN +
         /// <summary>
         /// Кнопка фильтрация.
         /// </summary>
@@ -238,6 +232,7 @@ namespace View
             }
         }
 
+        //TODO: remove?
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

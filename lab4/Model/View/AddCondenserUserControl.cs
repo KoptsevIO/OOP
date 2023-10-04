@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 namespace View
 {
-    //TODO: rename +
     /// <summary>
     /// Класс добавления параетров конденсатора. 
     /// </summary>
@@ -25,8 +24,6 @@ namespace View
         {
             InitializeComponent();
         }
-
-        //TODO: remove +
 
         /// <summary>
         /// Метод добавления конденсатора.

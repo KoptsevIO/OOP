@@ -15,7 +15,7 @@ namespace View
     /// </summary>
     public partial class AddElementForm : Form
     {
-        //TODO: нарушение инкапсуляции +
+        //TODO: RSDN
         /// <summary>
         /// Словарь UserControl.
         /// </summary>
@@ -26,7 +26,7 @@ namespace View
         /// </summary>
         public EventHandler<EventArgs> ElementAdded;
 
-        //TODO: нарушение инкапсуляции +
+        //TODO: RSDN
         /// <summary>
         /// Метка используемого UserControl.
         /// </summary>
@@ -159,6 +159,7 @@ namespace View
             }
         }
 
+        //TODO: remove?
         private void addInductorUserControl1_Load(object sender, EventArgs e)
         {
 
