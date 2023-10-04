@@ -16,7 +16,7 @@ namespace PassiveElement
         /// <summary>
         /// Приставка для расчёта сопротивления.
         /// </summary>
-        private const double _prefix = 10E-4;
+        private const double _prefix = 1E-3;
 
         /// <summary>
         /// Тип элемента.

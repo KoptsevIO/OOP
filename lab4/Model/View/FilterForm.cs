@@ -28,11 +28,11 @@ namespace View
         /// </summary>
         private BindingList<PassiveElementBase> _listElementsFilter;
 
-        //TODO: RSDN
+        //TODO: RSDN +
         /// <summary>
         /// Комплексное сопротивление.
         /// </summary>
-        private Complex impedance;
+        private Complex _impedance;
 
         /// <summary>
         /// Обработчик события.
@@ -75,19 +75,19 @@ namespace View
             _listElementsFilter = new BindingList<PassiveElementBase>();
             int count = 0;
 
-            //TODO: rename
-            double impedance1 = 0;
-            double impedance2 = 0;
+            //TODO: rename +
+            double reImpedance = 0;
+            double imImpedance = 0;
             try
             {
                 if (ReImpedanceTextBox.Text != "")
                 {
-                    impedance1 =
+                    reImpedance =
                         Utils.CheckNumber(ReImpedanceTextBox.Text);
                 }
                 if (ImImpedanceTextBox.Text != "")
                 {
-                    impedance2 =
+                    imImpedance =
                         Utils.CheckNumber(ImImpedanceTextBox.Text);
                 }
             }
@@ -98,7 +98,7 @@ namespace View
                     MessageBoxIcon.Error);
             }
 
-            impedance = new Complex(impedance1,impedance2);
+            _impedance = new Complex(reImpedance,imImpedance);
 
             if (!InductorCheckBox.Checked
                 && !ResistorCheckBox.Checked
@@ -123,7 +123,7 @@ namespace View
                         {
                             if (ImpedanceCheckBox.Checked)
                             {
-                                if (element.Impedance == impedance)
+                                if (element.Impedance == _impedance)
                                 {
                                     count++;
                                     _listElementsFilter.Add(element);
@@ -145,7 +145,7 @@ namespace View
                     && !CondenserCheckBox.Checked)
                 {
                     if (ImpedanceCheckBox.Checked &&
-                        element.Impedance == impedance)
+                        element.Impedance == _impedance)
                     {
                         count++;
                         _listElementsFilter.Add(element);

@@ -232,10 +232,6 @@ namespace View
             }
         }
 
-        //TODO: remove?
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        //TODO: remove? +
     }
 }

@@ -31,8 +31,10 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = 
+                new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = 
+                new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = 
                 new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             deletElement = new Button();
@@ -138,7 +140,6 @@ namespace View
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(484, 228);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode = 
                 DataGridViewTriState.True;
             dataGridView1.ColumnHeadersHeightSizeMode = 
@@ -178,7 +179,8 @@ namespace View
             // File
             // 
             File.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            File.DropDownItems.AddRange(new ToolStripItem[] { OpenFile, SaveFile });
+            File.DropDownItems.AddRange(new ToolStripItem[] 
+            { OpenFile, SaveFile });
             File.Image = (Image)resources.GetObject("File.Image");
             File.ImageTransparentColor = Color.Magenta;
             File.Name = "File";

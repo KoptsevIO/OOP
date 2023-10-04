@@ -70,7 +70,6 @@
             addInductorUserControl1.Name = "addInductorUserControl1";
             addInductorUserControl1.Size = new Size(341, 83);
             addInductorUserControl1.TabIndex = 4;
-            addInductorUserControl1.Load += addInductorUserControl1_Load;
             // 
             // addCondenserUserControl1
             // 
@@ -88,7 +87,8 @@
             choicElementComboBox.Name = "choicElementComboBox";
             choicElementComboBox.Size = new Size(178, 23);
             choicElementComboBox.TabIndex = 2;
-            choicElementComboBox.SelectedIndexChanged += СhoicElementComboBox_SelectedIndexChanged;
+            choicElementComboBox.SelectedIndexChanged += 
+                СhoicElementComboBox_SelectedIndexChanged;
             // 
             // canselButton
             // 

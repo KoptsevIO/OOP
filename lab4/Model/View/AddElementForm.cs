@@ -15,22 +15,22 @@ namespace View
     /// </summary>
     public partial class AddElementForm : Form
     {
-        //TODO: RSDN
+        //TODO: RSDN +
         /// <summary>
         /// Словарь UserControl.
         /// </summary>
-        private Dictionary<string, UserControl> dictionaryUserControl;
+        private Dictionary<string, UserControl> _dictionaryUserControl;
 
         /// <summary>
         /// Событие добавления элемента.
         /// </summary>
         public EventHandler<EventArgs> ElementAdded;
 
-        //TODO: RSDN
+        //TODO: RSDN +
         /// <summary>
         /// Метка используемого UserControl.
         /// </summary>
-        private UserControl userControl;
+        private UserControl _userControl;
 
         /// <summary>
         /// Форма добавления элементов.
@@ -51,7 +51,7 @@ namespace View
 
             choicElementComboBox.Items.AddRange(elements);
 
-            dictionaryUserControl = new Dictionary<string,
+            _dictionaryUserControl = new Dictionary<string,
                 UserControl>()
             {
                 {elements[0], addResistorUserControl1},
@@ -84,14 +84,14 @@ namespace View
         {
             string elementType = choicElementComboBox.SelectedItem.ToString();
 
-            foreach (var (i, userControl) in dictionaryUserControl)
+            foreach (var (i, userControl) in _dictionaryUserControl)
             {
                 userControl.Visible = false;
                 if (elementType == i)
                 {
                     userControl.Visible = true;
                     confirmationButton.Enabled = true;
-                    this.userControl = userControl;
+                    this._userControl = userControl;
                 }
             }
 
@@ -111,7 +111,7 @@ namespace View
                     choicElementComboBox.SelectedItem.ToString();
 
                 var currentElementControl =
-                    dictionaryUserControl[currentElementControlName];
+                    _dictionaryUserControl[currentElementControlName];
 
                 var eventArgs =
                     new ElementEventArgs(((IAddElement)
@@ -150,7 +150,7 @@ namespace View
 
             choicElementComboBox.SelectedIndex = random.Next(0, 3);
 
-            foreach (TextBox textbox in userControl.Controls.OfType<TextBox>())
+            foreach (TextBox textbox in _userControl.Controls.OfType<TextBox>())
             {
                 if (textbox.Visible && String.IsNullOrEmpty(textbox.Text))
                 {
@@ -159,10 +159,6 @@ namespace View
             }
         }
 
-        //TODO: remove?
-        private void addInductorUserControl1_Load(object sender, EventArgs e)
-        {
-
-        }
+        //TODO: remove? +
     }
 }
