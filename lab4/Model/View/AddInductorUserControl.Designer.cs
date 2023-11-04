@@ -40,37 +40,36 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 26);
+            label2.Location = new Point(261, 25);
             label2.Name = "label2";
-            label2.Size = new Size(90, 15);
-            label2.TabIndex = 0;
-            label2.Text = "Индуктивность";
+            label2.Size = new Size(29, 15);
+            label2.TabIndex = 5;
+            label2.Text = "мГн";
             // 
             // Inductance
             // 
-            Inductance.Location = new Point(168, 23);
+            Inductance.Location = new Point(180, 22);
             Inductance.Margin = new Padding(3, 2, 3, 2);
-            Inductance.Name = "Inductance";
-            Inductance.Size = new Size(64, 23);
-            Inductance.TabIndex = 1;
-            Inductance.KeyPress += Inductance_KeyPress;
+            Inductance.Name = "Resistance";
+            Inductance.Size = new Size(61, 23);
+            Inductance.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(238, 26);
+            label1.Location = new Point(15, 25);
             label1.Name = "label1";
-            label1.Size = new Size(29, 15);
-            label1.TabIndex = 2;
-            label1.Text = "мГн";
+            label1.Size = new Size(90, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Индуктивность";
             // 
             // AddInductorUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
-            Controls.Add(Inductance);
             Controls.Add(label2);
+            Controls.Add(Inductance);
+            Controls.Add(label1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "AddInductorUserControl";
             Size = new Size(300, 67);
