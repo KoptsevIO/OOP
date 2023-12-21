@@ -17,6 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решен
 		D:\Учёба\4 семестр\ООП\ЛБ 5. Копцев И.О..docx = D:\Учёба\4 семестр\ООП\ЛБ 5. Копцев И.О..docx
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LB5", "LB5", "{783212DA-9A69-4EF4-BE72-15A02677CFED}"
+	ProjectSection(SolutionItems) = preProject
+		D:\Учёба\4 семестр\ООП\ЛБ 5. Копцев И.О..docx = D:\Учёба\4 семестр\ООП\ЛБ 5. Копцев И.О..docx
+		D:\Учёба\4 семестр\ООП\ЛБ 5. Копцев И.О..pdf = D:\Учёба\4 семестр\ООП\ЛБ 5. Копцев И.О..pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
