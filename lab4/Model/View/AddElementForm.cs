@@ -15,7 +15,6 @@ namespace View
     /// </summary>
     public partial class AddElementForm : Form
     {
-        //TODO: RSDN +
         /// <summary>
         /// Словарь UserControl.
         /// </summary>
@@ -26,7 +25,6 @@ namespace View
         /// </summary>
         public EventHandler<EventArgs> ElementAdded;
 
-        //TODO: RSDN +
         /// <summary>
         /// Метка используемого UserControl.
         /// </summary>
@@ -158,7 +156,5 @@ namespace View
                 }
             }
         }
-
-        //TODO: remove? +
     }
 }

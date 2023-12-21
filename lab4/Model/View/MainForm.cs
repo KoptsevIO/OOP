@@ -231,7 +231,5 @@ namespace View
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //TODO: remove? +
     }
 }

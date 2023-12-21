@@ -28,7 +28,6 @@ namespace View
         /// </summary>
         private BindingList<PassiveElementBase> _listElementsFilter;
 
-        //TODO: RSDN +
         /// <summary>
         /// Комплексное сопротивление.
         /// </summary>
@@ -75,7 +74,6 @@ namespace View
             _listElementsFilter = new BindingList<PassiveElementBase>();
             int count = 0;
 
-            //TODO: rename +
             double reImpedance = 0;
             double imImpedance = 0;
             try
