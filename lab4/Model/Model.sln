@@ -14,7 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "View", "View\View.csproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{CDDB4004-93D1-424B-8A99-F3EB2C113744}"
 	ProjectSection(SolutionItems) = preProject
-		ЛБ5\ЛБ5. Копцев И.О..docx = ЛБ5\ЛБ5. Копцев И.О..docx
+		ЛБ5\ЛБ5.docx = ЛБ5\ЛБ5.docx
 	EndProjectSection
 EndProject
 Global
